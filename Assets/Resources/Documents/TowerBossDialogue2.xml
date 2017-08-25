@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ChessChampions>
+  <Dialogue> 
+      <MSG>
+        <number>2</number>
+		<first>You have dishonored me</first>
+		<second>I won't leave this unpunished</second>
+      </MSG>
+	
+	  <MSG>
+        <number>1</number>
+		<first>Why don't you leave me alone?</first>
+      </MSG>	  
+	  <MSG>
+        <number>2</number>
+		<first>I 'm sorry </first>
+		<second>Forgive me please</second>
+      </MSG>
+	  <MSG>
+        <number>1</number>
+		<first>Just dis pleeeeeasse</first>
+      </MSG>
+  </Dialogue>
+</ChessChampions>

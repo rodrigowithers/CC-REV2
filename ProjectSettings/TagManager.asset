@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - UnWalkable
+  - MediumTerrain
+  - HardTerrain
+  - Players
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackGround
+    uniqueID: 1564471587
+    locked: 0
+  - name: Ground
+    uniqueID: 3736135903
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2980649475
+    locked: 0
+  - name: ForeGround
+    uniqueID: 1360125337
+    locked: 0
+  - name: HUD
+    uniqueID: 2737467273
+    locked: 0
+  - name: UnWalkable
+    uniqueID: 2746051101
+    locked: 0
+  - name: HardTerrain
+    uniqueID: 2789481217
+    locked: 0
+  - name: MediumTerrain
+    uniqueID: 1461905473
+    locked: 0

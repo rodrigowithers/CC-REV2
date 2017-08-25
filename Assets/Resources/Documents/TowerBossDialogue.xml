@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ChessChampions>
+  <Dialogue> 
+    <MSG>
+        <number>3</number>
+		<first>Who the fuck are you?</first>
+		<second>Leave this instant you filthy mongrel</second>
+		<third>So be it, my gun will show you the door , TO HELL</third>
+      </MSG>
+	  <MSG>
+        <number>2</number>
+		<first>Again?</first>
+		<second>What are the guards doing?</second>
+      </MSG>
+	  <MSG>
+        <number>1</number>
+		<first>You don't learn do you?</first>
+      </MSG>
+	  <MSG>
+        <number>4</number>
+		<first>There' clearly something wrong with you</first>
+		<second>first : How are you STILL ALIVE</second>
+		<third>second : Why do you even try...</third>
+		<fourth>when you know your opponent is me?</fourth>
+      </MSG>
+	  <MSG>
+        <number>2</number>
+		<first>Seriously...</first>
+		<second>I have other things to do you  know.</second>
+      </MSG>
+	  <MSG>
+        <number>1</number>
+		<first>This time I'll make sure that you stay down</first>
+      </MSG>
+  </Dialogue>
+</ChessChampions>

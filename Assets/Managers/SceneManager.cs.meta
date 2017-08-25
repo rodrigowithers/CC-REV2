@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ab7d832e7fe64354f87025fbbcef444d
+timeCreated: 1498332037
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - ScenePrefab: {fileID: 1105342479813948, guid: f74b472763d547b43a4c3cd9b5dcb6a9,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

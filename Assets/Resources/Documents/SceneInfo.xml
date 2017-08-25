@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ChessChampions>
+  <WaveInfo>
+    <Waves>
+      <Wave>
+        <Level>  0 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   1 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  1 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 1 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  1 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  1 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  1 </Level>
+        <Kings>  1 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  1 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  1 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  1 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  1 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  2 </Level>
+        <Kings>  2 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  2 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 2 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  2 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  2 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  2 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  2 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  3 </Level>
+        <Kings>  1 </Kings>
+        <Queen>  1 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  3 </Level>
+        <Kings>  1 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   1 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  3 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  1 </Horse>
+        <Bishop> 1 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  3 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  1 </Queen>
+        <Tower>  1 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  4 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  1 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   3 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  4 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  2 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 2 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  4 </Level>
+        <Kings>  2 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  2 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  5 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  1 </Queen>
+        <Tower>  1 </Tower>
+        <Horse>  1 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  5 </Level>
+        <Kings>  1 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  1 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   2 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  5 </Level>
+        <Kings>  1 </Kings>
+        <Queen>  1 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  1 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  6 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  1 </Queen>
+        <Tower>  3 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   2 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  6 </Level>
+        <Kings>  2 </Kings>
+        <Queen>  3 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  1 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  6 </Level>
+        <Kings>  2 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  1 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 2 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  7 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  1 </Queen>
+        <Tower>  1 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 1 </Bishop>
+        <Pawn>   3 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  7 </Level>
+        <Kings>  2 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  1 </Tower>
+        <Horse>  1 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   1 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  7 </Level>
+        <Kings>  2 </Kings>
+        <Queen>  2 </Queen>
+        <Tower>  1 </Tower>
+        <Horse>  1 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  8 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  3 </Queen>
+        <Tower>  1 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 2 </Bishop>
+        <Pawn>   4 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  8 </Level>
+        <Kings>  2 </Kings>
+        <Queen>  2 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   6 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  8 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  3 </Tower>
+        <Horse>  3 </Horse>
+        <Bishop> 4 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  9 </Level>
+        <Kings>  2 </Kings>
+        <Queen>  2 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  1 </Horse>
+        <Bishop> 1 </Bishop>
+        <Pawn>   2 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  9 </Level>
+        <Kings>  1 </Kings>
+        <Queen>  2 </Queen>
+        <Tower>  2 </Tower>
+        <Horse>  1 </Horse>
+        <Bishop> 1 </Bishop>
+        <Pawn>   2 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  10 </Level>
+        <Kings>  5 </Kings>
+        <Queen>  0 </Queen>
+        <Tower>  0 </Tower>
+        <Horse>  5 </Horse>
+        <Bishop> 0 </Bishop>
+        <Pawn>   5 </Pawn>
+      </Wave>
+      <Wave>
+        <Level>  10 </Level>
+        <Kings>  0 </Kings>
+        <Queen>  4 </Queen>
+        <Tower>  4 </Tower>
+        <Horse>  0 </Horse>
+        <Bishop> 4 </Bishop>
+        <Pawn>   0 </Pawn>
+      </Wave>
+      
+      <Wave>
+        <Level>  11 </Level>
+        <Kings>  1 </Kings>
+        <Queen>  1 </Queen>
+        <Tower>  2 </Tower>
+        <Horse>  2 </Horse>
+        <Bishop> 2 </Bishop>
+        <Pawn>   8 </Pawn>
+      </Wave>
+    </Waves>
+  </WaveInfo>
+</ChessChampions>
