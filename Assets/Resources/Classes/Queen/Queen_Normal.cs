@@ -34,6 +34,9 @@ public class Queen_Normal : Class
         }
     }
 
+    private Transform _lastAttackArea;
+    private float _charge = 0;
+
     public override void Attack(Vector2 direction)
     {
         base.Attack(direction);
@@ -58,15 +61,40 @@ public class Queen_Normal : Class
             {
                 area.GetComponent<AttackArea>().Selected = true;
 
-                // Checa se pode atacar
-                if (CanAttack)
+                // Verifica se é a mesma area de ataque do antigo frame
+                if (_lastAttackArea != area)
                 {
-                    // Reduz a Stamina do jogador
-                    GetComponent<BattlePiece>().Stamina -= GetComponent<BattlePiece>().AttackCost;
-                    GetComponent<BattlePiece>().CanRegen = false;
+                    _lastAttackArea = area;
+                    _charge = 0;
+                }
+                else
+                {
+                    // Checa se pode atacar
+                    if (CanAttack)
+                    {
+                        //print(_charge);
 
-                    StartCoroutine(area.GetComponent<AttackArea>().CAttack());
-                    CanAttack = false;
+                        // Checa a carga do arco
+                        if (_charge >= 30)
+                        {
+                            _charge = 0;
+                            GetComponent<Piece>().Speed = MovementSpeed;
+
+                            // Reduz a Stamina do jogador
+                            GetComponent<BattlePiece>().Stamina -= GetComponent<BattlePiece>().AttackCost;
+                            GetComponent<BattlePiece>().CanRegen = false;
+
+                            StartCoroutine(area.GetComponent<AttackArea>().CAttack());
+                            CanAttack = false;
+                        }
+                        else
+                        {
+                            Camera.main.GetComponent<CameraController>().Shake(Mathf.Min(0.1f, 0.01f + (_charge / 100)));
+
+                            GetComponent<Piece>().Speed = 150;
+                            _charge++;
+                        }
+                    }
                 }
             }
             else

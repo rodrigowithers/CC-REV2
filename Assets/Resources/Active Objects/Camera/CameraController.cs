@@ -39,15 +39,15 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    public void Shake()
+    public void Shake(float multiplier = 0.2f)
     {
         if (_shaking)
             return;
 
-        StartCoroutine(CShake());
+        StartCoroutine(CShake(multiplier));
     }
 
-    private IEnumerator CShake()
+    private IEnumerator CShake(float multiplier)
     {
         _shaking = true;
         var time = 0.0f;
@@ -55,7 +55,7 @@ public class CameraController : MonoBehaviour
         var originalPos = transform.position;
         while (time < 0.1f)
         {
-            transform.position += Random.insideUnitCircle.xyz(transform.position) / 5;
+            transform.position += Random.insideUnitCircle.xyz(transform.position) * multiplier;
             transform.position = Vector3.Lerp(transform.position, originalPos, 0.5f);
 
             time += Time.deltaTime;

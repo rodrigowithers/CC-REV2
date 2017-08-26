@@ -13,7 +13,7 @@ public class Queen_NormalAttackArea : AttackArea
         _attacking = true;
 
         // Pega a posição e manda a flecha até ela
-        var arrow = Instantiate<GameObject>(Arrow, _parent.transform.position + (transform.position - _parent.transform.position).normalized, Quaternion.identity);
+        var arrow = Instantiate<GameObject>(Arrow, _parent.transform.position /*+ (transform.position - _parent.transform.position).normalized*/, Quaternion.identity);
         arrow.GetComponent<Arrow>().Destination = transform.position;
         arrow.GetComponent<Arrow>()._piece = _parent.GetComponent<BattlePiece>();
 

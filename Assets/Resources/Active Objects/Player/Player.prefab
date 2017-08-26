@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 114259181257407464}
   - component: {fileID: 199028744145505844}
   - component: {fileID: 114550999977054538}
+  - component: {fileID: 114414014595737968}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -42,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313217460558118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.22, y: -8.48, z: 0}
+  m_LocalPosition: {x: -0.22, y: 11.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,6 +99,17 @@ MonoBehaviour:
     Cost: 0
   Stamina: 100
   StaminaRecoverSpeed: 20
+--- !u!114 &114414014595737968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313217460558118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3432df3c2746df44aba6876a959cd197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114548662624052294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,13 +153,25 @@ MonoBehaviour:
   Stamina: 100
   StaminaRegen: 20
   AttackCost: 20
-  Starting: 
+  Starting: Pawn_Normal
   InvincibilityCurve:
     serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 0
+    m_RotationOrder: 0
   MaxLife: 3
   Classes: []
   cur: 0
@@ -208,7 +232,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1819153043
+  randomSeed: 897860837
   InitialModule:
     serializedVersion: 3
     enabled: 1

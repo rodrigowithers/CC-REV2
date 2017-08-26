@@ -33,6 +33,9 @@ public class Arrow : MonoBehaviour
         {
             if(hit.collider.GetComponent<IStopDash>() != null)
             {
+                // Tira as particulas do parent
+                transform.GetChild(0).parent = null;
+
                 Destroy(this.gameObject);
             }
 
@@ -40,6 +43,10 @@ public class Arrow : MonoBehaviour
             if (obj != null && hit.collider.GetComponent<BattlePiece>() != _piece)
             {
                 obj.TakeDamage(_direction);
+
+                // Tira as particulas do parent
+                transform.GetChild(0).parent = null;
+
                 Destroy(this.gameObject);
             }
         }
@@ -52,6 +59,9 @@ public class Arrow : MonoBehaviour
         time += Time.deltaTime * Speed;
         if (time >= 1.1f)
         {
+            // Tira as particulas do parent
+            transform.GetChild(0).parent = null;
+
             Destroy(this.gameObject);
         }
     }
