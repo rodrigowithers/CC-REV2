@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4659521706459726}
   - component: {fileID: 212227650976847700}
   - component: {fileID: 114438177266121212}
+  - component: {fileID: 61595527657286860}
   m_Layer: 0
   m_Name: Lance
   m_TagString: Untagged
@@ -73,6 +74,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61595527657286860
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1353197444218332}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.60399985}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.7}
+    oldSize: {x: 0.38, y: 3.02}
+    newSize: {x: 0.17, y: 1.49}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.38, y: 3.02}
+  m_EdgeRadius: 0
 --- !u!114 &114438177266121212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,6 +114,7 @@ MonoBehaviour:
   Destination: {x: 0, y: 0}
   Direction: {x: 0, y: 0}
   LanceParticles: {fileID: 1864715059928766}
+  Piece: {fileID: 0}
 --- !u!114 &114493038344678230
 MonoBehaviour:
   m_ObjectHideFlags: 1

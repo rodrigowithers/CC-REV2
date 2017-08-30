@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4010481780977812}
   - component: {fileID: 212257463643691934}
   - component: {fileID: 114497501364968702}
+  - component: {fileID: 58827284415838166}
   m_Layer: 0
   m_Name: Energy
   m_TagString: Untagged
@@ -41,6 +42,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58827284415838166
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1763917230940910}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!114 &114497501364968702
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,9 +68,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fe2edf389405c40a8a79b648e05de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Destination: {x: 0, y: 0}
   Direction: {x: 0, y: 0}
   StepTime: 0.1
+  _piece: {fileID: 0}
 --- !u!212 &212257463643691934
 SpriteRenderer:
   m_ObjectHideFlags: 1

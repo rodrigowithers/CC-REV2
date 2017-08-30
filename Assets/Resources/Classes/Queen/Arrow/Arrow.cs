@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+public class Arrow : MonoBehaviour, IAttack
 {
     public float Speed = 5;
     public Vector2 Destination;

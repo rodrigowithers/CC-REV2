@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lance : MonoBehaviour
+public class Lance : MonoBehaviour, IAttack
 {
     public float Speed = 2;
     public Vector2 Destination;
@@ -17,7 +17,7 @@ public class Lance : MonoBehaviour
 
     public GameObject LanceParticles;
 
-    public BattlePiece _piece;
+    public BattlePiece Piece;
 
     // Use this for initialization
     void Start()
@@ -40,7 +40,7 @@ public class Lance : MonoBehaviour
             }
 
             var obj = hit.collider.GetComponent<IKillable>();
-            if (obj != null && _damage && hit.collider.GetComponent<BattlePiece>() != _piece)
+            if (obj != null && _damage && hit.collider.GetComponent<BattlePiece>() != Piece)
             {
                 obj.TakeDamage(Direction);
                 _damage = false;

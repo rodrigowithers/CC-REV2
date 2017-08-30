@@ -20,7 +20,7 @@ public class HuntState : State
         //main_script.Move(main_script.Direction);
         //main_script.Move();
         
-        if (main_script.AtkAreaDistPlayer() < 0.5f)
+        if (main_script.AtkAreaDistPlayer() <= 0.5f)
         {
             main_script._StateMachine.ChangeState(new PrepareAttackState());
         }

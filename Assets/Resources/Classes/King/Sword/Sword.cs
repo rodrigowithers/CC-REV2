@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sword : MonoBehaviour
+public class Sword : MonoBehaviour, IAttack
 {
     public float Speed = 5;
     public float RotSpeed = 360;

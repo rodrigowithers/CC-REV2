@@ -45,6 +45,10 @@ public class Class : MonoBehaviour
         {
             return 0.5f;
         }
+        set
+        {
+
+        }
     }
     public virtual float AttackDuration
     {

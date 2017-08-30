@@ -8,14 +8,19 @@ public class Tower_Normal : Class
     {
         get
         {
-            return 250;
+            return 350;
         }
     }
+    private float _attackSpeed = 2.0f;
     public override float AttackSpeed
     {
         get
         {
-            return 1.0f;
+            return _attackSpeed;
+        }
+        set
+        {
+            _attackSpeed = value;
         }
     }
     public override float AttackDuration
@@ -37,7 +42,7 @@ public class Tower_Normal : Class
     {
         get
         {
-            return "DamageDash";
+            return "TurretMode";
         }
     }
 
@@ -98,7 +103,7 @@ public class Tower_Normal : Class
         _attackArea = Instantiate(AttackArea, transform, false);
 
         // Adiciona a Habilidade correspondente
-        GetComponent<HabilityManager>().Hability = new DamageDash(this.GetComponent<Piece>());
+        GetComponent<HabilityManager>().Hability = new TurretMode(this.GetComponent<Piece>());
 
         base.Start();
     }

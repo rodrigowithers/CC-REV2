@@ -57,13 +57,6 @@ public class Enemy : BattlePiece, IKillable
         }
     }
 
-    public IEnumerator HitStun()
-    {
-        CanMove = false;
-        yield return new WaitForSeconds(0.5f);
-        CanMove = true;
-    }
-
     public virtual void Die()
     {
         // Adiciona energia de troca ao jogador

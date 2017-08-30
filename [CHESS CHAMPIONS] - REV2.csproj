@@ -93,6 +93,7 @@
     <Compile Include="Assets\Helpers\ExtensionMethods.cs" />
     <Compile Include="Assets\Helpers\SubstringConsole.cs" />
     <Compile Include="Assets\Helpers\XmlLoader.cs" />
+    <Compile Include="Assets\Interfaces\IAttack.cs" />
     <Compile Include="Assets\Interfaces\IAttacker.cs" />
     <Compile Include="Assets\Interfaces\IKillable.cs" />
     <Compile Include="Assets\Interfaces\IScene.cs" />
@@ -133,6 +134,8 @@
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\FollowPathState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\HuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\PawnHuntState.cs" />
+    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\QueenHuntState.cs" />
+    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\TowerHuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\WanderPathState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PrepareAttackState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\TiedState.cs" />
@@ -180,6 +183,7 @@
     <Compile Include="Assets\Resources\Classes\Tower\TowerAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Tower\Tower_Normal.cs" />
     <Compile Include="Assets\Resources\Classes\Tower\Tower_NormalAttackArea.cs" />
+    <Compile Include="Assets\Resources\Classes\Tower\TurretMode.cs" />
     <Compile Include="Assets\Resources\Field Objects\Button\FieldButton.cs" />
     <Compile Include="Assets\Resources\Field Objects\FloorSpike\FloorSpike.cs" />
     <Compile Include="Assets\Resources\Field Objects\Harpoon\Harpoon.cs" />

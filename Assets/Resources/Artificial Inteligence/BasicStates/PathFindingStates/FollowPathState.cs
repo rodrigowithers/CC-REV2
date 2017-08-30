@@ -25,7 +25,7 @@ public class FollowPathState : State
         {
             // player ja chegou perto 
             // muda de estado 
-            main_script._StateMachine.ChangeState(new PawnHuntState());
+            main_script._StateMachine.ChangeState(new TowerHuntState());
         }
 
         // Cancela todas as corrotinas da unidade e inicia uma nova de perseguir o player

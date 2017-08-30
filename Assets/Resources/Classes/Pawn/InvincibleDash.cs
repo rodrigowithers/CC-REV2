@@ -8,8 +8,11 @@ public class InvincibleDash : Hability
     public float Speed = 10;
 
     public bool Dodging = false;
-    public float InvincibleTime = 0.5f;
+    public float InvincibleTime = 2.0f;
     Color originalcolor = new Color();
+
+    private GameObject _shield;
+    private GameObject _explosion;
 
     public InvincibleDash(Piece piece) : base(piece)
     {
@@ -26,6 +29,12 @@ public class InvincibleDash : Hability
 
         if (Dodging || dir.magnitude < 0.5f)
             return false;
+
+        if(_shield == null || _explosion == null)
+        {
+            _shield = Resources.Load<GameObject>("Classes/Pawn/PawnShield");
+            _explosion = Resources.Load<GameObject>("Classes/Pawn/PawnExplosion");
+        }
 
         _piece.StartCoroutine(CDash(dir));
         return true;
@@ -77,13 +86,36 @@ public class InvincibleDash : Hability
         }
 
 
-        if(!_piece.IsInvincible)
+        if (!_piece.IsInvincible)
             _piece.StartCoroutine(CInvincibleTime());
 
         _piece.CanMove = true;
         Dodging = false;
 
         yield return null;
+    }
+
+    public void Explode(float radius = 1.0f)
+    {
+        DebugExtension.DebugCircle(_piece.transform.position, Vector3.forward, Color.red, radius, 5);
+
+        // Instancia o Sistema da Partículas
+        Object.Instantiate(_explosion, _piece.transform.position, Quaternion.identity);
+
+        // Checa se houve colisão em um raio ao redor da explosão
+        var hits = Physics2D.CircleCastAll(_piece.transform.position, radius, Vector2.zero);
+        foreach (var hit in hits)
+        {
+            var obj = hit.collider.GetComponent<IKillable>();
+            if (obj != null && hit.collider.gameObject != _piece.gameObject)
+            {
+                var dir = (hit.collider.transform.position - _piece.transform.position).normalized;
+                obj.TakeDamage(dir);
+            }
+        }
+
+        // ScreenShake
+        Camera.main.GetComponent<CameraController>().Shake();
     }
 
     IEnumerator CInvincibleTime()
@@ -93,8 +125,37 @@ public class InvincibleDash : Hability
         _piece.IsInvincible = true;
         _piece.SetColor(Color.yellow);
 
-        yield return new WaitForSeconds(InvincibleTime);
-        //_piece.SetColor(originalcolor);
+        var oldSpeed = _piece.Speed;
+        _piece.Speed = 200;
+
+        var particles = Object.Instantiate(_shield, _piece.transform, false);
+
+        float time = 0;
+        int counter = 0;
+
+        while (time < InvincibleTime)
+        {
+            time += Time.deltaTime;
+
+            DebugExtension.DebugCircle(_piece.transform.position, Vector3.forward, Color.yellow, 0.5f);
+
+            // Circle Cast
+            var hits = Physics2D.CircleCastAll(_piece.transform.position, 0.5f, Vector2.zero);
+            foreach (var hit  in hits)
+            {
+                var obj = hit.collider.GetComponent<IAttack>();
+                if (obj != null && hit.collider.GetComponent<Lance>().Piece.gameObject != _piece.gameObject)
+                {
+                    counter++;
+                    time += 0.5f;
+                    break;
+                }
+            }
+
+            yield return null;
+        }
+
+
 
         if (_piece.GetComponent<Enemy>())
             _piece.SetColor(Color.red);
@@ -102,6 +163,16 @@ public class InvincibleDash : Hability
             _piece.SetColor(Color.white);
 
         _piece.IsInvincible = false;
+
+        if (counter > 1)
+        {
+            yield return new WaitForSeconds(0.5f);
+            Explode(Mathf.Max(3, counter));
+        }
+        _piece.Speed = oldSpeed;
+
+        Object.Destroy(particles);
+
         yield return null;
     }
 

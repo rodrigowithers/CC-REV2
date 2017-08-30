@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Energy : MonoBehaviour
+public class Energy : MonoBehaviour, IAttack
 {
     public Vector2 Direction;
 

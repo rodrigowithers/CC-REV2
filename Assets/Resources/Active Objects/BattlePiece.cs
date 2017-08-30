@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattlePiece : Piece, IAttacker
+public class BattlePiece : Piece, IAttacker, IKillable
 {
     protected Class _class;
     protected HabilityManager _hability;
@@ -65,6 +65,40 @@ public class BattlePiece : Piece, IAttacker
         }
     }
 
+    public void TakeDamage(Vector2 direction, float force = 10)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Die()
+    {
+        throw new NotImplementedException();
+    }
+
+    public void Pushback(Vector2 dir, float force = 10)
+    {
+        if (IsInvincible)
+            return;
+
+        // Empurra o corpo para traz
+        RigidBody.velocity = dir * force;
+        StartCoroutine(PushBackStun());
+    }
+
+    private IEnumerator PushBackStun()
+    {
+        CanMove = false;
+        yield return new WaitForSeconds(0.1f);
+        CanMove = true;
+    }
+
+    public IEnumerator HitStun()
+    {
+        CanMove = false;
+        yield return new WaitForSeconds(0.5f);
+        CanMove = true;
+    }
+
     private IEnumerator RegenTime()
     {
         yield return new WaitForSeconds(_class.StaminaRegenTimer);
@@ -106,4 +140,5 @@ public class BattlePiece : Piece, IAttacker
     {
         throw new NotImplementedException();
     }
+
 }

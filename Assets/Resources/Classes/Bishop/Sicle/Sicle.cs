@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sicle : MonoBehaviour
+public class Sicle : MonoBehaviour, IAttack
 {
     public float Speed = 5;
     public Vector2 Destination;

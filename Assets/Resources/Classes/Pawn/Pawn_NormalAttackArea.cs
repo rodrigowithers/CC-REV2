@@ -16,7 +16,7 @@ public class Pawn_NormalAttackArea : AttackArea
         var lance = Instantiate(Lance, _parent.transform.position + (transform.position - _parent.transform.position).normalized, Quaternion.identity);
         lance.transform.parent = transform;
         lance.GetComponent<Lance>().Direction = transform.position - _parent.transform.position;
-        lance.GetComponent<Lance>()._piece = _parent.GetComponent<BattlePiece>();
+        lance.GetComponent<Lance>().Piece = _parent.GetComponent<BattlePiece>();
 
 
         yield return new WaitForSeconds(Duration);

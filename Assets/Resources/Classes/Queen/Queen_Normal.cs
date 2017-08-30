@@ -75,7 +75,7 @@ public class Queen_Normal : Class
                         //print(_charge);
 
                         // Checa a carga do arco
-                        if (_charge >= 30)
+                        if (_charge >= 16)
                         {
                             _charge = 0;
                             GetComponent<Piece>().Speed = MovementSpeed;

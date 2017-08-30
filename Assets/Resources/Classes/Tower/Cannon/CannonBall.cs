@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonBall : MonoBehaviour
+public class CannonBall : MonoBehaviour, IAttack
 {
     public GameObject ExplosionParticles;
 
-    public float Speed = 5;
+    public float Speed = 3;
     public Vector2 Destination;
 
     protected Vector2 _originalPosition;
@@ -27,7 +27,7 @@ public class CannonBall : MonoBehaviour
 
         // Checa se houve colisão em um raio ao redor da explosão
         var hits = Physics2D.CircleCastAll(transform.position, _radius, Vector2.zero);
-        foreach(var hit in hits)
+        foreach (var hit in hits)
         {
             var obj = hit.collider.GetComponent<IKillable>();
             if (obj != null)
@@ -56,6 +56,8 @@ public class CannonBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Altera a velocidade
+
         // Casta um raio para frente
         Debug.DrawRay(transform.position, _direction / 5, Color.cyan);
         var hits = Physics2D.RaycastAll(transform.position, _direction / 5, 1);
@@ -63,7 +65,7 @@ public class CannonBall : MonoBehaviour
         {
             // Se bateu em qualquer coisa, explode
 
-            if (hit.collider.GetComponent<IStopDash>() != null || hit.collider.GetComponent<IKillable>() != null && hit.collider.GetComponent<BattlePiece>() != _piece)
+            if (hit.collider.GetComponent<IStopDash>() != null /*|| hit.collider.GetComponent<IKillable>() != null && hit.collider.GetComponent<BattlePiece>() != _piece*/)
             {
                 Explode();
             }

@@ -94,13 +94,6 @@ public class Player : BattlePiece, IKillable
         _invincibleFrames = false;
         yield return null;
     }
-    public IEnumerator HitStun()
-    {
-        CanMove = false;
-        yield return new WaitForSeconds(0.2f);
-        CanMove = true;
-    }
-
     #endregion
 
 

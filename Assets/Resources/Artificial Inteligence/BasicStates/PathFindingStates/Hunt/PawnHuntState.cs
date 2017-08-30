@@ -18,7 +18,7 @@ public class PawnHuntState : HuntState
 
         if (main_script._Hability.HasStamina()) 
         {
-            if(main_script.EnemyDistPlayer() < 6.0f && main_script.EnemyDistPlayer() > 4.0f)
+            if(main_script.EnemyDistPlayer() < 5.0f && main_script.EnemyDistPlayer() > 3.0f)
             {
                 main_script._Hability.Use();
             }

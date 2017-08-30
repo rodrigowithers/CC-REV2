@@ -6,6 +6,6 @@ public interface IKillable
 {
     IEnumerator HitStun();
 
-    void TakeDamage(Vector2 direction, float force = 10);
+    void TakeDamage(Vector2 direction, float force = 5);
     void Die();
 }

@@ -37,6 +37,14 @@ public class State  {
     public virtual void Exit(Piece piece)
     {
     }
+    protected bool PlayerIsRanged()
+    {
+        CHESSPIECE T = GameManager.Instance._Player.GetComponent<Player>().GetClass.Type;
+        if (T == CHESSPIECE.QUEEN || T == CHESSPIECE.TOWER || T == CHESSPIECE.BISHOP)
+            return true;
+
+        return false;
+    }
 
     protected void CheckforDanger()
     {
