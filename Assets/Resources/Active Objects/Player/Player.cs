@@ -19,7 +19,7 @@ public class Player : BattlePiece, IKillable
     private bool _invincibleFrames = false;
 
     public AnimationCurve InvincibilityCurve;
-
+   
     public int MaxLife = 3;
 
     private static Player _instance;
@@ -62,6 +62,8 @@ public class Player : BattlePiece, IKillable
 
         Camera.main.GetComponent<CameraController>().Shake();
 
+        StartCoroutine(Camera.main.GetComponent<Flash>().CFlash());
+
         StartCoroutine(HitStun());
         StartCoroutine(CIFrames());
     }
@@ -96,7 +98,6 @@ public class Player : BattlePiece, IKillable
     }
     #endregion
 
-
     [Header("Debug")]
     public List<string> Classes;
     public int cur = 0;
@@ -128,6 +129,8 @@ public class Player : BattlePiece, IKillable
 
     void Update()
     {
+        base.Update();
+
         // DEBUG
         //if (Input.GetKeyDown(KeyCode.Alpha5))
         //    Die();
@@ -170,9 +173,6 @@ public class Player : BattlePiece, IKillable
         {
             _class.Attack(_controller.RAS);
         }
-
-        if (Stamina < 100 && CanRegen)
-            Stamina += Time.deltaTime * StaminaRegen;
 
         // Verifica se morreu
         if(Life <= 0)

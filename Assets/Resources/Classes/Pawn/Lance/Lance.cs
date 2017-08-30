@@ -42,6 +42,9 @@ public class Lance : MonoBehaviour, IAttack
             var obj = hit.collider.GetComponent<IKillable>();
             if (obj != null && _damage && hit.collider.GetComponent<BattlePiece>() != Piece)
             {
+                if (hit.collider.GetComponent<Enemy>() && Piece.GetComponent<Enemy>())
+                    continue;
+
                 obj.TakeDamage(Direction);
                 _damage = false;
             }

@@ -42,6 +42,9 @@ public class Arrow : MonoBehaviour, IAttack
             var obj = hit.collider.GetComponent<IKillable>();
             if (obj != null && hit.collider.GetComponent<BattlePiece>() != _piece)
             {
+                if (hit.collider.GetComponent<Enemy>() && _piece.GetComponent<Enemy>())
+                    continue;
+
                 obj.TakeDamage(_direction);
 
                 // Tira as particulas do parent

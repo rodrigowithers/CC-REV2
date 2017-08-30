@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InvincibleDash : Hability
 {
@@ -8,15 +9,25 @@ public class InvincibleDash : Hability
     public float Speed = 10;
 
     public bool Dodging = false;
-    public float InvincibleTime = 2.0f;
+    public float InvincibleTime = 3;
     Color originalcolor = new Color();
 
     private GameObject _shield;
     private GameObject _explosion;
 
+    private GameObject _canvas;
+    private Image _chargeBar;
+    private float _charge = 0.0f;
+    private int _chargeCount = 3;
+
     public InvincibleDash(Piece piece) : base(piece)
     {
         Cost = 30;
+
+        // Instancia o Canvas
+        _canvas = Object.Instantiate(Resources.Load<GameObject>("Classes/Pawn/InvincibleDash Canvas"), _piece.transform, false);
+        _chargeBar = _canvas.transform.GetChild(1).GetComponent<Image>();
+        _chargeBar.fillAmount = 0;
     }
 
     public override bool Use()
@@ -85,8 +96,10 @@ public class InvincibleDash : Hability
             yield return null;
         }
 
+        _charge += (1.0f / _chargeCount);
+        _chargeBar.fillAmount = _charge;
 
-        if (!_piece.IsInvincible)
+        if (!_piece.IsInvincible && _charge >= 1.0f)
             _piece.StartCoroutine(CInvincibleTime());
 
         _piece.CanMove = true;
@@ -110,7 +123,13 @@ public class InvincibleDash : Hability
             if (obj != null && hit.collider.gameObject != _piece.gameObject)
             {
                 var dir = (hit.collider.transform.position - _piece.transform.position).normalized;
-                obj.TakeDamage(dir);
+                obj.TakeDamage(dir, 10);
+            }
+
+            var atk = hit.collider.GetComponent<IAttack>();
+            if(atk != null)
+            {
+                Object.Destroy(hit.collider.gameObject);
             }
         }
 
@@ -120,6 +139,9 @@ public class InvincibleDash : Hability
 
     IEnumerator CInvincibleTime()
     {
+        _charge = 0;
+        _chargeBar.fillAmount = _charge;
+
         _piece.SetColor(Color.white);
 
         _piece.IsInvincible = true;
@@ -129,6 +151,9 @@ public class InvincibleDash : Hability
         _piece.Speed = 200;
 
         var particles = Object.Instantiate(_shield, _piece.transform, false);
+
+        var ps = particles.GetComponent<ParticleSystem>().emission.rateOverTime;
+        ps.constant = 0;
 
         float time = 0;
         int counter = 0;
@@ -146,8 +171,9 @@ public class InvincibleDash : Hability
                 var obj = hit.collider.GetComponent<IAttack>();
                 if (obj != null && hit.collider.GetComponent<Lance>().Piece.gameObject != _piece.gameObject)
                 {
+                    ps.constant += 10;
+
                     counter++;
-                    time += 0.5f;
                     break;
                 }
             }
@@ -162,17 +188,15 @@ public class InvincibleDash : Hability
         else
             _piece.SetColor(Color.white);
 
-        _piece.IsInvincible = false;
+        Object.Destroy(particles);
 
         if (counter > 1)
         {
-            yield return new WaitForSeconds(0.5f);
-            Explode(Mathf.Max(3, counter));
+            //Explode();
         }
+
         _piece.Speed = oldSpeed;
-
-        Object.Destroy(particles);
-
+        _piece.IsInvincible = false;
         yield return null;
     }
 

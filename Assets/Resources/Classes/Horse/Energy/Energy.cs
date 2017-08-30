@@ -87,6 +87,9 @@ public class Energy : MonoBehaviour, IAttack
             var obj = hit.collider.GetComponent<IKillable>();
             if (obj != null && hit.collider.GetComponent<BattlePiece>() != _piece)
             {
+                if (hit.collider.GetComponent<Enemy>() && _piece.GetComponent<Enemy>())
+                    continue;
+
                 var dir = hit.transform.position - transform.position;
                 obj.TakeDamage(dir);
 

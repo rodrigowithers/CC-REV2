@@ -24,10 +24,12 @@ public class Sword : MonoBehaviour, IAttack
             return;
         }
         var obj = collision.GetComponent<IKillable>();
-        if(obj != null && _damage && collision.GetComponent<BattlePiece>() != _piece)
+        if(obj != null && collision.GetComponent<BattlePiece>() != _piece)
         {
+            if (collision.GetComponent<Enemy>() && _piece.GetComponent<Enemy>())
+                return;
+
             obj.TakeDamage(Direction);
-            _damage = false;
         }
     }
 

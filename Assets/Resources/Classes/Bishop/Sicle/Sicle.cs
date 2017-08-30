@@ -54,6 +54,9 @@ public class Sicle : MonoBehaviour, IAttack
                 var obj = hit.collider.GetComponent<IKillable>();
                 if (obj != null && _damage && hit.collider.GetComponent<BattlePiece>() != _piece)
                 {
+                    if (hit.collider.GetComponent<Enemy>() && _piece.GetComponent<Enemy>())
+                        continue;
+
                     var dir = (Parent.position - transform.position).xy().normalized;
 
                     obj.TakeDamage(dir);

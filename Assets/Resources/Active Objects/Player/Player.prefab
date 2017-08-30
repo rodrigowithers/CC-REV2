@@ -29,6 +29,7 @@ GameObject:
   - component: {fileID: 199028744145505844}
   - component: {fileID: 114550999977054538}
   - component: {fileID: 114414014595737968}
+  - component: {fileID: 114910981864299626}
   m_Layer: 11
   m_Name: Player
   m_TagString: Player
@@ -43,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1313217460558118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.22, y: 11.2, z: 0}
+  m_LocalPosition: {x: 0, y: -6.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -149,11 +150,11 @@ MonoBehaviour:
   Direction: {x: 0, y: 0}
   Speed: 0
   IsInvincible: 0
-  Life: 2
+  Life: 3
   Stamina: 100
   StaminaRegen: 20
   AttackCost: 20
-  Starting: Pawn_Normal
+  Starting: Queen_Normal
   InvincibilityCurve:
     serializedVersion: 2
     m_Curve:
@@ -175,6 +176,18 @@ MonoBehaviour:
   MaxLife: 3
   Classes: []
   cur: 0
+--- !u!114 &114910981864299626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313217460558118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42b1c309b8deb3489b82b72f3f5dff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Precision: 100
 --- !u!198 &198932999539963272
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -232,7 +245,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 897860837
+  randomSeed: 478066718
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3332,9 +3345,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1314317821
+  m_SortingLayer: 1
+  m_SortingOrder: 100
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -3383,7 +3396,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1314317821
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 81
   m_Sprite: {fileID: 21300000, guid: e1a10de67e31fce41be0619c2986d16c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

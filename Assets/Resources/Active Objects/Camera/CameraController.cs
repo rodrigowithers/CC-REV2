@@ -14,6 +14,9 @@ public class CameraController : MonoBehaviour
 
     private bool _changingTarget = false;
     private bool _shaking = false;
+
+    private bool _zooming = false;
+
     private bool GridCreated = false;
 
     void Start()
@@ -45,6 +48,70 @@ public class CameraController : MonoBehaviour
             return;
 
         StartCoroutine(CShake(multiplier));
+    }
+
+    public void Zoom(Vector2 position)
+    {
+        if (_zooming)
+            return;
+
+        StartCoroutine(CZoom(position));
+    }
+
+    private IEnumerator CZoom(Vector2 position)
+    {
+        _zooming = true;
+
+        Time.timeScale = 0.1f;
+        var time = 0.0f;
+
+        Camera c = Camera.main;
+
+        var oldPos = transform.position;
+        var oldSize = c.orthographicSize;
+        var newSize = 9.0f;
+
+        var speed = 0.5f;
+
+        // Indo
+
+        while(time < 1.0f)
+        {
+            // Lerp da posição
+            transform.position = Vector3.Lerp(transform.position, position.xyz(transform.position), time);
+
+            // Lerp do tamanho
+            c.orthographicSize = Mathf.Lerp(c.orthographicSize, newSize, time);
+
+            time += Time.unscaledDeltaTime * speed;
+
+            yield return null;
+        }
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        // Voltando
+
+        time = 0.0f;
+        while (time < 1.0f)
+        {
+            // Lerp da posição
+            transform.position = Vector3.Lerp(transform.position, oldPos, time);
+
+            // Lerp do tamanho
+            c.orthographicSize = Mathf.Lerp(c.orthographicSize, oldSize, time);
+
+            time += Time.unscaledDeltaTime * speed * 2;
+
+            yield return null;
+        }
+
+        c.orthographicSize = oldSize;
+
+        _zooming = false;
+
+        Time.timeScale = 1.0f;
+        yield return null;
     }
 
     private IEnumerator CShake(float multiplier)
@@ -109,7 +176,7 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_changingTarget)
+        if (_changingTarget || _zooming)
             return;
 
         if (_target == null)

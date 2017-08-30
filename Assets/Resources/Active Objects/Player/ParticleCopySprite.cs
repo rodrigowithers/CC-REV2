@@ -25,5 +25,7 @@ public class ParticleCopySprite : MonoBehaviour
     {
         var mat = _particleSystem.GetComponent<ParticleSystemRenderer>().material;
         mat.mainTexture = _spriteRenderer.sprite.texture;
+
+        _particleSystem.GetComponent<ParticleSystemRenderer>().sortingOrder = _spriteRenderer.sortingOrder;
     }
 }

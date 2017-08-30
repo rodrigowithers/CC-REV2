@@ -131,9 +131,10 @@ public class BattlePiece : Piece, IAttacker, IKillable
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
-
+        if (Stamina < 100 && CanRegen)
+            Stamina += Time.deltaTime * StaminaRegen;
     }
 
     public IEnumerator CRecoverAttack()

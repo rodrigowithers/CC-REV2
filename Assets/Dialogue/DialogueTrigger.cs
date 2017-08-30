@@ -29,7 +29,17 @@ public class DialogueTrigger : MonoBehaviour
         if (!enabled)
             return;
 
-        //Time.timeScale = 0.0f;
+        if (Level.Instance.Completed)
+        {
+            _dialogueBox.Dialogues = Dialogues;
+
+            foreach (var dialogue in _dialogueBox.Dialogues)
+            {
+                dialogue.EndOfDialogueEvent.Invoke();
+            }
+        
+            return;
+        }
 
         _dialogueBox.Set(true);
         _dialogueBox.Dialogues = Dialogues;

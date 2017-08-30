@@ -50,6 +50,12 @@ public class Unit : MonoBehaviour
 
         while (main_script.Use_Path && following)
         {
+            // Checa se pode mover
+            if (!main_script.CanMove)
+            {
+                yield break;
+            }
+
             if (path.turnBoundaries.Length != 0)
             {
                 //Debug.Log("path size" + path.turnBoundaries.Length);

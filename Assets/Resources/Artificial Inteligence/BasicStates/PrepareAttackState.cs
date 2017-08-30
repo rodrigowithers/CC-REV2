@@ -13,6 +13,14 @@ public class PrepareAttackState : State
     public override void Enter(Piece piece)
     {
         base.Enter(piece);
+
+        // Ve se tem stamina pra atacar
+        if(main_script.Stamina < main_script.AttackCost)
+        {
+            StateManager.Instance.AdjustFollow(piece.GetComponent<Enemy>());
+            return;
+        }
+
         atkarea = main_script.CurrentAtkArea;
 
         main_script.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
@@ -23,6 +31,7 @@ public class PrepareAttackState : State
     {
         if (finished )
         {
+            // Ataca
             main_script.GetClass.Attack(main_script.EnemyDirPlayer());
             main_script.StartCoroutine( CQuittingAttack());
         }

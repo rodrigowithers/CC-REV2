@@ -101,6 +101,7 @@
     <Compile Include="Assets\Managers\CanvasManager.cs" />
     <Compile Include="Assets\Managers\EnemyManager.cs" />
     <Compile Include="Assets\Managers\GameManager.cs" />
+    <Compile Include="Assets\Managers\Level.cs" />
     <Compile Include="Assets\Managers\MessageManager.cs" />
     <Compile Include="Assets\Managers\PartyManager.cs" />
     <Compile Include="Assets\Managers\PieceManager.cs" />
@@ -108,10 +109,12 @@
     <Compile Include="Assets\Managers\SceneManager.cs" />
     <Compile Include="Assets\Managers\StateManager.cs" />
     <Compile Include="Assets\Managers\WaveManager.cs" />
+    <Compile Include="Assets\OrderInLayerByPosition.cs" />
     <Compile Include="Assets\Resources\Active Objects\BattlePiece.cs" />
     <Compile Include="Assets\Resources\Active Objects\Camera\CameraController.cs" />
     <Compile Include="Assets\Resources\Active Objects\Camera\CanvasMenuPanel.cs" />
     <Compile Include="Assets\Resources\Active Objects\Camera\CanvasScenarioPanel.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Camera\Flash.cs" />
     <Compile Include="Assets\Resources\Active Objects\Enemies\Enemy.cs" />
     <Compile Include="Assets\Resources\Active Objects\Enemies\StaminaParticles.cs" />
     <Compile Include="Assets\Resources\Active Objects\Enemies\Tower\Enemy_Tower.cs" />
@@ -203,6 +206,8 @@
     <None Include="Assets\Resources\Documents\SceneInfo.xml" />
     <None Include="Assets\Resources\Documents\TowerBossDialogue.xml" />
     <None Include="Assets\Resources\Documents\TowerBossDialogue2.xml" />
+    <None Include="Assets\Shaders\Flash\Flash.shader" />
+    <None Include="Assets\Shaders\Ground\Ground.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -32,6 +32,9 @@ public class CannonBall : MonoBehaviour, IAttack
             var obj = hit.collider.GetComponent<IKillable>();
             if (obj != null)
             {
+                if (hit.collider.GetComponent<Enemy>() && _piece.GetComponent<Enemy>())
+                    continue;
+
                 var dir = (hit.collider.transform.position - transform.position).normalized;
                 obj.TakeDamage(dir);
             }

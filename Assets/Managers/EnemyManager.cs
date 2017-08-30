@@ -53,6 +53,14 @@ public class EnemyManager : MonoBehaviour
     }
 
 
+    public int EnemyCount
+    {
+        get
+        {
+            return _enemyList.Count;
+        }
+    }
+
     // Use this for initialization
     void Start()
     {

@@ -59,8 +59,12 @@ public class Enemy : BattlePiece, IKillable
 
     public virtual void Die()
     {
+        // Checa se é o ultimo inimigo, se for, da zoom nele
+        if (EnemyManager.Instance.EnemyCount == 1)
+            Camera.main.GetComponent<CameraController>().Zoom(transform.position.xy());
+
         // Adiciona energia de troca ao jogador
-        Player.Instance.GetComponent<CharacterSwitch>().Energy += 10;
+        Player.Instance.GetComponent<CharacterSwitch>().Energy += UnityEngine.Random.Range(20, 30);
 
         // Retorna stamina ao jogador
         Player.Instance.GetComponent<Player>().Stamina = 100;
@@ -100,7 +104,7 @@ public class Enemy : BattlePiece, IKillable
 
     void Update()
     {
-
+        base.Update();
     }
 
     //fução virtual, recebe override de todos os filhos para que estes possam 
