@@ -35,7 +35,7 @@ public class Unit : MonoBehaviour
 
     public void OnPathFound(Vector2[] waypoints, bool pathsucessful)
     {
-        if (pathsucessful && waypoints != null)
+        if (pathsucessful && waypoints != null && main_script.CanMove)
         {
             path = new Path(waypoints, transform.position, turnSpd);
             StopCoroutine(FollowPath());
@@ -62,7 +62,7 @@ public class Unit : MonoBehaviour
                 //Debug.Log("path index " + pathindex);
 
 
-                while (path.turnBoundaries[pathindex].HasCrossedLine(transform.position))
+                while (path.turnBoundaries[pathindex].HasCrossedLine(transform.position) && main_script.CanMove)
                 {
                     if (pathindex == path.finishLineIndex)
                     {
@@ -92,8 +92,7 @@ public class Unit : MonoBehaviour
                     main_script.Move(dir);
                 }
             }
-
-
+            
             yield return null;
         }
     }

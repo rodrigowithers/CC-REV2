@@ -121,7 +121,7 @@
     <Compile Include="Assets\Resources\Active Objects\Piece.cs" />
     <Compile Include="Assets\Resources\Active Objects\Player\Character Switch\ChangePanel.cs" />
     <Compile Include="Assets\Resources\Active Objects\Player\Character Switch\CharacterSwitch.cs" />
-    <Compile Include="Assets\Resources\Active Objects\Player\Health\HealthManager.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Player\HUD\HealthManager.cs" />
     <Compile Include="Assets\Resources\Active Objects\Player\ParticleCopySprite.cs" />
     <Compile Include="Assets\Resources\Active Objects\Player\Player.cs" />
     <Compile Include="Assets\Resources\Active Objects\Player\PlayerController.cs" />
@@ -135,7 +135,10 @@
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\FollowState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\FindSafePath.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\FollowPathState.cs" />
+    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\BishopHuntState.cs" />
+    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\HorseHuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\HuntState.cs" />
+    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\KingHuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\PawnHuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\QueenHuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\TowerHuntState.cs" />
@@ -145,9 +148,6 @@
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\WanderState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\NormalStates\DodgeState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\NormalStates\NormalFollow.cs" />
-    <Compile Include="Assets\Resources\Artificial Inteligence\TowerStates\T_DodgeState.cs" />
-    <Compile Include="Assets\Resources\Artificial Inteligence\TowerStates\T_FleeState.cs" />
-    <Compile Include="Assets\Resources\Artificial Inteligence\TowerStates\T_FollowState.cs" />
     <Compile Include="Assets\Resources\Classes\AttackArea\AttackArea.cs" />
     <Compile Include="Assets\Resources\Classes\AttackArea\AttackAreaFollow.cs" />
     <Compile Include="Assets\Resources\Classes\AttackArea\AttackAreaStay.cs" />
@@ -156,6 +156,7 @@
     <Compile Include="Assets\Resources\Classes\Bishop\Bishop_Normal.cs" />
     <Compile Include="Assets\Resources\Classes\Bishop\Bishop_NormalAttackArea.cs" />
     <Compile Include="Assets\Resources\Classes\Bishop\RopeDash.cs" />
+    <Compile Include="Assets\Resources\Classes\Bishop\RopePull.cs" />
     <Compile Include="Assets\Resources\Classes\Bishop\Sicle\Sicle.cs" />
     <Compile Include="Assets\Resources\Classes\Class.cs" />
     <Compile Include="Assets\Resources\Classes\Dash.cs" />

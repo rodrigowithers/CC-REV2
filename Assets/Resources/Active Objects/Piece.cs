@@ -74,6 +74,16 @@ public class Piece : MonoBehaviour
         MovementDirection = Direction.normalized;
     }
 
+    public void StopMoving()
+    {
+        CanMove = false;
+        _rigidBody.velocity = Vector2.zero;
+    }
+    public void ResumeMove()
+    {
+        CanMove = true;
+    }
+
     protected void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();

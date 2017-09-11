@@ -36,13 +36,16 @@ public class CanvasManager : MonoBehaviour
 
     private Player _player;
 
-    [Header("Stamina")]
-    public Image StaminaBar;
+    [Header("Health")]
+    public Image HealthBar;
+
+    [Header("Energy")]
+    public Image EnergyBar;
     public Color HabilityReady;
     public Color HabilityNotReady;
 
-    [Header("Attack")]
-    public Image AttackBar;
+    [Header("Stamina")]
+    public Image StaminaBar;
     public Color AttackReady;
     public Color AttackNotReady;
 
@@ -65,46 +68,59 @@ public class CanvasManager : MonoBehaviour
         }
     }
 
+    private void UpdateEnergyBar()
+    {
+        if (EnergyBar == null)
+            return;
+
+        // Pega a Stamina atual do player
+        var energy = _player.GetComponent<HabilityManager>().Energy;
+
+        EnergyBar.fillAmount = energy / 100;
+
+        // Vê se a stamina atual é suficiente para executar a habilidade atual
+        if (energy >= _player.GetComponent<HabilityManager>().Hability.Cost)
+        {
+            // Seta a cor para Amarelo
+            EnergyBar.color = HabilityReady;
+        }
+        else
+        {
+            // Seta a cor para Cinza
+            EnergyBar.color = HabilityNotReady;
+        }
+    }
+
     private void UpdateStaminaBar()
     {
         if (StaminaBar == null)
             return;
 
-        // Pega a Stamina atual do player
-        var stamina = _player.GetComponent<HabilityManager>().Stamina;
-
-        StaminaBar.fillAmount = stamina / 100;
-
-        // Vê se a stamina atual é suficiente para executar a habilidade atual
-        if (stamina >= _player.GetComponent<HabilityManager>().Hability.Cost)
-        {
-            // Seta a cor para Amarelo
-            StaminaBar.color = HabilityReady;
-        }
-        else
-        {
-            // Seta a cor para Cinza
-            StaminaBar.color = HabilityNotReady;
-        }
-    }
-
-    private void UpdateAttack()
-    {
-        if (AttackBar == null)
-            return;
-
         var attack = _player.Stamina;
-        AttackBar.fillAmount = attack / 100;
+        StaminaBar.fillAmount = attack / 100;
+
+        Debug.Log(attack / 100);
 
         if (attack >= _player.AttackCost)
         {
-            AttackBar.color = AttackReady;
+            StaminaBar.color = AttackReady;
         }
         else
         {
-            AttackBar.color = AttackNotReady;
+            StaminaBar.color = AttackNotReady;
         }
     }
+
+    private void UpdateHealthBar()
+    {
+        if (HealthBar == null)
+            return;
+
+        var health = _player.Life;
+        StaminaBar.fillAmount = health / 100;
+    }
+
+
 
     private void UpdateScore()
     {
@@ -143,8 +159,10 @@ public class CanvasManager : MonoBehaviour
         //    transform.GetChildOfType<CanvasScenarioPanel>().gameObject.SetActive(true);
         //}
 
+        UpdateEnergyBar();
         UpdateStaminaBar();
-        UpdateAttack();
+        UpdateHealthBar();
+
         UpdateScore();
     }
 }

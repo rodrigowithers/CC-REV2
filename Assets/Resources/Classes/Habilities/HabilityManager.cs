@@ -7,7 +7,7 @@ public class HabilityManager : MonoBehaviour
     private Piece _piece;
 
     public Hability Hability;
-    public float Stamina = 100;
+    public float Energy = 100;
 
     public float StaminaRecoverSpeed = 1;
 
@@ -31,7 +31,7 @@ public class HabilityManager : MonoBehaviour
 
     public bool HasStamina()
     {
-        if (Hability.Cost <= Stamina)
+        if (Hability.Cost <= Energy)
             return true;
         return false;
     }
@@ -45,13 +45,13 @@ public class HabilityManager : MonoBehaviour
 
     public bool Use()
     {
-        if (Hability == null || Stamina < Hability.Cost)
+        if (Hability == null || Energy < Hability.Cost)
             return false;
 
         if (Hability.Use())
         {
             CanRecover = false;
-            Stamina -= Hability.Cost;
+            Energy -= Hability.Cost;
             return true;
         }
         return false;
@@ -69,9 +69,9 @@ public class HabilityManager : MonoBehaviour
 
     void Update()
     {
-        if(Stamina < 100 && CanRecover)
+        if(Energy < 100 && CanRecover)
         {
-            Stamina += StaminaRecoverSpeed * Time.deltaTime;
+            Energy += StaminaRecoverSpeed * Time.deltaTime;
         }
     }
 }

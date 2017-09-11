@@ -28,8 +28,6 @@ public class CharacterSwitch : MonoBehaviour
             ChangeCharacter();
 
         // Atualiza o texto
-        EnergyText.text = "Next Life: " + (int)Energy + "/100";
-
         if (Energy >= 100)
         {
             Energy = 0;

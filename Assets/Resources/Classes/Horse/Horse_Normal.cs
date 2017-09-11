@@ -34,6 +34,8 @@ public class Horse_Normal : Class
         }
     }
 
+    public float AttackCost = 45;
+
     public override void Attack(Vector2 direction)
     {
         // Troca a Sprite para a Sprite de um Pawn
@@ -66,7 +68,7 @@ public class Horse_Normal : Class
                 if (CanAttack)
                 {
                     // Reduz a Stamina do jogador
-                    GetComponent<BattlePiece>().Stamina -= GetComponent<BattlePiece>().AttackCost;
+                    GetComponent<BattlePiece>().Stamina -= AttackCost;
                     GetComponent<BattlePiece>().CanRegen = false;
 
                     StartCoroutine(area.GetComponent<AttackArea>().CAttack());

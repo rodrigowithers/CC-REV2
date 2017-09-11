@@ -36,7 +36,7 @@ public class Scene : MonoBehaviour, IScene, IStopDash
 
         // Restaura stamina e habilidade do Player
         Player.Instance.GetComponent<Player>().Stamina = 100;
-        Player.Instance.GetComponent<HabilityManager>().Stamina = 100;
+        Player.Instance.GetComponent<HabilityManager>().Energy = 100;
 
         // Executa o evento de entrada
         SceneEnterEvent.Invoke();

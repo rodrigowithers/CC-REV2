@@ -106,6 +106,37 @@ public class BattlePiece : Piece, IAttacker, IKillable
         _canRegen = true;
     }
 
+    public AnimationCurve DamageCurve;
+
+
+    // Alterna entre a cor da sprite e branco
+    public IEnumerator CDamageFlash()
+    {
+        float time = 0.0f;
+
+        var oldColor = _renderer.color;
+
+        while (time < 1.0f)
+        {
+            var color = _renderer.color;
+
+            var percentage = DamageCurve.Evaluate(time);
+
+            var newR = Mathf.Lerp(color.r, 1.0f, percentage);
+            var newG = Mathf.Lerp(color.g, 1.0f, percentage);
+            var newB = Mathf.Lerp(color.b, 1.0f, percentage);
+
+            _renderer.color = new Color(newR, newG, newB, 1);
+
+            time += Time.deltaTime * 5.0f;
+            yield return null;
+        }
+
+        _renderer.color = oldColor;
+
+        yield return null;
+    }
+
     public void Attack()
     {
         throw new NotImplementedException();

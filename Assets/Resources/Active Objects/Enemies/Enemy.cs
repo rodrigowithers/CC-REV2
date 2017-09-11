@@ -13,11 +13,13 @@ public class Enemy : BattlePiece, IKillable
     public LEVEL Level;
     protected StateMachine statemachine;
     public bool Use_Path = true;
+    public bool Smart = false;
     #endregion
 
     public UnityEvent DieEvent;
-
     public GameObject StaminaParticles;
+
+    public AnimationCurve InvincibilityCurve;
 
     public StateMachine _StateMachine
     {
@@ -83,15 +85,18 @@ public class Enemy : BattlePiece, IKillable
             return;
         Life--;
 
-        // Empurra o corpo para traz
-        RigidBody.velocity = direction * force;
-
         if (Life <= 0)
         {
             Die();
         }
 
+        StartCoroutine(CDamageFlash());
+
+        CanMove = false;
         StartCoroutine(HitStun());
+
+        // Empurra o corpo para traz
+        RigidBody.velocity = direction * force;
     }
     public void Start()
     {

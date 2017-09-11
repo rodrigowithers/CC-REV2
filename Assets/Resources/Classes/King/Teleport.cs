@@ -31,7 +31,11 @@ public class Teleport : Hability
 
     private IEnumerator CTeleport()
     {
-        GameObject target = EnemyManager.Instance.ClosestEnemy(_piece.transform.position);
+        GameObject target = null;
+        if (_piece.GetComponent<Player>())
+            target = EnemyManager.Instance.ClosestEnemy(_piece.transform.position);
+        else if (_piece.GetComponent<Enemy>())
+            target = GameManager.Instance._Player;
         if (target == null)
             yield break;
 
@@ -51,8 +55,13 @@ public class Teleport : Hability
 
         _piece.CanMove = true;
 
-        _piece.transform.position = finalpos;
-        EnemyManager.Instance.ConfuseAllEnemies();
+        _piece.transform.position = finalpos;       
+
+
+        if (_piece.GetComponent<Player>())
+            EnemyManager.Instance.ConfuseAllEnemies();
+        else if (_piece.GetComponent<Enemy>())
+            _piece.GetComponent<Unit>().RequestNewPathTo(target);
 
         Object.Instantiate(_teleportOut, finalpos, Quaternion.identity);
 

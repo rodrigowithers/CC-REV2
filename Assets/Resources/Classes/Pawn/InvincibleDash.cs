@@ -17,8 +17,11 @@ public class InvincibleDash : Hability
 
     private GameObject _canvas;
     private Image _chargeBar;
+
     private float _charge = 0.0f;
     private int _chargeCount = 3;
+
+    private bool _invincible = false;
 
     public InvincibleDash(Piece piece) : base(piece)
     {
@@ -41,7 +44,7 @@ public class InvincibleDash : Hability
         if (Dodging || dir.magnitude < 0.5f)
             return false;
 
-        if(_shield == null || _explosion == null)
+        if (_shield == null || _explosion == null)
         {
             _shield = Resources.Load<GameObject>("Classes/Pawn/PawnShield");
             _explosion = Resources.Load<GameObject>("Classes/Pawn/PawnExplosion");
@@ -96,7 +99,9 @@ public class InvincibleDash : Hability
             yield return null;
         }
 
-        _charge += (1.0f / _chargeCount);
+        if (!_invincible)
+            _charge += (1.0f / _chargeCount);
+
         _chargeBar.fillAmount = _charge;
 
         if (!_piece.IsInvincible && _charge >= 1.0f)
@@ -127,7 +132,7 @@ public class InvincibleDash : Hability
             }
 
             var atk = hit.collider.GetComponent<IAttack>();
-            if(atk != null)
+            if (atk != null)
             {
                 Object.Destroy(hit.collider.gameObject);
             }
@@ -139,6 +144,8 @@ public class InvincibleDash : Hability
 
     IEnumerator CInvincibleTime()
     {
+        _invincible = true;
+
         _charge = 0;
         _chargeBar.fillAmount = _charge;
 
@@ -166,7 +173,7 @@ public class InvincibleDash : Hability
 
             // Circle Cast
             var hits = Physics2D.CircleCastAll(_piece.transform.position, 0.5f, Vector2.zero);
-            foreach (var hit  in hits)
+            foreach (var hit in hits)
             {
                 var obj = hit.collider.GetComponent<IAttack>();
                 if (obj != null && hit.collider.GetComponent<Lance>().Piece.gameObject != _piece.gameObject)
@@ -197,8 +204,8 @@ public class InvincibleDash : Hability
 
         _piece.Speed = oldSpeed;
         _piece.IsInvincible = false;
+        _invincible = false;
         yield return null;
     }
-
 
 }

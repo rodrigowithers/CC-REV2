@@ -21,16 +21,28 @@ public class FollowPathState : State
     public override void Execute(Piece piece)
     {
 
-        if ((player.transform.position - main_script.transform.position).magnitude <= 6)
-        {
-            // player ja chegou perto 
-            // muda de estado 
-            main_script._StateMachine.ChangeState(new TowerHuntState());
-        }
 
         // Cancela todas as corrotinas da unidade e inicia uma nova de perseguir o player
         unit.StopAllCoroutines();
-        unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position));
+
+        if (main_script.Smart)
+        {
+            if ((player.transform.position - main_script.transform.position).magnitude <= 6)
+            {
+                // player ja chegou perto 
+                // muda de estado 
+                main_script._StateMachine.ChangeState(new PawnHuntState());
+            }
+            unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position));
+        }
+        else
+        {
+            if (main_script.AtkAreaDistPlayer() <= 0.5f)
+            {
+                main_script._StateMachine.ChangeState(new PrepareAttackState());
+            }
+            unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position - (Vector3)main_script.AtkAreaToEnemy()));
+        }
 
         //CheckforDanger();
         base.Execute(piece);

@@ -42,7 +42,7 @@ public class TurretMode : Hability
             _oldAttackSpeed = _piece.GetComponent<Class>().AttackSpeed;
 
             _using = true;
-            _piece.GetComponent<HabilityManager>().Stamina -= _cost;
+            _piece.GetComponent<HabilityManager>().Energy -= _cost;
 
             // Seta as variáveis
             _piece.Speed = _turretSpeed;
@@ -78,9 +78,9 @@ public class TurretMode : Hability
     {
         while (_using)
         {
-            _piece.GetComponent<HabilityManager>().Stamina -= 0.5f;
+            _piece.GetComponent<HabilityManager>().Energy -= 0.5f;
 
-            if(_piece.GetComponent<HabilityManager>().Stamina <= 0)
+            if(_piece.GetComponent<HabilityManager>().Energy <= 0)
             {
                 _using = false;
 

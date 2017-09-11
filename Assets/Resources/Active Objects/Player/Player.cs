@@ -9,6 +9,8 @@ public class Player : BattlePiece, IKillable
 
     private Vector2 _moveInput;
 
+    public AnimationCurve InvincibilityCurve;
+
     [Header("Starting Class")]
     public string Starting;
 
@@ -17,8 +19,6 @@ public class Player : BattlePiece, IKillable
     [Header("Damage")]
 
     private bool _invincibleFrames = false;
-
-    public AnimationCurve InvincibilityCurve;
    
     public int MaxLife = 3;
 
@@ -55,10 +55,12 @@ public class Player : BattlePiece, IKillable
 
         EnemyManager.Instance.Combo = 0;
 
+        StartCoroutine(CDamageFlash());
+
         RigidBody.velocity = direction * force;
         Life--;
 
-        HealthManager.Instance.TookDamage();
+        //HealthManager.Instance.TookDamage(); Não usa mais o sistema antigo de Health
 
         Camera.main.GetComponent<CameraController>().Shake();
 
@@ -96,6 +98,7 @@ public class Player : BattlePiece, IKillable
         _invincibleFrames = false;
         yield return null;
     }
+
     #endregion
 
     [Header("Debug")]
