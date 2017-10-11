@@ -31,10 +31,11 @@ public class Arrow : MonoBehaviour, IAttack
         var hits = Physics2D.RaycastAll(transform.position, _direction / 5, 1);
         foreach (var hit in hits)
         {
-            if(hit.collider.GetComponent<IStopDash>() != null)
+            if (hit.collider.GetComponent<IStopDash>() != null)
             {
                 // Tira as particulas do parent
-                transform.GetChild(0).parent = null;
+                if (transform.GetChild(0) != null && transform.GetChild(0).parent != null)
+                    transform.GetChild(0).parent = null;
 
                 Destroy(this.gameObject);
             }

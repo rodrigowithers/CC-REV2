@@ -15,23 +15,21 @@ public class PawnHuntState : HuntState
         /////////////////////////////////////////////////////////////
         ///Regras para que o peão utilize a sua habilidade especial//
         /////////////////////////////////////////////////////////////
+        //base.Execute(piece);
 
-        if (main_script._Hability.HasStamina()) 
+        if (main_script._Hability.HasStamina())
         {
-            if(main_script.EnemyDistPlayer() < 5.0f && main_script.EnemyDistPlayer() > 3.0f)
+            if (main_script.EnemyDistPlayer() < 5.0f && main_script.EnemyDistPlayer() > 4.0f)
             {
                 main_script._Hability.Use();
             }
         }
-        else
-        {
+
             base.Execute(piece);
-        }
+        
 
 
         // Regras para após de o peao utilizar habiidade
-
-
 
     }
     public override void Exit(Piece piece)

@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour
 {
-
-    //TODO:
-    [HideInInspector]
     public string DialoguePath;
 
-    public Dialogue[] Dialogues;
+    public List<UnityEvent> Nodes;
+
+    private Dialogue[] _dialogues;
 
     private DialogueBox _dialogueBox;
 
@@ -29,23 +29,27 @@ public class DialogueTrigger : MonoBehaviour
         if (!enabled)
             return;
 
-        if (Level.Instance.Completed)
-        {
-            _dialogueBox.Dialogues = Dialogues;
 
-            foreach (var dialogue in _dialogueBox.Dialogues)
-            {
-                dialogue.EndOfDialogueEvent.Invoke();
-            }
+        /// TODO: Refazer isso
+        //if (Level.Instance.Completed)
+        //{
+        //    _dialogueBox.Dialogues = _dialogues;
+
+        //    foreach (var dialogue in _dialogueBox.Dialogues)
+        //    {
+        //        //dialogue.EndOfDialogueEvent.Invoke();
+        //    }
         
-            return;
-        }
+        //    return;
+        //}
 
         _dialogueBox.Set(true);
-        _dialogueBox.Dialogues = Dialogues;
+        _dialogueBox.Dialogues = _dialogues;
+        _dialogueBox.Nodes = Nodes;
+        _dialogueBox.Filename = DialoguePath;
         _dialogueBox.CurrentTrigger = this;
 
-        _dialogueBox.StartCoroutine(_dialogueBox.CDisplayText());
+        _dialogueBox.StartCoroutine(_dialogueBox.CExecuteNodes());
     }
 
     public void Exit()
@@ -57,5 +61,26 @@ public class DialogueTrigger : MonoBehaviour
     public void Start()
     {
         _dialogueBox = FindObjectOfType<DialogueBox>().GetComponent<DialogueBox>();
+        //LoadDialogues();
+
+        //foreach(var node in Nodes)
+        //{
+        //    if(node.GetPersistentMethodName(0) == "GetDialogue")
+        //    {
+                
+        //    }
+        //}
     }
+
+    private void LoadDialogues()
+    {
+        //// List<Dialogue> temp = JsonHelper.Instance.Retrieve_Conversation(DialoguePath);
+        //Dialogues = JsonHelper.Instance.Retrieve_Conversation(DialoguePath).ToArray();
+        //for (int i = 0;i< Dialogues.Length;i++)
+        //{
+        //    //Dialogues[i] = temp[i];
+        //    Dialogues[i].Speaking = Adjust_Speaker_Img(Dialogues[i].person);
+        //}
+    }
+
 }

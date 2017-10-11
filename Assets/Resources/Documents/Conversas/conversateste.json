@@ -1,0 +1,22 @@
+[
+  {
+    "index": 0,
+    "person": 2,
+    "string": [
+      { "s": "Eaew" },
+      { "s": "sou apenas um teste" },
+      { "s": "mas por favor me trate com carinho" }
+    ]
+  },
+  {
+    "index": 1,
+    "person": -1,
+    "string": 
+    [
+      { "s": "MAS QUE DROGA" },
+      { "s": "que que vc ta fazendo aqui porra" },
+      { "s": "Voce j� devia ter vencido esses lacaios ..." },
+      { "s": "Player ruim da poha" }
+    ]
+  }
+]

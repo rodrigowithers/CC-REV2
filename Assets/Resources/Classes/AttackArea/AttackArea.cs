@@ -68,6 +68,8 @@ public class AttackArea : MonoBehaviour
 
         _attacking = true;
 
+        yield return new WaitForSeconds(0.1f);
+
         var oldParent = transform.parent;
         var oldPos = transform.localPosition;
 

@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class RopePull : Hability
 {
-    public float Distance = 4;
-    public float Speed = 10;
+    int life_captured = 0;
 
     public bool Dodging = false;
 
-    GameObject _tiedEnemy;
-    private float _tiedTime = 2.0f;
+    GameObject _tiedTo = new GameObject();
+    private float _tiedTime = 3.0f;
 
     private GameObject _rope;
 
     public RopePull(Piece piece) : base(piece)
     {
-        Cost = 30;
+        Cost = 40;
         _piece = piece;
     }
 
@@ -32,64 +31,28 @@ public class RopePull : Hability
 
 
 
-        _piece.StartCoroutine(CDash(dir));
+        _piece.StartCoroutine(CChooseTarget());
         return true;
     }
 
 
-    IEnumerator CDash(Vector2 direction)
+    IEnumerator CChooseTarget()
     {
-        Dodging = true;
-        _piece.CanMove = false;
 
-        Vector2 finalPos = _piece.transform.position.xy() + direction * Distance;
-        Vector2 originalPos = _piece.transform.position.xy();
-
-
-        bool hitted = false;
-        float time = 0;
-        var pTime = 0.0f;
-
-        while (time < 1)
+        if (EnemyManager.Instance.HasEnemies)
         {
-            pTime++;
-            if (pTime >= 4)
-            {
-                pTime = 0;
-                _piece.GetComponent<ParticleSystem>().Emit(1);
-            }
+            Vector3 pos = GameManager.Instance._Player.transform.position;
+            _tiedTo = EnemyManager.Instance.ClosestEnemyOtherThan(pos,_piece.gameObject);
 
-            // Raycast para ver se bateu em algo
-            Debug.DrawRay(_piece.transform.position.xy() + direction, direction, Color.red);
+            if (_tiedTo.GetComponent<Enemy>().Life < 3)
+                _tiedTo.GetComponent<Enemy>().Life++;
 
-            if (!hitted)
-            {
-                var hits = Physics2D.CircleCastAll(_piece.transform.position.xy(), 1, Vector2.zero);
-                foreach (var hit in hits)
-                {
-                    if (hit.collider.GetComponent<Enemy>() && hit.collider.tag != "Player")
-                    {
-                        _tiedEnemy = hit.collider.gameObject;
-
-                        hitted = true;
-                    }
-                }
-            }
-
-            if (!TryLerp(originalPos, finalPos, time))
-                break;
-
-            time += 0.01f * Speed;
-            yield return null;
+            _piece.StartCoroutine(CStayTied());
         }
-
-        _piece.CanMove = true;
-        Dodging = false;
-
         yield return null;
     }
 
-    IEnumerator CTimerOut()
+    IEnumerator CStayTied()
     {
         if (_rope == null)
         {
@@ -97,36 +60,51 @@ public class RopePull : Hability
             _rope = Resources.Load<GameObject>("Classes/Bishop/Rope");
         }
 
-        GameObject obj = Object.Instantiate(_rope);
+        GameObject obj = Object.Instantiate(_rope,_piece.transform);
+        obj.name = "Rope";
+        Debug.Log(obj.transform.position.y);
 
         var ln = obj.GetComponent<LineRenderer>();
         var time = 0.0f;
+        ln.positionCount = 2;
+        bool pull = true;
 
         while (time < _tiedTime)
         {
-           
-            
+            if (_piece == null || _tiedTo == null)
+            {
+                time = _tiedTime;
+                pull = false;
+                Object.Destroy(obj);
+            }
+            else
+            {
+                ln.SetPosition(0, _piece.transform.position);
+                ln.SetPosition(1, _tiedTo.transform.position);
+            }
 
             time += Time.deltaTime;
+
             yield return null;
         }
-
-
-
-        Finished();
-
-        Object.Destroy(obj);
+        if (pull)
+        {
+            PullCloser();
+        }
+        if (obj != null)
+        {
+            Object.Destroy(obj);
+        }
         yield return null;
     }
+    
 
-
-    void Finished()
+    void PullCloser()
     {
-        
-        
+        Vector2 dirtopull = (_piece.transform.position - _tiedTo.transform.position).normalized;
 
-
-       
+        _tiedTo.GetComponent<BattlePiece>().Pushback(dirtopull, 30);
     }
+
 
 }

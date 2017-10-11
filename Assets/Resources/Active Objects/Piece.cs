@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
+
 public class Piece : MonoBehaviour
 {
 
@@ -41,10 +44,50 @@ public class Piece : MonoBehaviour
         }
     }
 
+    private void UpdateAnimator(Vector2 input)
+    {
+        var anim = GetComponent<ClassAnimator>();
+        if (anim == null)
+            return;
+
+        // Usa o Movement Direction para dizer para onde a peça está se movendo
+        if (MovementDirection.y > 0)
+        {
+            if (MovementDirection.x > 0.6f)
+                anim.Play("WalkRight");
+            else if (MovementDirection.x < -0.6f)
+                anim.Play("WalkLeft");
+            else
+                anim.Play("WalkUp");
+        }
+
+        else if (MovementDirection.y < 0)
+        {
+            if (MovementDirection.x > 0.5f)
+                anim.Play("WalkRight");
+            else if (MovementDirection.x < -0.5f)
+                anim.Play("WalkLeft");
+            else
+                anim.Play("WalkDown");
+        }
+
+        else if (MovementDirection.x > 0)
+            anim.Play("WalkRight");
+
+        else if (MovementDirection.x < 0)
+            anim.Play("WalkLeft");
+
+        else
+            anim.Play("Idle");
+    }
+
     public void Move(Vector2 input)
     {
         if (!CanMove)
             return;
+
+        if (_rigidBody == null)
+            _rigidBody = GetComponent<Rigidbody2D>();
 
         if (input.magnitude < 0.5f)
         {
@@ -56,11 +99,16 @@ public class Piece : MonoBehaviour
         }
 
         MovementDirection = input.normalized;
+
+        UpdateAnimator(input);
     }
     public void Move()
     {
         if (!CanMove)
             return;
+
+        if (_rigidBody == null)
+            _rigidBody = GetComponent<Rigidbody2D>();
 
         if (Direction.magnitude < 0.5f)
         {
@@ -72,6 +120,7 @@ public class Piece : MonoBehaviour
         }
 
         MovementDirection = Direction.normalized;
+        UpdateAnimator(MovementDirection);
     }
 
     public void StopMoving()
@@ -97,7 +146,6 @@ public class Piece : MonoBehaviour
     public void NewDirection()
     {
         Direction = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
-        //Debug.Log(Direction);
     }
 
     private void Update()
@@ -105,14 +153,29 @@ public class Piece : MonoBehaviour
 
     }
 
+    public void Push(Vector2 dir , float mag = 10)
+    {
+        _rigidBody.AddForce(dir*mag);
+    }
 
     public void SetColor(Color c)
     {
+        if (_renderer == null)
+            return;
+
         _renderer.color = c;
     }
     public Color GetColor()
     {
+        if (_renderer == null)
+            _renderer = GetComponent<SpriteRenderer>();
+
         return _renderer.color;
+    }
+    public Vector2 RandomDirection()
+    {
+        Vector2 toreturn = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
+        return toreturn;
     }
 
 }

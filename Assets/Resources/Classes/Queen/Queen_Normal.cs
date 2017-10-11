@@ -89,10 +89,31 @@ public class Queen_Normal : Class
                         }
                         else
                         {
+                            if(_charge == 0)
+                            {
+                                if(area.position.y > transform.position.y)
+                                {
+                                    GetComponent<ClassAnimator>().Play("AttackUp", 0, true);
+                                }
+                                else if (area.position.y < transform.position.y)
+                                {
+                                    GetComponent<ClassAnimator>().Play("AttackDown", 0, true);
+                                }
+                                else if(area.position.x > transform.position.x)
+                                {
+                                    GetComponent<ClassAnimator>().Play("AttackRight", 0, true);
+                                }
+                                else if (area.position.x < transform.position.x)
+                                {
+                                    GetComponent<ClassAnimator>().Play("AttackLeft", 0, true);
+                                }
+                            }
+
                             Camera.main.GetComponent<CameraController>().Shake(Mathf.Min(0.1f, 0.01f + (_charge / 100)));
 
                             GetComponent<Piece>().Speed = 150;
                             _charge++;
+
                         }
                     }
                 }
@@ -108,8 +129,12 @@ public class Queen_Normal : Class
     public override void Start()
     {
         // Troca a Sprite para a Sprite de um Pawn
-        Sprite s = Resources.Load<Sprite>("Sprites/queen");
-        GetComponent<SpriteRenderer>().sprite = s;
+        //Sprite s = Resources.Load<Sprite>("Sprites/queen");
+        //GetComponent<SpriteRenderer>().sprite = s;
+
+        // Carrega o Animator
+        gameObject.AddComponent<ClassAnimator>();
+        gameObject.GetComponent<ClassAnimator>().LoadAnimations("Classes/Queen/Animations/QueenAnimationController");
 
         Type = CHESSPIECE.QUEEN;
         // Carreaga a Area de Ataque

@@ -65,48 +65,50 @@ public class CameraController : MonoBehaviour
         Time.timeScale = 0.1f;
         var time = 0.0f;
 
-        Camera c = Camera.main;
+        //Camera c = Camera.main;
 
-        var oldPos = transform.position;
-        var oldSize = c.orthographicSize;
-        var newSize = 9.0f;
+        yield return new WaitForSecondsRealtime(1.0f);
+            
+        //var oldPos = transform.position;
+        //var oldSize = c.orthographicSize;
+        //var newSize = 9.0f;
 
-        var speed = 0.5f;
+        //var speed = 0.5f;
 
         // Indo
 
-        while(time < 1.0f)
-        {
-            // Lerp da posição
-            transform.position = Vector3.Lerp(transform.position, position.xyz(transform.position), time);
+        //while(time < 1.0f)
+        //{
+        //    // Lerp da posição
+        //    //transform.position = Vector3.Lerp(transform.position, position.xyz(transform.position), time);
 
-            // Lerp do tamanho
-            c.orthographicSize = Mathf.Lerp(c.orthographicSize, newSize, time);
+        //    // Lerp do tamanho
+        //    //c.orthographicSize = Mathf.Lerp(c.orthographicSize, newSize, time);
 
-            time += Time.unscaledDeltaTime * speed;
+        //    time += Time.unscaledDeltaTime * speed;
 
-            yield return null;
-        }
+        //    yield return null;
+        //}
 
-        yield return new WaitForSecondsRealtime(0.5f);
+        //yield return new WaitForSecondsRealtime(0.5f);
 
         // Voltando
 
-        time = 0.0f;
-        while (time < 1.0f)
-        {
-            // Lerp da posição
-            transform.position = Vector3.Lerp(transform.position, oldPos, time);
+        //time = 0.0f;
+        //while (time < 1.0f)
+        //{
+        //    // Lerp da posição
+        //    //transform.position = Vector3.Lerp(transform.position, oldPos, time);
 
-            // Lerp do tamanho
-            c.orthographicSize = Mathf.Lerp(c.orthographicSize, oldSize, time);
+        //    // Lerp do tamanho
+        //    //c.orthographicSize = Mathf.Lerp(c.orthographicSize, oldSize, time);
 
-            time += Time.unscaledDeltaTime * speed * 2;
+        //    time += Time.unscaledDeltaTime * speed * 2;
 
-            yield return null;
-        }
+        //    yield return null;
+        //}
 
-        c.orthographicSize = oldSize;
+        //c.orthographicSize = oldSize;
 
         _zooming = false;
 

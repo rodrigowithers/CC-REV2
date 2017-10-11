@@ -39,7 +39,7 @@ public class Flash : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-            StartCoroutine(CFlash());
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //    StartCoroutine(CFlash());
     }
 }

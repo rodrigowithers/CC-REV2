@@ -1,0 +1,266 @@
+[
+    {
+        "index": 0,
+        "person": 1,
+        "string": [
+            {
+                "s": "This is an official notice by the king"
+            },
+            {
+                "s": "All knights should report to duty this saturday, September the 4th, for the official promotion of out new Champion, the Queen Veneria."
+            },
+            {
+                "s": "This event is mandatory, and tardiness will not be tolerated."
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "person": 6,
+        "string": [
+            {
+                "s": "I'm already late! I better run!"
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "person": 6,
+        "string": [
+            {
+                "s": "What is that up ahead?!"
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "person": -6,
+        "string": [
+            {
+                "s": "You!"
+            },
+            {
+                "s": "Are you with king Edgar?"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "person": 6,
+        "string": [
+            {
+                "s": "Of course!"
+            }
+        ]
+    },
+    {
+        "index": 5,
+        "person": -6,
+        "string": [
+            {
+                "s": "Then die!"
+            }
+        ]
+    },
+    {
+        "index": 6,
+        "person": 6,
+        "string": [
+            {
+                "s": "What?!"
+            }
+        ]
+    },
+    {
+        "index": 7,
+        "person": 6,
+        "string": [
+            {
+                "s": "I wonder why those knights attacked me..."
+            },
+            {
+                "s": "Shit, there are more up ahead..."
+            },
+            {
+                "s": "I better get ready to fight untill I can find the answer!"
+            }
+        ]
+    },
+    {
+        "index": 8,
+        "person": -6,
+        "string": [
+            {
+                "s": "You!"
+            }
+        ]
+    },
+    {
+        "index": 9,
+        "person": 6,
+        "string": [
+            {
+                "s": "Yeah, I get it, come!"
+            }
+        ]
+    },
+    {
+        "index": 10,
+        "person": 1,
+        "string": [
+            {
+                "s": "You there, Pawn!"
+            },
+            {
+                "s": "I saw you fighting the other knigts-"
+            }
+        ]
+    },
+    {
+        "index": 11,
+        "person": 6,
+        "string": [
+            {
+                "s": "Your Majesty, I was only defending myself!"
+            }
+        ]
+    },
+    {
+        "index": 12,
+        "person": 1,
+        "string": [
+            {
+                "s": "Then whose side are you on?"
+            }
+        ]
+    },
+    {
+        "index": 13,
+        "person": 6,
+        "string": [
+            {
+                "s": "Yours, obviously!"
+            }
+        ]
+    },
+    {
+        "index": 14,
+        "person": 1,
+        "string": [
+            {
+                "s": "Fantastic, then join me, I'll explain after we've delt with these deserters..."
+            }
+        ]
+    },
+    {
+        "index": 15,
+        "person": 0,
+        "string": [
+            {
+                "s": "King Edgar has joined your Party!"
+            }
+        ]
+    },
+    {
+        "index": 16,
+        "person": 1,
+        "string": [
+            {
+                "s": "Press E to open Character Select Screen"
+            }
+        ]
+    },
+    {
+        "index": 17,
+        "person": 1,
+        "string": [
+            {
+                "s": "The new Champion turned against the kingdom in the middle of the cerimony."
+            },
+            {
+                "s": "Turns out, she had the whole military on her side, except for you, apparently."
+            },
+            {
+                "s": "Now she's on her way to the castle, I need to go stop her while I still can."
+            }
+        ]
+    },
+    {
+        "index": 18,
+        "person": 6,
+        "string": [
+            {
+                "s": "The Champion? I always thought they were the best of the best, our greatests warriors..."
+            }
+        ]
+    },
+    {
+        "index": 19,
+        "person": 1,
+        "string": [
+            {
+                "s": "Indeed they were, 10 years ago..."
+            },
+            {
+                "s": "She was supposed to be the first new Champion in the last decade, seeing as all the old ones have left their services."
+            }
+        ]
+    },
+    {
+        "index": 20,
+        "person": 6,
+        "string": [
+            {
+                "s": "Can you defeat her?"
+            }
+        ]
+    },
+    {
+        "index": 21,
+        "person": 1,
+        "string": [
+            {
+                "s": "I fear not, but I must try..."
+            }
+        ]
+    },
+    {
+        "index": 22,
+        "person": -2,
+        "string": [
+            {
+                "s": "The kingdom is mine now, Edgar!"
+            },
+            {
+                "s": "You and your little Pawn friend have no choice but to conforme to the new Law, that is me!"
+            },
+            {
+                "s": "Towers, kill them!"
+            }
+        ]
+    },
+    {
+        "index": 23,
+        "person": 1,
+        "string": [
+            {
+                "s": "She ran away..."
+            },
+            {
+                "s": "Thank you knight, for standing by my side. But now, we must part ways."
+            },
+            {
+                "s": "Go back to your family, and leave this kingdom, I fear nowhere is safe anymore."
+            }
+        ]
+    },
+    {
+        "index": 24,
+        "person": 0,
+        "string": [
+            {
+                "s": "King Edgar has left your Party!"
+            }
+        ]
+    }
+]

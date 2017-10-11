@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Enemy_Tower : Enemy
 {
+    public string SpawnType = null;
+
     public override void Die()
     {
         base.Die();
     }
 
+    private void Awake()
+    {
+        if(SpawnType != null)
+            PieceManager.Instance.ChangeClass(this, System.Type.GetType(SpawnType));
+    }
     void Start()
     {
         base.Start();
@@ -24,7 +31,7 @@ public class Enemy_Tower : Enemy
 
     void Update()
     {
-
+        base.Update();
     }
 
     public override void VerifyLevel()

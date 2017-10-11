@@ -106,6 +106,32 @@ public static class ExtensionMethods
 
     #endregion
 
+    #region Animator Extensions
+
+    /// <summary>
+    /// NÃO FUNCIONA
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="value"></param>
+    public static void SetCurrentBool(this Animator animator, bool value)
+    {
+        var info = animator.GetCurrentAnimatorStateInfo(0);
+        var name = info.fullPathHash;
+
+        animator.SetBool(name, value);
+    }
+
+    public static void SetAllBools(this Animator animator, bool value)
+    {
+        foreach(AnimatorControllerParameter p in animator.parameters)
+        {
+            animator.SetBool(p.name, value);
+        }
+    }
+
+
+    #endregion
+
     #region List<GameObject> Extensions
 
     public static List<GameObject> Invert(this List<GameObject> list)

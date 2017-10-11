@@ -30,11 +30,7 @@ public class FollowState : State {
         //}
 
         // Checa se vai dar ruim
-       if(CheckForAreaDangers())
-        {
-            Debug.Log("Danger Ahead");
-            main_script._StateMachine.ChangeState(new AvoidDangerState());
-        }
+
 
         base.Execute(piece);
     }
@@ -43,11 +39,6 @@ public class FollowState : State {
         base.Exit(piece);
     }
 
-    IEnumerator CPromove()
-    {
-        yield return new WaitForSeconds(1);
-        PieceManager.Instance.PromoveEnemy(main_script);
-    }
 
 
     bool CheckForAreaDangers()

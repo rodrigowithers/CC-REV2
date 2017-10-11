@@ -25,6 +25,7 @@ public class Teleport : Hability
             return false;
 
         _piece.StartCoroutine(CTeleport());
+        _piece.GetComponent<ClassAnimator>().Play("HabilityDown", 0, true);
 
         return true;
     }

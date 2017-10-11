@@ -27,11 +27,7 @@ public class ConfusedState : State
     {
         if (finished)
         {
-            //main_script._isconfused = false;
-
-            StateManager.Instance.AdjustFollow(piece.GetComponent<Enemy>());
-            //main_script.StateMachine.ChangeState(new FollowState());
-
+            main_script._StateMachine.ChangeState(new FollowPathState());
         }
     }
     public override void Exit(Piece piece)

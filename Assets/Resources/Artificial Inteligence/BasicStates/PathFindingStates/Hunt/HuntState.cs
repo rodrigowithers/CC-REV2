@@ -34,8 +34,6 @@ public class HuntState : State
             main_script._StateMachine.ChangeState(new FollowPathState());
         }
         //CheckforDanger();
-
-        base.Execute(piece);
     }
     public override void Exit(Piece piece)
     {

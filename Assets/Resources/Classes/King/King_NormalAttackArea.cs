@@ -20,7 +20,6 @@ public class King_NormalAttackArea : AttackArea
         sword.transform.localRotation = Quaternion.FromToRotation(Vector3.up, dir);
 
         sword.GetComponent<Sword>()._piece = _parent.GetComponent<BattlePiece>();
-
         sword.GetComponent<Sword>().Direction = dir;
 
 

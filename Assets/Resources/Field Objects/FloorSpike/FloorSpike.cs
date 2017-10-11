@@ -12,7 +12,7 @@ public class FloorSpike : MonoBehaviour, IKillable
         Destroy(this.gameObject);
     }
 
-    public IEnumerator HitStun()
+    public IEnumerator HitStun(float time = 0.5f)
     {
         throw new NotImplementedException();
     }

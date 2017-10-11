@@ -169,21 +169,21 @@ public class InvincibleDash : Hability
         {
             time += Time.deltaTime;
 
-            DebugExtension.DebugCircle(_piece.transform.position, Vector3.forward, Color.yellow, 0.5f);
+            //DebugExtension.DebugCircle(_piece.transform.position, Vector3.forward, Color.yellow, 0.5f);
 
-            // Circle Cast
-            var hits = Physics2D.CircleCastAll(_piece.transform.position, 0.5f, Vector2.zero);
-            foreach (var hit in hits)
-            {
-                var obj = hit.collider.GetComponent<IAttack>();
-                if (obj != null && hit.collider.GetComponent<Lance>().Piece.gameObject != _piece.gameObject)
-                {
-                    ps.constant += 10;
+            //// Circle Cast
+            //var hits = Physics2D.CircleCastAll(_piece.transform.position, 0.5f, Vector2.zero);
+            //foreach (var hit in hits)
+            //{
+            //    var obj = hit.collider.GetComponent<IAttack>();
+            //    if (obj != null && hit.collider.GetComponent<Lance>().Piece.gameObject != _piece.gameObject)
+            //    {
+            //        ps.constant += 10;
 
-                    counter++;
-                    break;
-                }
-            }
+            //        counter++;
+            //        break;
+            //    }
+            //}
 
             yield return null;
         }

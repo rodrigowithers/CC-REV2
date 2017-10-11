@@ -22,7 +22,7 @@ public class Pawn_Normal : Class
     {
         get
         {
-            return 0.1f;
+            return 0.2f;
         }
     }
 
@@ -62,12 +62,31 @@ public class Pawn_Normal : Class
                 // Checa se pode atacar
                 if (CanAttack)
                 {
+                    // Toca a Animação
+                    if (area.position.x > transform.position.x) // Direita
+                    {
+                        if (area.position.y > transform.position.y) // Cima
+                            GetComponent<ClassAnimator>().Play("AttackUpRight", 0, true);
+                        else                                  // Baixo
+                            GetComponent<ClassAnimator>().Play("AttackDownRight", 0, true);
+                    }
+                    else                                      // Esquerda
+                    {
+                        if (area.position.y > transform.position.y) // Cima
+                            GetComponent<ClassAnimator>().Play("AttackUpLeft", 0, true);
+                        else                                  // Baixo
+                            GetComponent<ClassAnimator>().Play("AttackDownLeft", 0, true);
+                    }
+
                     // Reduz a Stamina do jogador
                     GetComponent<BattlePiece>().Stamina -= GetComponent<BattlePiece>().AttackCost;
                     GetComponent<BattlePiece>().CanRegen = false;
 
                     StartCoroutine(area.GetComponent<AttackArea>().CAttack());
                     CanAttack = false;
+
+                    GetComponent<BattlePiece>().StopMoving();
+                    GetComponent<BattlePiece>().hitStun(AttackDuration);
                 }
             }
             else
@@ -79,14 +98,20 @@ public class Pawn_Normal : Class
 
     void Start()
     {
-
-        //Debug.Log("Area de Ataque sendo instanciada");
+        // Carrega um ClassAnimator da classe novo
+        gameObject.AddComponent<ClassAnimator>();
+        gameObject.GetComponent<ClassAnimator>().LoadAnimations("Classes/Pawn/Animations/PawnAnimationController");
 
         // Troca a Sprite para a Sprite de um Pawn
-        Sprite s = Resources.Load<Sprite>("Sprites/pawn");
-        GetComponent<SpriteRenderer>().sprite = s;  
-
+        //Sprite s = Resources.Load<Sprite>("Sprites/pawn");
+        //GetComponent<SpriteRenderer>().sprite = s;  
         Type = CHESSPIECE.PAWN;
+
+        if (GetComponent<Enemy_Tower>() != null)
+        {
+            GetComponent<Enemy_Tower>()._Type = Type;
+        }
+
         // Carreaga a Area de Ataque
         this.AttackArea = Resources.Load<GameObject>("Classes/Pawn/NormalAttackArea");
 

@@ -1,0 +1,454 @@
+fileFormatVersion: 2
+guid: 9010af7674ee5704d961a24d09c46212
+timeCreated: 1505859296
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: peao_enemy-Sheet_0
+    21300002: peao_enemy-Sheet_1
+    21300004: peao_enemy-Sheet_2
+    21300006: peao_enemy-Sheet_3
+    21300008: peao_enemy-Sheet_4
+    21300010: peao_enemy-Sheet_5
+    21300012: peao_enemy-Sheet_6
+    21300014: peao_enemy-Sheet_7
+    21300016: peao_enemy-Sheet_8
+    21300018: peao_enemy-Sheet_9
+    21300020: peao_enemy-Sheet_10
+    21300022: peao_enemy-Sheet_11
+    21300024: peao_enemy-Sheet_12
+    21300026: peao_enemy-Sheet_13
+    21300028: peao_enemy-Sheet_14
+    21300030: peao_enemy-Sheet_15
+    21300032: peao_enemy-Sheet_16
+    21300034: peao_enemy-Sheet_17
+    21300036: peao_enemy-Sheet_18
+    21300038: peao_enemy-Sheet_19
+    21300040: peao_enemy-Sheet_20
+    21300042: peao_enemy-Sheet_21
+    21300044: peao_enemy-Sheet_22
+    21300046: peao_enemy-Sheet_23
+    21300048: peao_enemy-Sheet_24
+    21300050: peao_enemy-Sheet_25
+    21300052: peao_enemy-Sheet_26
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 40
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1840
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1840
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1840
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1656
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1656
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1472
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1472
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1288
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1288
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1104
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1104
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1104
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 920
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 920
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 920
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 736
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 736
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 552
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 552
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 552
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 368
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 184
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: peao_enemy-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 184
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

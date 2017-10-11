@@ -31,9 +31,11 @@ public class FollowPathState : State
             {
                 // player ja chegou perto 
                 // muda de estado 
-                main_script._StateMachine.ChangeState(new PawnHuntState());
+                main_script._StateMachine.ChangeState(new PawnHuntState());    
+            //StateManager.Instance.AdjustHunt(main_script);
             }
-            unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position));
+            else
+                unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position));
         }
         else
         {
@@ -52,11 +54,6 @@ public class FollowPathState : State
         base.Exit(piece);
     }
 
-    IEnumerator CPromove()
-    {
-        yield return new WaitForSeconds(1);
-        PieceManager.Instance.PromoveEnemy(main_script);
-    }
 
 
     bool CheckForAreaDangers()

@@ -7,39 +7,10 @@ public class BattlePiece : Piece, IAttacker, IKillable
 {
     protected Class _class;
     protected HabilityManager _hability;
-
     public int Life = 2;
-
+    public CHESSPIECE _Type;
     public float Stamina = 100;
     public float StaminaRegen = 20;
-
-    public void SetHability(string h)
-    {
-        //switch (h)
-        //{
-        //    case "Dash":
-        //        _hability.Hability = new Dash(this);
-        //        break;
-        //    case "RopeDash":
-        //        _hability.Hability = new RopeDash(this);
-        //        break;
-        //    case "SpeedUp":
-        //        _hability.Hability = new SpeedUp(this);
-        //        break;
-        //    case "Teleport":
-        //        _hability.Hability = new Teleport(this);
-        //        break;
-        //    case "WallDash":
-        //        _hability.Hability = new WallDash(this);
-        //        break;
-        //    case "InvincibleDash":
-        //        _hability.Hability = new InvincibleDash(this);
-        //        break;
-        //    case "DamageDash":
-        //        _hability.Hability = new DamageDash(this);
-        //        break;
-        //}
-    }
 
     public float AttackCost = 20;
 
@@ -67,18 +38,22 @@ public class BattlePiece : Piece, IAttacker, IKillable
 
     public void TakeDamage(Vector2 direction, float force = 10)
     {
-        throw new NotImplementedException();
+
     }
 
     public void Die()
     {
-        throw new NotImplementedException();
+
     }
 
     public void Pushback(Vector2 dir, float force = 10)
     {
         if (IsInvincible)
             return;
+
+        //faz com que o corpo pare de se mover
+        RigidBody.velocity = Vector2.zero;
+
 
         // Empurra o corpo para traz
         RigidBody.velocity = dir * force;
@@ -92,10 +67,27 @@ public class BattlePiece : Piece, IAttacker, IKillable
         CanMove = true;
     }
 
-    public IEnumerator HitStun()
+    public void hitStun(float time = 0.5f)
+    {
+        StartCoroutine(HitStun(time));    
+    }
+
+    public IEnumerator CFreezeFrame(int frames = 5)
+    {
+        if (Time.timeScale == 1.0f)
+        {
+            Time.timeScale = 0.01f;
+            yield return new WaitForSecondsRealtime(0.016f * frames); // 2 frame
+            Time.timeScale = 1.0f;
+        }
+
+        yield return null;
+    }
+
+    public IEnumerator HitStun(float time = 0.5f)
     {
         CanMove = false;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(time);
         CanMove = true;
     }
 
@@ -112,28 +104,27 @@ public class BattlePiece : Piece, IAttacker, IKillable
     // Alterna entre a cor da sprite e branco
     public IEnumerator CDamageFlash()
     {
+        var renderer = GetComponent<SpriteRenderer>();
+        var mat = renderer.material;
+
         float time = 0.0f;
-
-        var oldColor = _renderer.color;
-
         while (time < 1.0f)
         {
-            var color = _renderer.color;
+            mat.SetFloat("_Flash", time);
 
-            var percentage = DamageCurve.Evaluate(time);
-
-            var newR = Mathf.Lerp(color.r, 1.0f, percentage);
-            var newG = Mathf.Lerp(color.g, 1.0f, percentage);
-            var newB = Mathf.Lerp(color.b, 1.0f, percentage);
-
-            _renderer.color = new Color(newR, newG, newB, 1);
-
-            time += Time.deltaTime * 5.0f;
+            time += Time.deltaTime * 6.0f;
             yield return null;
-        }
+        };
 
-        _renderer.color = oldColor;
+        while (time > 0.0f)
+        {
+            mat.SetFloat("_Flash", time);
 
+            time -= Time.deltaTime * 6.0f;
+            yield return null;
+        };
+
+        mat.SetFloat("_Flash", 0);
         yield return null;
     }
 

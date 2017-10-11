@@ -56,11 +56,6 @@ public class ChangePanel : MonoBehaviour
         //System.Type t = System.Type.GetType(Player.Instance.GetComponent<CharacterSwitch>().ClassesDebug[index]);
         System.Type t = System.Type.GetType(PartyManager.Instance.Classes[index]);
 
-        // Checa se não é a mesma classe
-        if (t == Player.Instance.GetClass.GetType())
-        {
-            Player.Instance.GetComponent<CharacterSwitch>().Energy = 100;
-        }
 
         PieceManager.Instance.ChangeClass(Player.Instance, t);
 

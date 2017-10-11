@@ -34,6 +34,7 @@ public class SceneManager : MonoBehaviour
     private List<IScene> _scenes = new List<IScene>();
 
 
+
     public IScene currentScene;
     public IScene CurrentScene
     {

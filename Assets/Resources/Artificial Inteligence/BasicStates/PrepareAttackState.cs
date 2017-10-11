@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+ 
 public class PrepareAttackState : State
 {
     bool finished = false;
@@ -17,7 +17,7 @@ public class PrepareAttackState : State
         // Ve se tem stamina pra atacar
         if(main_script.Stamina < main_script.AttackCost)
         {
-            StateManager.Instance.AdjustFollow(piece.GetComponent<Enemy>());
+            main_script._StateMachine.ChangeState(new FollowPathState());
             return;
         }
 
@@ -41,10 +41,10 @@ public class PrepareAttackState : State
         }
         if(finishedagain)
         {
-            StateManager.Instance.AdjustFollow(piece.GetComponent<Enemy>());
+            main_script._StateMachine.ChangeState(new FollowPathState());
             //main_script._StateMachine.ChangeState(new FollowState());
         }
-   
+
     }
     public override void Exit(Piece piece)
     {

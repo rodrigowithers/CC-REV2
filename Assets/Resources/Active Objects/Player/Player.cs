@@ -11,16 +11,13 @@ public class Player : BattlePiece, IKillable
 
     public AnimationCurve InvincibilityCurve;
 
-    [Header("Starting Class")]
-    public string Starting;
-
     #region Damage
 
     [Header("Damage")]
 
     private bool _invincibleFrames = false;
    
-    public int MaxLife = 3;
+    public int MaxLife = 10;
 
     private static Player _instance;
     public static Player Instance
@@ -50,17 +47,16 @@ public class Player : BattlePiece, IKillable
 
     public void TakeDamage(Vector2 direction, float force = 10)
     {
+        base.TakeDamage(direction, force);
+
         if (_invincibleFrames || IsInvincible)
             return;
 
+        StartCoroutine(CFreezeFrame());
+
         EnemyManager.Instance.Combo = 0;
-
-        StartCoroutine(CDamageFlash());
-
         RigidBody.velocity = direction * force;
         Life--;
-
-        //HealthManager.Instance.TookDamage(); Não usa mais o sistema antigo de Health
 
         Camera.main.GetComponent<CameraController>().Shake();
 
@@ -101,13 +97,11 @@ public class Player : BattlePiece, IKillable
 
     #endregion
 
-    [Header("Debug")]
-    public List<string> Classes;
-    public int cur = 0;
 
     private void Awake()
     {
         base.Awake();
+       
 
         _controller = GetComponent<PlayerController>();
         _hability = GetComponent<HabilityManager>();
@@ -134,31 +128,9 @@ public class Player : BattlePiece, IKillable
     {
         base.Update();
 
-        // DEBUG
-        //if (Input.GetKeyDown(KeyCode.Alpha5))
-        //    Die();
-
-        if (Input.GetKeyDown(KeyCode.J))
+        if(Life > MaxLife)
         {
-            if (cur - 1 >= 0)
-                cur = Classes.Count;
-            else
-                cur--;
-
-            Type classe = Type.GetType(Classes[cur]);
-
-            PieceManager.Instance.ChangeClass(this, classe);
-        }
-        else if (Input.GetKeyDown(KeyCode.K))
-        {
-            if (cur + 1 >= Classes.Count)
-                cur = 0;
-            else
-                cur++;
-
-            Type classe = Type.GetType(Classes[cur]);
-
-            PieceManager.Instance.ChangeClass(this, classe);
+            Life = MaxLife;
         }
 
         // Verifica se usou uma habilidade
@@ -189,6 +161,4 @@ public class Player : BattlePiece, IKillable
         // Move o player
         Move(_moveInput);
     }
-
-
 }

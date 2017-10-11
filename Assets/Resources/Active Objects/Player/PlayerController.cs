@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class PlayerController : MonoBehaviour
 {
+    public bool Enable = true;
+
     public enum ControllerType
     {
         Keyboard = 0,
@@ -33,6 +35,11 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 toReturn = Vector2.zero;
 
+            //if (!Enable)
+            //{
+            //    return toReturn;
+            //}
+
             switch (Type)
             {
                 case ControllerType.Keyboard:
@@ -58,6 +65,9 @@ public class PlayerController : MonoBehaviour
         {
             Vector2 toReturn = Vector2.zero;
 
+            if (!Enable)
+                return toReturn;
+
             switch (Type)
             {
                 case ControllerType.Keyboard:
@@ -81,6 +91,9 @@ public class PlayerController : MonoBehaviour
     {
         get
         {
+            if (!Enable)
+                return false;
+
             return Input.GetButtonDown("Hability");
         }
     }

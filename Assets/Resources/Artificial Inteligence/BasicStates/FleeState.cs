@@ -25,7 +25,7 @@ public class FleeState : State
         {
             if(IsCornered())
             {
-                StateManager.Instance.AdjustFollow(main_script);
+                main_script._StateMachine.ChangeState(new FollowPathState());
                 finished = true;
                 //main_script.Move(DesperateDirection());
             }
@@ -37,7 +37,7 @@ public class FleeState : State
 
         if(finished)
         {
-            StateManager.Instance.AdjustFollow(main_script);
+            main_script._StateMachine.ChangeState(new FollowPathState());
         }
         base.Execute(piece);
     }

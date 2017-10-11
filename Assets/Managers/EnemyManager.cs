@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -206,6 +206,39 @@ public class EnemyManager : MonoBehaviour
 
         return closest;
     }
+
+
+    public GameObject ClosestEnemyOtherThan(Vector3 pos,GameObject caller)
+    {
+        if (_enemyList.Count <= 1)
+            return null;
+
+        GameObject closest = null;
+        float closestdist = 1000;
+        float dist = 0;
+        foreach (GameObject g in _enemyList)
+        {
+            if (g != caller)
+            {
+                dist = g.GetComponent<Enemy>().EnemyDistPlayer();
+                if (closestdist > dist)
+                {
+                    closestdist = dist;
+                    closest = g;
+                }
+            }
+        }
+
+        return closest;
+    }
+
+    public bool HasMoreThan(int n)
+    {
+        if (_enemyList.Count > n)
+            return true;
+        return false;
+    }
+
     public void ConfuseAllEnemies()
     {
         foreach (GameObject g in _enemyList)

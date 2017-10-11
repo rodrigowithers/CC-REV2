@@ -22,10 +22,9 @@ public class AwareState : State
     {
         if (finished)
         {
-            if(piece != null)
-                StateManager.Instance.AdjustFollow(piece.GetComponent<Enemy>());
-            //ChangeStateTo();
-            //main_script.StateMachine.Adjust_FOLLOW(main_script);
+            if (piece != null)
+                main_script._StateMachine.ChangeState(new FollowPathState());
+                   
         }
     }
     public override void Exit(Piece piece)

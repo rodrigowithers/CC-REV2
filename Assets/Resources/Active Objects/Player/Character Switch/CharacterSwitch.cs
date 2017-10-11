@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class CharacterSwitch : MonoBehaviour
 {
-    public float Energy = 0.0f;
-    public Text EnergyText;
-
     // Use this for initialization
     void Start()
     {
@@ -24,14 +21,7 @@ public class CharacterSwitch : MonoBehaviour
     void Update()
     {
         // Aparece as paradas pra trocar
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonDown("Change"))
             ChangeCharacter();
-
-        // Atualiza o texto
-        if (Energy >= 100)
-        {
-            Energy = 0;
-            Player.Instance.Life++;
-        }
     }
 }

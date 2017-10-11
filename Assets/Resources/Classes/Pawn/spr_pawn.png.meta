@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: 743666d18586a7b49aaa18fc3581cc7d
+timeCreated: 1505918964
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: idle_0
+    21300002: idle_1
+    21300004: idle_2
+    21300006: wDown_0
+    21300008: wDown_1
+    21300010: wUp_0
+    21300012: wUp_1
+    21300014: wLeft_0
+    21300016: wLeft_1
+    21300018: peao_nv-Sheet_9
+    21300020: peao_nv-Sheet_10
+    21300022: peao_nv-Sheet_11
+    21300024: peao_nv-Sheet_12
+    21300026: peao_nv-Sheet_13
+    21300028: peao_nv-Sheet_14
+    21300030: peao_nv-Sheet_15
+    21300032: peao_nv-Sheet_16
+    21300034: peao_nv-Sheet_17
+    21300036: peao_nv-Sheet_18
+    21300038: peao_nv-Sheet_19
+    21300040: peao_nv-Sheet_20
+    21300042: peao_nv-Sheet_21
+    21300044: peao_nv-Sheet_22
+    21300046: peao_nv-Sheet_23
+    21300048: peao_nv-Sheet_24
+    21300050: aDownLeft_0
+    21300052: aDownLeft_1
+    21300054: aDownLeft_2
+    21300056: aDownRight_0
+    21300058: aDownRight_1
+    21300060: aDownRight_2
+    21300062: aUpRight_0
+    21300064: aUpRight_1
+    21300066: spr_pawn_17
+    21300068: aUpLeft_0
+    21300070: aUpLeft_1
+    21300072: aUpLeft_2
+    21300074: shieldDown_0
+    21300076: shieldDown_1
+    21300078: shieldUp_0
+    21300080: shieldUp_1
+    21300082: shieldLeft_0
+    21300084: shieldLeft_1
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 38
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1840
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1840
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: idle_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1840
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wDown_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1656
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wDown_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1656
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wUp_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1472
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wUp_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1472
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wLeft_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1288
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wLeft_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1288
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aDownLeft_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1104
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aDownLeft_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1104
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aDownLeft_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 1104
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aDownRight_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 920
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aDownRight_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 920
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aDownRight_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 920
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aUpRight_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 736
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aUpRight_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 736
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spr_pawn_17
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 736
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aUpLeft_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 552
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aUpLeft_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 552
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: aUpLeft_2
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 552
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: shieldDown_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: shieldDown_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 368
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: shieldUp_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: shieldUp_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 185
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: shieldLeft_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: shieldLeft_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 0
+        width: 184
+        height: 184
+      alignment: 9
+      pivot: {x: 0.468, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

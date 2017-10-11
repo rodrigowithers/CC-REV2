@@ -30,7 +30,7 @@ public class HarpoonShooter : MonoBehaviour, IKillable
         Destroy(this.gameObject);
     }
 
-    public IEnumerator HitStun()
+    public IEnumerator HitStun(float time = 0.5f)
     {
         yield return null;
     }

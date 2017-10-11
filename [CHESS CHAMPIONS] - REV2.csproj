@@ -76,6 +76,9 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="LitJson">
+      <HintPath>Assets\External Assets\LitJson.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AStar_PathFinding\Grid.cs" />
@@ -91,6 +94,9 @@
     <Compile Include="Assets\External Assets\DebugDrawingExtension\DebugExtension.cs" />
     <Compile Include="Assets\Helpers\AutoKillParticles.cs" />
     <Compile Include="Assets\Helpers\ExtensionMethods.cs" />
+    <Compile Include="Assets\Helpers\GoodDictionary.cs" />
+    <Compile Include="Assets\Helpers\JsonHelper.cs" />
+    <Compile Include="Assets\Helpers\OrderInLayerByPosition.cs" />
     <Compile Include="Assets\Helpers\SubstringConsole.cs" />
     <Compile Include="Assets\Helpers\XmlLoader.cs" />
     <Compile Include="Assets\Interfaces\IAttack.cs" />
@@ -109,12 +115,26 @@
     <Compile Include="Assets\Managers\SceneManager.cs" />
     <Compile Include="Assets\Managers\StateManager.cs" />
     <Compile Include="Assets\Managers\WaveManager.cs" />
-    <Compile Include="Assets\OrderInLayerByPosition.cs" />
     <Compile Include="Assets\Resources\Active Objects\BattlePiece.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\Boss.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\AccurateAtkState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\DashState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\GiantAtkState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\RecoverState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\SceneShowerAtkState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\ShowerAtkState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\SpawnMinionState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\StayStillState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\WalkAroundState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AtkArea\TowerBossAttackArea.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AtkArea\TowerBossExplosion.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\BossStopper.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\TowerBoss.cs" />
     <Compile Include="Assets\Resources\Active Objects\Camera\CameraController.cs" />
     <Compile Include="Assets\Resources\Active Objects\Camera\CanvasMenuPanel.cs" />
     <Compile Include="Assets\Resources\Active Objects\Camera\CanvasScenarioPanel.cs" />
     <Compile Include="Assets\Resources\Active Objects\Camera\Flash.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Drops\Drop.cs" />
     <Compile Include="Assets\Resources\Active Objects\Enemies\Enemy.cs" />
     <Compile Include="Assets\Resources\Active Objects\Enemies\StaminaParticles.cs" />
     <Compile Include="Assets\Resources\Active Objects\Enemies\Tower\Enemy_Tower.cs" />
@@ -127,10 +147,8 @@
     <Compile Include="Assets\Resources\Active Objects\Player\PlayerController.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\Base\State.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\Base\StateMachine.cs" />
-    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\AvoidDangerState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\AwareState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\ConfusedState.cs" />
-    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\EvolveState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\FleeState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\FollowState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\FindSafePath.cs" />
@@ -146,8 +164,6 @@
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PrepareAttackState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\TiedState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\WanderState.cs" />
-    <Compile Include="Assets\Resources\Artificial Inteligence\NormalStates\DodgeState.cs" />
-    <Compile Include="Assets\Resources\Artificial Inteligence\NormalStates\NormalFollow.cs" />
     <Compile Include="Assets\Resources\Classes\AttackArea\AttackArea.cs" />
     <Compile Include="Assets\Resources\Classes\AttackArea\AttackAreaFollow.cs" />
     <Compile Include="Assets\Resources\Classes\AttackArea\AttackAreaStay.cs" />
@@ -158,7 +174,9 @@
     <Compile Include="Assets\Resources\Classes\Bishop\RopeDash.cs" />
     <Compile Include="Assets\Resources\Classes\Bishop\RopePull.cs" />
     <Compile Include="Assets\Resources\Classes\Bishop\Sicle\Sicle.cs" />
+    <Compile Include="Assets\Resources\Classes\BossDash.cs" />
     <Compile Include="Assets\Resources\Classes\Class.cs" />
+    <Compile Include="Assets\Resources\Classes\ClassAnimator.cs" />
     <Compile Include="Assets\Resources\Classes\Dash.cs" />
     <Compile Include="Assets\Resources\Classes\Habilities\Hability.cs" />
     <Compile Include="Assets\Resources\Classes\Habilities\HabilityManager.cs" />
@@ -192,12 +210,14 @@
     <Compile Include="Assets\Resources\Field Objects\FloorSpike\FloorSpike.cs" />
     <Compile Include="Assets\Resources\Field Objects\Harpoon\Harpoon.cs" />
     <Compile Include="Assets\Resources\Field Objects\Harpoon\HarpoonShooter.cs" />
+    <Compile Include="Assets\Resources\Field Objects\Houses\BarrelDrop.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\ButtonScene.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\EnemyScene.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\Scene.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\SceneBuilder.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\SceneLimit.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\SpawnPoint.cs" />
+    <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\Trigger.cs" />
     <Compile Include="Assets\Resources\Field Objects\Wall\Wall.cs" />
     <Compile Include="Assets\TextRigidBody\TextRigidBody.cs" />
     <Compile Include="Assets\TextRigidBody\TextSpawner.cs" />
@@ -207,8 +227,10 @@
     <None Include="Assets\Resources\Documents\SceneInfo.xml" />
     <None Include="Assets\Resources\Documents\TowerBossDialogue.xml" />
     <None Include="Assets\Resources\Documents\TowerBossDialogue2.xml" />
+    <None Include="Assets\Shaders\ColorSwapper.shader" />
     <None Include="Assets\Shaders\Flash\Flash.shader" />
     <None Include="Assets\Shaders\Ground\Ground.shader" />
+    <None Include="Assets\Shaders\Tiles.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

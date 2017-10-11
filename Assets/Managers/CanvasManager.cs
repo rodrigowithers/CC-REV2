@@ -99,8 +99,6 @@ public class CanvasManager : MonoBehaviour
         var attack = _player.Stamina;
         StaminaBar.fillAmount = attack / 100;
 
-        Debug.Log(attack / 100);
-
         if (attack >= _player.AttackCost)
         {
             StaminaBar.color = AttackReady;
@@ -116,8 +114,10 @@ public class CanvasManager : MonoBehaviour
         if (HealthBar == null)
             return;
 
-        var health = _player.Life;
-        StaminaBar.fillAmount = health / 100;
+        float max = _player.MaxLife;
+        float cur = _player.Life;
+
+        HealthBar.fillAmount = cur / max;
     }
 
 

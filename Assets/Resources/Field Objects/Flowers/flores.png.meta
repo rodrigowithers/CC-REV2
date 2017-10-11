@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9d6fb8c985b787545bfbd73769733f56
-timeCreated: 1504110029
+timeCreated: 1506976423
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -44,7 +44,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 35
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -79,8 +79,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -90,10 +90,10 @@ TextureImporter:
       name: flores_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 25
         y: 0
-        width: 64
-        height: 64
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,10 +103,10 @@ TextureImporter:
       name: flores_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 50
         y: 0
-        width: 64
-        height: 64
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,10 +116,10 @@ TextureImporter:
       name: flores_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 75
         y: 0
-        width: 64
-        height: 64
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

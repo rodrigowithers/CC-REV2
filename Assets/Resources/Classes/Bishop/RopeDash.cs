@@ -127,7 +127,6 @@ public class RopeDash : Hability
 
 
             time += Time.deltaTime;
-            yield return null;
         }
 
 
@@ -143,7 +142,7 @@ public class RopeDash : Hability
     {
         foreach (Enemy g in _tiedEnemies)
         {
-            StateManager.Instance.AdjustFollow(g.GetComponent<Enemy>());
+            _piece.GetComponent<Enemy>()._StateMachine.ChangeState(new FollowPathState());
 
             if (_tiedEnemies.Count >= 2)
                 g.TakeDamage(g.EnemyDirPlayer(), 30);

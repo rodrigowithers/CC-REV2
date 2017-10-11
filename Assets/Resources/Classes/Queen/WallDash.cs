@@ -53,7 +53,25 @@ public class WallDash : Hability
 
         Vector2 finalPos = _piece.transform.position.xy() + direction * Distance;
         Vector2 originalPos = _piece.transform.position.xy();
-        
+
+        // Toca a animação
+        if(direction.y < 0)
+        {
+            _piece.GetComponent<ClassAnimator>().Play("HabilityDown", 0, true);
+        }
+        else if(direction.y > 0)
+        {
+            _piece.GetComponent<ClassAnimator>().Play("HabilityUp", 0, true);
+        }
+        else if (direction.x > 0)
+        {
+            _piece.GetComponent<ClassAnimator>().Play("HabilityRight", 0, true);
+        }
+        else if (direction.x < 0)
+        {
+            _piece.GetComponent<ClassAnimator>().Play("HabilityLeft", 0, true);
+        }
+
         float time = 0;
         var pTime = 0.0f;
 

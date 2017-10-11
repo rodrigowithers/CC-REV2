@@ -49,10 +49,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    public List<Sprite> _Portraits = new List<Sprite>();
+
+
     void Awake()
     {
         //Player = FindObjectOfType<Player>().gameObject;
         _Player = Player.Instance.gameObject;
+        LoadAllSprites();
     }
 
 
@@ -61,6 +66,25 @@ public class GameManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(name);
     }
 
+    void LoadAllSprites()
+    {
+        //Carregando Inimigos
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Enemies/Portraits/e_King_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Enemies/Portraits/e_Queen_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Enemies/Portraits/e_Tower_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Enemies/Portraits/e_Horse_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Enemies/Portraits/e_Bishop_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Enemies/Portraits/e_Pawn_Normal"));
+
+        //Carregando Player
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Player/Character Switch/Portraits/King_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Player/Character Switch/Portraits/Queen_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Player/Character Switch/Portraits/Tower_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Player/Character Switch/Portraits/Horse_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Player/Character Switch/Portraits/Bishop_Normal"));
+        _Portraits.Add(Resources.Load<Sprite>("Active Objects/Player/Character Switch/Portraits/Pawn_Normal"));
+
+    }
 
     //private Object[] _piecesprites;
     //[SerializeField]

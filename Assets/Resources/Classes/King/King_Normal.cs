@@ -15,7 +15,7 @@ public class King_Normal : Class
     {
         get
         {
-            return 0.5f;
+            return 0.8f;
         }
     }
     public override float AttackDuration
@@ -61,12 +61,28 @@ public class King_Normal : Class
                 // Checa se pode atacar
                 if (CanAttack)
                 {
+                    // Toca a Animação
+                    if (area.position.x > transform.position.x) // Direita
+                        GetComponent<ClassAnimator>().Play("AttackRight", 0, true);
+
+                    if (area.position.x < transform.position.x) // Esquerda
+                        GetComponent<ClassAnimator>().Play("AttackLeft", 0, true);
+
+                    if (area.position.y > transform.position.y) // Cima
+                        GetComponent<ClassAnimator>().Play("AttackUp", 0, true);
+
+                    if (area.position.y < transform.position.y) // Baixo
+                        GetComponent<ClassAnimator>().Play("AttackDown", 0, true);
+
                     // Reduz a Stamina do jogador
                     GetComponent<BattlePiece>().Stamina -= GetComponent<BattlePiece>().AttackCost;
                     GetComponent<BattlePiece>().CanRegen = false;
 
                     StartCoroutine(area.GetComponent<AttackArea>().CAttack());
                     CanAttack = false;
+
+                    GetComponent<BattlePiece>().StopMoving();
+                    GetComponent<BattlePiece>().hitStun(AttackDuration);
                 }
             }
             else
@@ -79,9 +95,9 @@ public class King_Normal : Class
 
     public override void Start()
     {
-        // Troca a Sprite para a Sprite de um Pawn
-        Sprite s = Resources.Load<Sprite>("Sprites/king");
-        GetComponent<SpriteRenderer>().sprite = s;
+        // Carrega um ClassAnimator da classe novo
+        gameObject.AddComponent<ClassAnimator>();
+        gameObject.GetComponent<ClassAnimator>().LoadAnimations("Classes/King/Animations/KingAnimationController");
 
         Type = CHESSPIECE.KING;
         // Carreaga a Area de Ataque

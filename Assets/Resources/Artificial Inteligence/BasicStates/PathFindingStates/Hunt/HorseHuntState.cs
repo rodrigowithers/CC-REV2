@@ -12,6 +12,7 @@ public class HorseHuntState : HuntState
     public override void Enter(Piece piece)
     {
         base.Enter(piece);
+        Debug.Log("HorseHuntState");
     }
 
     public override void Execute(Piece piece)

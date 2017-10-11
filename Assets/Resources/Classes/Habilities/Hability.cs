@@ -45,6 +45,34 @@ public class Hability
         return true;
     }
 
+
+    protected int BossTryLerp(Vector2 originalPos, Vector2 finalPos, float percentage)
+    {
+        int toreturn = 0;
+        var nextPos = originalPos + ((finalPos - originalPos) * percentage);
+
+        // Checa se vai dar ruim
+        var hits = Physics2D.CircleCastAll(nextPos, _piece.GetComponent<CircleCollider2D>().radius, Vector3.forward);
+        foreach (var hit in hits)
+        {
+
+            if (hit.collider.GetComponent<IStopDash>() != null)
+            {
+                toreturn = 1;
+                if(hit.collider.tag == "B_Stopper")
+                {
+                    toreturn = 2;
+                }
+                return toreturn;
+            }
+        }
+
+        _piece.transform.position = nextPos.xyz(_piece.transform.position);
+        return toreturn;
+    }
+
+
+
     //protected Vector2 CheckDirection(Vector2 direction)
     //{
     //    Vector2 toReturn = _piece.transform.position.xy() + direction * Distance;

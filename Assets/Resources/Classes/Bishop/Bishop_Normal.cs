@@ -30,6 +30,11 @@ public class Bishop_Normal : Class
     {
         get
         {
+            if (GetComponent<Enemy>())
+            {
+                return "RopePull";
+            }
+           
             return "RopeDash";
         }
     }
@@ -92,8 +97,14 @@ public class Bishop_Normal : Class
 
         this.AttackArea.transform.localPosition = Vector3.zero;
         // Adiciona a Habilidade correspondente
-        GetComponent<HabilityManager>().Hability = new RopeDash(this.GetComponent<Piece>());
-
+        if (GetComponent<Enemy>())
+        {
+            GetComponent<HabilityManager>().Hability = new RopePull(this.GetComponent<Piece>());
+        }
+        else
+        {
+            GetComponent<HabilityManager>().Hability = new RopeDash(this.GetComponent<Piece>());
+        }
         base.Start();
     }
 

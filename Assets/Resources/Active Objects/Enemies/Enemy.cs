@@ -9,7 +9,6 @@ public class Enemy : BattlePiece, IKillable
 {
     #region Variables
     public string Name;
-    public CHESSPIECE Type;
     public LEVEL Level;
     protected StateMachine statemachine;
     public bool Use_Path = true;
@@ -61,13 +60,6 @@ public class Enemy : BattlePiece, IKillable
 
     public virtual void Die()
     {
-        // Checa se é o ultimo inimigo, se for, da zoom nele
-        if (EnemyManager.Instance.EnemyCount == 1)
-            Camera.main.GetComponent<CameraController>().Zoom(transform.position.xy());
-
-        // Adiciona energia de troca ao jogador
-        Player.Instance.GetComponent<CharacterSwitch>().Energy += UnityEngine.Random.Range(20, 30);
-
         // Retorna stamina ao jogador
         Player.Instance.GetComponent<Player>().Stamina = 100;
         Instantiate(StaminaParticles, transform.position, Quaternion.identity);
@@ -85,9 +77,11 @@ public class Enemy : BattlePiece, IKillable
             return;
         Life--;
 
-        if (Life <= 0)
+        if(Life <= 0)
         {
-            Die();
+            // Checa se é o ultimo inimigo, se for, da zoom nele
+            if (EnemyManager.Instance.EnemyCount == 1)
+                Camera.main.GetComponent<CameraController>().Zoom(transform.position.xy());
         }
 
         StartCoroutine(CDamageFlash());
@@ -95,9 +89,19 @@ public class Enemy : BattlePiece, IKillable
         CanMove = false;
         StartCoroutine(HitStun());
 
+        if (Life <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            StartCoroutine(CFreezeFrame());
+        }
+
         // Empurra o corpo para traz
         RigidBody.velocity = direction * force;
     }
+
     public void Start()
     {
         NewDirection();

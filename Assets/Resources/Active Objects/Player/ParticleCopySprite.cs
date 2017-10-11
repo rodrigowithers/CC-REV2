@@ -23,9 +23,12 @@ public class ParticleCopySprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var mat = _particleSystem.GetComponent<ParticleSystemRenderer>().material;
-        mat.mainTexture = _spriteRenderer.sprite.texture;
+        var sprite = _spriteRenderer.sprite;
 
+        var mat = _particleSystem.GetComponent<ParticleSystemRenderer>().material;
         _particleSystem.GetComponent<ParticleSystemRenderer>().sortingOrder = _spriteRenderer.sortingOrder;
+
+        mat.mainTexture = sprite.texture;
+        mat.mainTextureOffset = sprite.textureRectOffset;
     }
 }

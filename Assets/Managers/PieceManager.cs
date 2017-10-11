@@ -59,7 +59,7 @@ public class PieceManager : MonoBehaviour
     private List<Class> _classes = new List<Class>();
     private List<GameObject> _atkPatterns = new List<GameObject>();
 
-   // private List<CHESSPIECE> _possiblePlayerClasses; // Classes que o player pode 
+    // private List<CHESSPIECE> _possiblePlayerClasses; // Classes que o player pode 
     //public Transform LivesParent;                    // Parent para o mostrador das classes possíveis
     public GameObject Piece;                         // Prefab da peça a ser instanciada
 
@@ -148,7 +148,7 @@ public class PieceManager : MonoBehaviour
         //}
         //DontDestroyOnLoad(gameObject);
 
-       // XmlLoader.LoadPieces(_pieces_path, _classes);
+        // XmlLoader.LoadPieces(_pieces_path, _classes);
         //FillAtkPattern();
 
     }
@@ -177,35 +177,31 @@ public class PieceManager : MonoBehaviour
     /// e um NORMAL enemy vire um GREATER enemy
     /// </summary>
     /// <param name="e"></param>
-    public void PromoveEnemy(Enemy e)
-    {
-        if (e.Level >= LEVEL.GREATER)
-            return;
-        //Destroy(e.GetComponent<Class>());
-        e._Level++;
-
-        e._StateMachine.ChangeState(new EvolveState());
-    }
+   
 
     public void ChangeClass(BattlePiece p, System.Type newType)
     {
         if (p.transform.childCount != 0)
         {
-            Destroy(p.transform.GetChild(0).gameObject);
+            for (int i = 0; i < p.transform.childCount; i++)
+            {
+                Destroy(p.transform.GetChild(i).gameObject);
+            }
 
             Destroy(p.GetComponent<Class>());
         }
+        
         p.GetClass = (Class)p.gameObject.AddComponent(newType);
-       // p.GetClass.Start();
+        // p.GetClass.Start();
     }
 
 
     public void DecideRandomClass(BattlePiece p)
     {
-        switch(Random.Range(0, 5))
+        switch (Random.Range(0, 5))
         {
             case 0:
-                ChangeClass(p,typeof(King_Normal));
+                ChangeClass(p, typeof(King_Normal));
                 break;
             case 1:
                 ChangeClass(p, typeof(Queen_Normal));
@@ -225,6 +221,7 @@ public class PieceManager : MonoBehaviour
 
         }
     }
+
 
 
 

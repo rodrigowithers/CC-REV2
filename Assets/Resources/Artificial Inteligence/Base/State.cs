@@ -25,8 +25,9 @@ public class State  {
         {
             unit = piece.GetComponent<Unit>();
             main_script = piece.GetComponent<Enemy>();
-            player = Player.Instance.gameObject;
         }
+        if(player == null)
+            player = Player.Instance.gameObject;
     }
 
     // Update is called once per frame

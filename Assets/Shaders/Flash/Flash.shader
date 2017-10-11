@@ -3,6 +3,8 @@
 	Properties
 	{
 		_MainTex("Texture", 2D) = "White" {}
+		_Texture("Texture", 2D) = "white" {}
+
 		_Color("Flash Color", COLOR) = (1, 1, 1, 1)
 		_Fade("Fade", Range(0, 1)) = 0
 	}
@@ -40,6 +42,7 @@
 			}
 			
 			sampler2D _MainTex;
+			sampler2D _Texture;
 
 			float4 _Color;
 			float _Fade;
@@ -47,8 +50,14 @@
 			fixed4 frag (v2f i) : SV_Target
 			{
 				float4 col = tex2D(_MainTex, i.uv);
+				float4 tex = tex2D(_Texture, i.uv);
 
-				return col = lerp(col, _Color, _Fade);
+				//if(tex.b < _Fade)
+					//return _Color;
+
+				//return col;
+
+				return col = lerp(col, _Color, (tex.r * _Fade) + _Fade);
 			}
 			ENDCG
 		}

@@ -14,7 +14,7 @@ public class StateManager : MonoBehaviour {
             {
                 if (FindObjectOfType<StateManager>() == null)
                 {
-                    GameObject go = new GameObject("PieceManager");
+                    GameObject go = new GameObject("StateManager");
                     go.AddComponent<StateManager>();
 
                     DontDestroyOnLoad(go);
@@ -31,30 +31,34 @@ public class StateManager : MonoBehaviour {
         }
     }
 
-    public void AdjustFollow(Enemy e)
-    {
-        // Temporariamente manda todas as peças para o FollowPathState
-        e._StateMachine.ChangeState(new FollowPathState());
-
-        ///
-        /* Seleciona a partir do tipo da peça
-         * qual o follow adequado para 
-         * aquela dita peça
-        switch (e.Type)
+    public void AdjustHunt(Enemy e)
+    {       
+        // Seleciona a partir do tipo da peça
+        // * qual o follow adequado para 
+        // * aquela dita peça
+        switch (e._Type)
         {
             case CHESSPIECE.KING:
+                e._StateMachine.ChangeState(new KingHuntState());
                 break;
             case CHESSPIECE.QUEEN:
+                e._StateMachine.ChangeState(new QueenHuntState());
                 break;
             case CHESSPIECE.TOWER:
+                e._StateMachine.ChangeState(new TowerHuntState());
                 break;
             case CHESSPIECE.HORSE:
+                e._StateMachine.ChangeState(new HorseHuntState());
                 break;
             case CHESSPIECE.BISHOP:
+                e._StateMachine.ChangeState(new BishopHuntState());
                 break;
             case CHESSPIECE.PAWN:
+                e._StateMachine.ChangeState(new PawnHuntState());
                 break;
-        }*/
+        }
 
     }
+
+
 }
