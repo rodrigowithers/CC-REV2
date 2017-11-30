@@ -43,6 +43,9 @@ public class StaminaParticles : MonoBehaviour
 
     private void Update()
     {
+        if (Player.Instance == null)
+            Destroy(this.gameObject);
+
         _target = Player.Instance.transform.position;
     }
 

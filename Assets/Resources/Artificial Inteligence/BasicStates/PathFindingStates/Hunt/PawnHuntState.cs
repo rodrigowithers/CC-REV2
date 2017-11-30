@@ -17,6 +17,13 @@ public class PawnHuntState : HuntState
         /////////////////////////////////////////////////////////////
         //base.Execute(piece);
 
+        //Debug.Log(main_script.EnemyDistPlayer());
+
+        if (main_script.AtkAreaDistPlayer() < 1.0f)
+        {
+            main_script._StateMachine.ChangeState(new PrepareAttackState());
+        }
+
         if (main_script._Hability.HasStamina())
         {
             if (main_script.EnemyDistPlayer() < 5.0f && main_script.EnemyDistPlayer() > 4.0f)
@@ -25,8 +32,27 @@ public class PawnHuntState : HuntState
             }
         }
 
-            base.Execute(piece);
-        
+        if(main_script.Stamina > 10)
+        {
+            unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position - (Vector3)main_script.AtkAreaToEnemy()));
+        }
+        else
+        {
+            unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position + (Vector3)main_script.AtkAreaToEnemy() * 2));
+        }
+
+
+
+        //unit.StopAllCoroutines();
+        //if (main_script.EnemyDistPlayer() > 6)
+        //{
+        //    // player ja chegou perto 
+        //    // muda de estado 
+        //    main_script._StateMachine.ChangeState(new FollowPathState());
+        //}
+
+        //base.Execute(piece);
+
 
 
         // Regras para após de o peao utilizar habiidade
@@ -37,6 +63,6 @@ public class PawnHuntState : HuntState
         base.Exit(piece);
     }
 
-    
+
 
 }

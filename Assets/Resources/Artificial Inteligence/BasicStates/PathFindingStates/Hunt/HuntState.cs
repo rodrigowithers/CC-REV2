@@ -16,38 +16,26 @@ public class HuntState : State
     }
     public override void Execute(Piece piece)
     {
-        //main_script.Direction = main_script.AtkAreaDirPlayer();
-        //main_script.Move(main_script.Direction);
-        //main_script.Move();
-        
-        if (main_script.AtkAreaDistPlayer() <= 0.5f)
+        float checkdist = 0.5f;
+
+
+        if (main_script.AtkAreaDistPlayer() <= checkdist)
         {
             main_script._StateMachine.ChangeState(new PrepareAttackState());
         }
+        EnemyManager.Instance.AtkAreaUpdate(main_script.gameObject);
 
         unit.StopAllCoroutines();
         unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position - (Vector3)main_script.AtkAreaToEnemy()));
+
         if (main_script.EnemyDistPlayer() > 6)
         {
-            // player ja chegou perto 
-            // muda de estado 
             main_script._StateMachine.ChangeState(new FollowPathState());
         }
-        //CheckforDanger();
     }
     public override void Exit(Piece piece)
     {
         base.Exit(piece);
     }
-
-    //protected bool CanUseHability()
-    //{
-    //    //Verifica se a peça possui stamina o suficiente para utilizar a habilidade
-    //    if (main_script._Hability.Hability.Cost <= main_script._Hability.Stamina)
-    //    {
-    //        return true;
-    //    }
-    //    return false;
-    //}
   
 }

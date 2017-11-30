@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4753442222647300}
   - component: {fileID: 114748128199590564}
   - component: {fileID: 114836089335158552}
+  - component: {fileID: 114593270892531394}
+  - component: {fileID: 114382676257845602}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -41,6 +43,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114382676257845602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1554626853424528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d03f996016202c42b709ee4068e1674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114593270892531394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1554626853424528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: HLAS_Controller
+  m_VerticalAxis: VLAS_Controller
+  m_SubmitButton: Hability
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!114 &114748128199590564
 MonoBehaviour:
   m_ObjectHideFlags: 1

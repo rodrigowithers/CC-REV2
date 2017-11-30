@@ -61,6 +61,7 @@ public class Hability
                 toreturn = 1;
                 if(hit.collider.tag == "B_Stopper")
                 {
+                    hit.collider.GetComponent<BossStopper>().Hit(_piece.gameObject);
                     toreturn = 2;
                 }
                 return toreturn;

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - B_Stopper
+  - ScenarioUI
+  - whatever
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - MediumTerrain
   - HardTerrain
   - Players
-  - 
+  - ParticleFloor
   - 
   - 
   - 

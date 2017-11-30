@@ -19,6 +19,32 @@ public class Flash : MonoBehaviour
         Material.SetFloat("_Fade", 0);
     }
 
+    public void StartFlash(bool unscaled = false)
+    {
+        if (unscaled)
+            StartCoroutine(CUnscaledFlash());
+        else
+            StartCoroutine(CFlash());
+    }
+
+    public IEnumerator CUnscaledFlash()
+    {
+        var time = 0.0f;
+        Material.SetFloat("_Fade", 0);
+
+        while (time < FlashCurve.GetCurveLenght())
+        {
+            time += Time.unscaledDeltaTime * Speed;
+
+            Material.SetFloat("_Fade", FlashCurve.Evaluate(time));
+
+            yield return null;
+        }
+
+        Material.SetFloat("_Fade", 0);
+        yield return null;
+    }
+
     public IEnumerator CFlash()
     {
         var time = 0.0f;

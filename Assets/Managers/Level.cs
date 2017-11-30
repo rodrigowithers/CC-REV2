@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class Level : MonoBehaviour
 {
     private static Level _instance;
@@ -18,13 +19,18 @@ public class Level : MonoBehaviour
         }
     }
 
-    // Pegar num JSON
+    public string Name = "1";
     public bool Completed;
+
+    private void OnEnable()
+    {
+        Completed = Resources.Load<LevelsAsset>("Level Data").Check(Name);
+    }
 
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame

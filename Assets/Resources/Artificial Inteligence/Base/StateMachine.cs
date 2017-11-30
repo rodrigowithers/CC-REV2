@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
+    private bool paused = false;
+
+    public void Pause(bool p)
+    {
+        paused = p;
+    }
+    public bool IsPaused()
+    {
+        return paused;
+    }
 
     private Piece _myOwner;
     //Estado atual da máquina de estados
@@ -13,6 +23,8 @@ public class StateMachine : MonoBehaviour
     private State _previousState;
     //Estado Global
     private State _globalState;
+
+    public string StateName;
 
     // Use this for initialization
     public void StartManchine(Piece owner)
@@ -38,19 +50,27 @@ public class StateMachine : MonoBehaviour
     }
 
     //Invoca este metodo para atualizar a FSM.
-    void Update()
+    void FixedUpdate()
     {
-        //Se existir um estado global, invoca o seu metodo execute,
-        //caso contrario nao faz nada:
-        if (_globalState != null)
+        if (!paused)
         {
-            _globalState.Execute(_myOwner);
+            //Se existir um estado global, invoca o seu metodo execute,
+            //caso contrario nao faz nada:
+            if (_globalState != null)
+            {
+                _globalState.Execute(_myOwner);
+            }
+            //Idem para o estado atual:
+            if (_currentState != null)
+            {
+                _currentState.Execute(_myOwner);
+            }
         }
-        //Idem para o estado atual:
-        if (_currentState != null)
-        {
-            _currentState.Execute(_myOwner);
-        }
+    }
+
+    private void Update()
+    {
+        StateName = _currentState.ToString();
     }
 
     //Faz a troca de estados.

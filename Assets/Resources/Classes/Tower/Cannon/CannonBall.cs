@@ -20,6 +20,9 @@ public class CannonBall : MonoBehaviour, IAttack
 
     private void Explode()
     {
+        // Som
+        SoundManager.Play("boom");
+
         DebugExtension.DebugCircle(transform.position, Vector3.forward, Color.red, _radius, 5);
 
         // Instancia o Sistema da Partículas
@@ -50,6 +53,10 @@ public class CannonBall : MonoBehaviour, IAttack
     // Use this for initialization
     void Start()
     {
+        // Som
+        SoundManager.Play("corte 2");
+        SoundManager.Play("corte 1");
+
         _originalPosition = transform.position;
         _direction = Destination - transform.position.xy();
 

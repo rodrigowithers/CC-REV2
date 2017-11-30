@@ -190,7 +190,7 @@ public class PieceManager : MonoBehaviour
 
             Destroy(p.GetComponent<Class>());
         }
-        
+        Destroy(p.GetComponent<ClassAnimator>());
         p.GetClass = (Class)p.gameObject.AddComponent(newType);
         // p.GetClass.Start();
     }
@@ -198,7 +198,7 @@ public class PieceManager : MonoBehaviour
 
     public void DecideRandomClass(BattlePiece p)
     {
-        switch (Random.Range(0, 5))
+        switch (Random.Range(0, 6))
         {
             case 0:
                 ChangeClass(p, typeof(King_Normal));
@@ -222,8 +222,41 @@ public class PieceManager : MonoBehaviour
         }
     }
 
-
-
+    public void DecidewithSeed(BattlePiece p, bool[] a)
+    {
+        bool success = false;
+        int r = 0;
+        while (!success)
+        {
+            r = Random.Range(0, 6);
+            if (a[r])
+            {
+                success = true;
+            }
+        }
+        Debug.Log(r);
+        switch (r)
+        {
+            case 0:
+                ChangeClass(p, typeof(King_Normal));
+                break;
+            case 1:
+                ChangeClass(p, typeof(Queen_Normal));
+                break;
+            case 2:
+                ChangeClass(p, typeof(Tower_Normal));
+                break;
+            case 3:
+                ChangeClass(p, typeof(Horse_Normal));
+                break;
+            case 4:
+                ChangeClass(p, typeof(Bishop_Normal));
+                break;
+            case 5:
+                ChangeClass(p, typeof(Pawn_Normal));
+                break;
+        }
+    }
 
 
     //public void SpawnLivesHUD()

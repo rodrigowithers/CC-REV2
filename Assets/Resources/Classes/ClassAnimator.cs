@@ -9,6 +9,8 @@ public class ClassAnimator : MonoBehaviour
 
     private bool Locked = false;
 
+    public AnimatorStateInfo CurrentClip;
+
     private IEnumerator WaitForLock(AnimationClip clip)
     {
         yield return new WaitForSeconds(clip.length);
@@ -26,13 +28,16 @@ public class ClassAnimator : MonoBehaviour
         }
     }
 
-    public bool Play(string stateName, int layer = 0, bool lockAnimation = false)
+    public bool Play(string stateName, int layer = 0, bool lockAnimation = false, bool overwriteAnimation = false)
     {
+        if (Locked && overwriteAnimation)
+            Locked = false;
+
         if (Locked)
             return false;
 
-        var currentClip = _animator.GetCurrentAnimatorStateInfo(layer);
-        if (!currentClip.IsName(stateName))
+        CurrentClip = _animator.GetCurrentAnimatorStateInfo(layer);
+        if (!CurrentClip.IsName(stateName))
         {
             _animator.Play(stateName, 0);
 
@@ -47,6 +52,11 @@ public class ClassAnimator : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void Stop()
+    {
+        _animator.StopPlayback();
     }
 
     private void Awake()

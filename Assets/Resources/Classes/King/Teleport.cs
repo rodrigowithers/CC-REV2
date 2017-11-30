@@ -30,11 +30,32 @@ public class Teleport : Hability
         return true;
     }
 
+    private GameObject Closest(List<Enemy> EnemyList)
+    {
+        GameObject closest = null;
+        float closestdist = 1000;
+        float dist = 0;
+        foreach (var g in EnemyList)
+        {
+            dist = g.EnemyDistPlayer();
+            if (closestdist > dist)
+            {
+                closestdist = dist;
+                closest = g.gameObject;
+            }
+        }
+
+        return closest;
+    }
+
     private IEnumerator CTeleport()
     {
         GameObject target = null;
         if (_piece.GetComponent<Player>())
-            target = EnemyManager.Instance.ClosestEnemy(_piece.transform.position);
+        {
+            List<Enemy> enemies = new List<Enemy>(GameObject.FindObjectsOfType<Enemy>());
+            target = Closest(enemies);
+        }
         else if (_piece.GetComponent<Enemy>())
             target = GameManager.Instance._Player;
         if (target == null)
@@ -49,14 +70,18 @@ public class Teleport : Hability
         _piece.CanMove = false;
         _piece.RigidBody.velocity = Vector2.zero;
 
+        Vector3 dir = (target.transform.position - _piece.transform.position).normalized;
+        
         Vector3 targetDir = target.GetComponent<Piece>().Direction;
-        Vector2 finalpos = target.transform.position - (2 *targetDir);
+        //Vector2 finalpos = target.transform.position - (2 * targetDir);
+
+        Vector2 finalPos = target.transform.position + dir * 2;
 
         yield return new WaitForSeconds(0.25f);
 
         _piece.CanMove = true;
 
-        _piece.transform.position = finalpos;       
+        _piece.transform.position = finalPos;       
 
 
         if (_piece.GetComponent<Player>())
@@ -64,7 +89,7 @@ public class Teleport : Hability
         else if (_piece.GetComponent<Enemy>())
             _piece.GetComponent<Unit>().RequestNewPathTo(target);
 
-        Object.Instantiate(_teleportOut, finalpos, Quaternion.identity);
+        Object.Instantiate(_teleportOut, finalPos, Quaternion.identity);
 
         yield return null;
     }

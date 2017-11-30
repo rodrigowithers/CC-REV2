@@ -37,6 +37,9 @@ public class Sword : MonoBehaviour, IAttack
     void Start()
     {
         transform.Rotate(Vector3.forward, -45);
+
+        // Toca o som
+        SoundManager.Play("corte 2");
     }
 
     // Update is called once per frame

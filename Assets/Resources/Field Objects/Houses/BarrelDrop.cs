@@ -3,48 +3,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarrelDrop : MonoBehaviour, IKillable
+public class BarrelDrop : Destructable, IKillable
 {
-    public int Life = 1;
-
     public GameObject[] Drops;
 
-    public void Die()
+    public override void Die()
     {
         int itens = UnityEngine.Random.Range(1, 5);
-
-        for (int i = 0; i < itens; i++)
+        if (UnityEngine.Random.Range(0, 2) == 1)
         {
-            Instantiate(Drops[UnityEngine.Random.Range(0, Drops.Length)], transform.position, Quaternion.identity);
+            for (int i = 0; i < itens; i++)
+            {
+                Instantiate(Drops[UnityEngine.Random.Range(0, Drops.Length)], transform.position, Quaternion.identity);
+            }
         }
 
         Destroy(this.gameObject);
     }
 
-    public IEnumerator HitStun(float time = 0.5f)
+    public override IEnumerator HitStun(float time = 0.5f)
     {
         yield return null;
     }
 
-    public void TakeDamage(Vector2 direction, float force = 5)
+    public override void TakeDamage(Vector2 direction, float force = 5,int dmg = 1)
     {
-        Life -= 1;
-
-        if(Life <= 0)
-        {
-            Die();
-        }
+        base.TakeDamage(direction, force, dmg);
     }
 
     // Use this for initialization
     void Start()
     {
-
+        base.Start();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        base.Update();
     }
 }

@@ -1,0 +1,257 @@
+[
+    {
+        "index": 0,
+        "person": 1,
+        "string": [
+            {
+                "s": "We're getting closer to that new Champion, I can feel it..."
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "person": 3,
+        "string": [
+            {
+                "s": "Where did that guy came from, anyway? I thought the only new Champion was the Queen."
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "person": 1,
+        "string": [
+            {
+                "s": "I have no idea, but recently, I've heard rumors of new Champions popping up left and right..."
+            },
+            {
+                "s": "The Queen must be up to something, because it's been a long time since knights had been given Champions titles."
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "person": 3,
+        "string": [
+            {
+                "s": "And now this new guy is trying to stop us, huh?"
+            },
+            {
+                "s" : "Lets go teach him a lesson!"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "person": -6,
+        "string": [
+            {
+                "s": "Sir, we've finished setting up the traps!"
+            }
+        ]
+    },
+    {
+        "index": 5,
+        "person": -3,
+        "string": [
+            {
+                "s": "Just in time! Soldier, in formation! Let's stop this deserter!+"
+            }
+        ]
+    },
+    {
+        "index": 6,
+        "person": 3,
+        "string": [
+            {
+                "s": "Apparently, the Queen has been doing some propaganda against you..."
+            },
+            {
+                "s": "It'll be harder to find help now."
+            }
+        ]
+    },
+    {
+        "index": 7,
+        "person": 1,
+        "string": [
+            {
+                "s": "Yeah, she has this all planned out..."
+            },
+            {
+                "s": "Let's keep going."
+            }
+        ]
+    },
+    {
+        "index": 8,
+        "person": -3,
+        "string": [
+            {
+                "s": "Well, look who we have here!"
+            },
+            {
+                "s": "A good old traitor for us to kill!"
+            }
+        ]
+    },
+    {
+        "index": 9,
+        "person": 1,
+        "string": [
+            {
+                "s": "What?! Peterson?!"
+            },
+            {
+                "s": "I can't believe you turned against me too!"
+            }
+        ]
+    },
+    {
+        "index": 10,
+        "person": -3,
+        "string": [
+            {
+                "s": "Oh ho, your Majesty, that was long overdue, don't you think?"
+            },
+            {
+                "s": "After all you've done, I'm finally getting some payback!"
+            },
+            {
+                "s": "Look, now I have my own troops!"
+            }
+        ]
+    },
+    {
+        "index": 11,
+        "person": 1,
+        "string": [
+            {
+                "s": "I did what I had to do as king! Stop with this act!"
+            }
+        ]
+    },
+    {
+        "index": 12,
+        "person": -3,
+        "string": [
+            {
+                "s": "Oh ho ho, you can try to convince me..."
+            },
+            {
+                "s": "In hell!"
+            }
+        ]
+    },
+    {
+        "index": 13,
+        "person": -3,
+        "string": [
+            {
+                "s": "Ohhh ho... Looks like you've got me good..."
+            }
+        ]
+    },
+    {
+        "index": 14,
+        "person": 1,
+        "string": [
+            {
+                "s": "You've left me no choice."
+            }
+        ]
+    },
+    {
+        "index": 15,
+        "person": -3,
+        "string": [
+            {
+                "s": "Very well then, I'll be seeing you in hell, False King!"
+            }
+        ]
+    },
+    {
+        "index": 16,
+        "person": -3,
+        "string": [
+            {
+                "s": "Old King, welcome to my arena!"
+            },
+            {
+                "s": "Are you ready to +die?"
+            }
+        ]
+    },
+    {
+        "index": 17,
+        "person": 3,
+        "string": [
+            {
+                "s": "The only one who's going to die today is you!"
+            },
+            {
+                "s": "You're a disgrace to all Champions! Betraying your own King--"
+            }
+        ]
+    },
+    {
+        "index": 18,
+        "person": -3,
+        "string": [
+            {
+                "s": "A disgrace, you say? All Champions?"
+            },
+            {
+                "s": "This False King by your side is the real disgrace to all Champions!"
+            },
+            {
+                "s": "I'm Freedom, I'm the light of this kingdom, the first success of the Queen's Army!+"
+            },
+            {
+                "s": "You two are no more than a stepping stone on my way to becoming the Greatest Champion that ever lived!"
+            }
+        ]
+    },
+    {
+        "index": 19,
+        "person": 6,
+        "string": [
+            {
+                "s": "Shut your stupid mouth, you're nothing but another toy at the hands of the Queen!"
+            },
+            {
+                "s": "You're freedom? Well, I'm here to lock you up!"
+            }
+        ]
+    },
+    {
+        "index": 20,
+        "person": 0,
+        "string": [
+            {
+                "s": "+The Pawn joined your party!"
+            }
+        ]
+    },
+    {
+        "index": 21,
+        "person": -3,
+        "string": [
+            {
+                "s": "Hmpf."
+            },
+            {
+                "s": "Fine then, come face me,##+ Bastille, ##+Rook Champion!+"
+            }
+        ]
+    },
+    {
+        "index": 22,
+        "person": 1,
+        "string": [
+            {
+                "s": "Thanks for playing Chess Champions!"
+            }
+        ]
+    }
+]

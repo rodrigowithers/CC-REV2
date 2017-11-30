@@ -22,8 +22,6 @@ public class King_NormalAttackArea : AttackArea
         sword.GetComponent<Sword>()._piece = _parent.GetComponent<BattlePiece>();
         sword.GetComponent<Sword>().Direction = dir;
 
-
-
         yield return new WaitForSeconds(Duration);
         _attacking = false;
 

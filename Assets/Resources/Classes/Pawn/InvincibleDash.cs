@@ -12,6 +12,8 @@ public class InvincibleDash : Hability
     public float InvincibleTime = 3;
     Color originalcolor = new Color();
 
+    private ParticleSystem _particles;
+
     private GameObject _shield;
     private GameObject _explosion;
 
@@ -31,6 +33,26 @@ public class InvincibleDash : Hability
         _canvas = Object.Instantiate(Resources.Load<GameObject>("Classes/Pawn/InvincibleDash Canvas"), _piece.transform, false);
         _chargeBar = _canvas.transform.GetChild(1).GetComponent<Image>();
         _chargeBar.fillAmount = 0;
+
+        _particles = _piece.GetComponent<ParticleSystem>();
+
+        _piece.StartCoroutine(ControlCharge());
+    }
+
+    IEnumerator ControlCharge()
+    {
+        while (true)
+        {
+            if(_charge > 0.0f)
+            {
+                _charge -= Time.deltaTime * 0.1f;
+
+            }
+
+            yield return null;
+        }
+
+        yield return null;
     }
 
     public override bool Use()
@@ -86,11 +108,12 @@ public class InvincibleDash : Hability
         while (time < 1)
         {
             pTime++;
-            if (pTime >= 3)
-            {
-                pTime = 0;
-                _piece.GetComponent<ParticleSystem>().Emit(1);
-            }
+            //if (pTime >= 3)
+            //{
+            //    pTime = 0;
+            //    _particles.Emit(1);
+            //}
+            _particles.Emit(1);
 
             if (!TryLerp(originalPos, finalPos, time))
                 break;

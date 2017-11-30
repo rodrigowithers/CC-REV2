@@ -21,6 +21,9 @@ public class Arrow : MonoBehaviour, IAttack
         _direction = Destination - transform.position.xy();
 
         transform.localRotation = Quaternion.FromToRotation(Vector3.down, _direction);
+
+        // Toca o som
+        SoundManager.Play("tiro");
     }
 
     // Update is called once per frame
@@ -46,10 +49,11 @@ public class Arrow : MonoBehaviour, IAttack
                 if (hit.collider.GetComponent<Enemy>() && _piece.GetComponent<Enemy>())
                     continue;
 
-                obj.TakeDamage(_direction);
+                obj.TakeDamage(_direction, 5, 3);
 
                 // Tira as particulas do parent
-                transform.GetChild(0).parent = null;
+                if (transform.GetChild(0) != null)
+                    transform.GetChild(0).parent = null;
 
                 Destroy(this.gameObject);
             }

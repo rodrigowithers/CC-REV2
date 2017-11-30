@@ -22,8 +22,8 @@ public class Enemy_Tower : Enemy
         statemachine = GetComponent<StateMachine>();
         statemachine.StartManchine(this);
 
-        //statemachine.ChangeState(new WanderState());
-        statemachine.ChangeState(new HuntState());
+        statemachine.ChangeState(new WanderAroundPathState());
+        //statemachine.ChangeState(new HuntState());
         VerifyLevel();
 
         //_class = (Class) gameObject.AddComponent<Bishop_Normal>();

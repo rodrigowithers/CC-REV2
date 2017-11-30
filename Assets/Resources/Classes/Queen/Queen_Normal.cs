@@ -66,6 +66,7 @@ public class Queen_Normal : Class
                 {
                     _lastAttackArea = area;
                     _charge = 0;
+                    GetComponent<Piece>().Speed = MovementSpeed;
                 }
                 else
                 {
@@ -89,9 +90,9 @@ public class Queen_Normal : Class
                         }
                         else
                         {
-                            if(_charge == 0)
+                            if (_charge == 0)
                             {
-                                if(area.position.y > transform.position.y)
+                                if (area.position.y > transform.position.y)
                                 {
                                     GetComponent<ClassAnimator>().Play("AttackUp", 0, true);
                                 }
@@ -99,7 +100,7 @@ public class Queen_Normal : Class
                                 {
                                     GetComponent<ClassAnimator>().Play("AttackDown", 0, true);
                                 }
-                                else if(area.position.x > transform.position.x)
+                                else if (area.position.x > transform.position.x)
                                 {
                                     GetComponent<ClassAnimator>().Play("AttackRight", 0, true);
                                 }
@@ -121,29 +122,30 @@ public class Queen_Normal : Class
             else
             {
                 area.GetComponent<AttackArea>().Selected = false;
+                GetComponent<Piece>().Speed = MovementSpeed;
             }
         }
     }
 
-
-    public override void Start()
+    void Start()
     {
-        // Troca a Sprite para a Sprite de um Pawn
-        //Sprite s = Resources.Load<Sprite>("Sprites/queen");
-        //GetComponent<SpriteRenderer>().sprite = s;
-
-        // Carrega o Animator
+        // Carrega um ClassAnimator da classe novo
         gameObject.AddComponent<ClassAnimator>();
         gameObject.GetComponent<ClassAnimator>().LoadAnimations("Classes/Queen/Animations/QueenAnimationController");
 
         Type = CHESSPIECE.QUEEN;
+
+        if (GetComponent<Enemy_Tower>() != null)
+        {
+            GetComponent<Enemy_Tower>()._Type = Type;
+        }
+
         // Carreaga a Area de Ataque
         this.AttackArea = Resources.Load<GameObject>("Classes/Queen/NormalAttackArea");
 
         // Instancia a Area de Ataque
         _attackArea = Instantiate(AttackArea, transform, false);
 
-        this.AttackArea.transform.localPosition = Vector3.zero;
         // Adiciona a Habilidade correspondente
         GetComponent<HabilityManager>().Hability = new WallDash(this.GetComponent<Piece>());
 

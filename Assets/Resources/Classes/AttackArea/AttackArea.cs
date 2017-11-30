@@ -13,6 +13,8 @@ public class AttackArea : MonoBehaviour
 
     private float _duration;
 
+    //private LineRenderer Line;
+
     private List<GameObject> _insideCollider = new List<GameObject>();
 
     public virtual float Duration
@@ -40,16 +42,6 @@ public class AttackArea : MonoBehaviour
 
             if (_attacking)
                 return;
-
-            // Troca as cores
-            if (!_selected)
-            {
-                _renderer.color = new Color(0, 0, 0);
-            }
-            else
-            {
-                _renderer.color = new Color(1, 1, 1);
-            }
         }
     }
 
@@ -81,11 +73,6 @@ public class AttackArea : MonoBehaviour
         }
 
         float time = 0.0f;
-
-        var oldColor = _renderer.color;
-
-        // Muda a cor
-        _renderer.color = new Color(0, 255, 255);
 
         bool hitted = false;
 
@@ -124,14 +111,6 @@ public class AttackArea : MonoBehaviour
             yield return null;
         }
 
-        _attacking = false;
-        _renderer.color = oldColor;
-        if (LockPosition)
-        {
-            transform.parent = oldParent;
-            transform.localPosition = oldPos;
-        }
-
         yield return null;
     }
 
@@ -156,6 +135,9 @@ public class AttackArea : MonoBehaviour
 
     private void Awake()
     {
+        //Line = GetComponent<LineRenderer>();
+
+
         _renderer = GetComponent<SpriteRenderer>();
     }
 
@@ -163,10 +145,24 @@ public class AttackArea : MonoBehaviour
     {
         Selected = false;
         _parent = transform.parent.parent.GetComponent<Piece>();
+
+        if (_parent.GetComponent<Player>() != null)
+        {
+            _renderer.color = Color.white;
+        }
+        else
+        {
+            _renderer.color = Color.red;
+        }
+
+        //Line.startColor = Line.endColor = _renderer.color;
     }
 
     void Update()
     {
-
+        //Line.SetPositions(new Vector3[] {
+        //    transform.position,
+        //    _parent.transform.position
+        //});
     }
 }

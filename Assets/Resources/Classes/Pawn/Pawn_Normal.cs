@@ -102,9 +102,6 @@ public class Pawn_Normal : Class
         gameObject.AddComponent<ClassAnimator>();
         gameObject.GetComponent<ClassAnimator>().LoadAnimations("Classes/Pawn/Animations/PawnAnimationController");
 
-        // Troca a Sprite para a Sprite de um Pawn
-        //Sprite s = Resources.Load<Sprite>("Sprites/pawn");
-        //GetComponent<SpriteRenderer>().sprite = s;  
         Type = CHESSPIECE.PAWN;
 
         if (GetComponent<Enemy_Tower>() != null)

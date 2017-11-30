@@ -21,6 +21,9 @@ public class WanderState : State
 
     public override void Execute(Piece piece)
     {
+        if (piece == null || main_script == null)
+            return;
+
         if (!is_changing)
         {
             main_script.StartCoroutine(TimeToChange(piece));
@@ -29,21 +32,15 @@ public class WanderState : State
 
         main_script.Move(main_script.Direction);
 
-        if(SeenPlayer())
+        if (main_script.IsAttacking)
         {
             main_script._StateMachine.ChangeState(new AwareState());
+            //if (SeenPlayer())
+            //{
+            //    main_script._StateMachine.ChangeState(new AwareState());
+            //}
         }
 
-        //if (SeenPlayer())
-        //{
-        //    WaveManager.Instance.GetSceneScript().SeenPlayer(main_script.gameObject);
-        //}
-        //if (main_script.WasHit)
-        //{
-        //    WaveManager.Instance.GetSceneScript().SeenPlayer(main_script.gameObject);
-        //    // main_script.StateMachine.ChangeState(new AwareState());
-        //}
-        ////  base.Execute(piece);
     }
     public override void Exit(Piece piece)
     {

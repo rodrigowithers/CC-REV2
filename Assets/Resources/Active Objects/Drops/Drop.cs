@@ -70,6 +70,10 @@ public class Drop : MonoBehaviour
                 default:
                     break;
             }
+
+            // Toca um som
+            SoundManager.Play("Pause");
+
             Destroy(this.gameObject);
         }
     }
@@ -93,7 +97,7 @@ public class Drop : MonoBehaviour
     void Update()
     {
         // Gravidade
-        _momentum += Vector2.down * Gravity * Time.deltaTime;
+        _momentum += Vector2.down * Gravity * Time.fixedDeltaTime;
         transform.position += _momentum.xyz(transform.position);
 
         // Checa se chegou ao "Chão"

@@ -13,10 +13,16 @@ public class Enemy : BattlePiece, IKillable
     protected StateMachine statemachine;
     public bool Use_Path = true;
     public bool Smart = false;
+    public bool IsAttacking = false;
     #endregion
 
+    public GameObject Drop;
+
+    public GameObject DeathExplosion;
+
+    public float dropChance = 0.5f;
+
     public UnityEvent DieEvent;
-    public GameObject StaminaParticles;
 
     public AnimationCurve InvincibilityCurve;
 
@@ -56,26 +62,42 @@ public class Enemy : BattlePiece, IKillable
         {
             return transform.GetChild(0).GetComponent<AttackPattern>().CurrenAtkPattern;
         }
+        set
+        {
+            transform.GetChild(0).GetComponent<AttackPattern>().CurrenAtkPattern = value;
+        }
     }
 
     public virtual void Die()
     {
+        if (DeathExplosion != null)
+            Instantiate(DeathExplosion, transform.position, Quaternion.identity);
+
         // Retorna stamina ao jogador
         Player.Instance.GetComponent<Player>().Stamina = 100;
-        Instantiate(StaminaParticles, transform.position, Quaternion.identity);
 
         // Invoca o evento
         DieEvent.Invoke();
+
+        // Dropa
+        if(Drop != null) {
+            if(UnityEngine.Random.Range(0.0f, 1.0f) > dropChance){
+                Instantiate(Drop, transform.position, Quaternion.identity);
+            }
+        }
 
         EnemyManager.Instance.RemoveEnemy(this.gameObject);
         Destroy(this.gameObject);
     }
 
-    public void TakeDamage(Vector2 direction, float force = 10)
+    public void TakeDamage(Vector2 direction, float force = 10,int dmg = 1)
     {
         if (IsInvincible)
             return;
-        Life--;
+
+        base.TakeDamage(direction, force, dmg);
+
+        Life -= dmg;
 
         if(Life <= 0)
         {
@@ -92,6 +114,7 @@ public class Enemy : BattlePiece, IKillable
         if (Life <= 0)
         {
             Die();
+            return;
         }
         else
         {
@@ -99,16 +122,25 @@ public class Enemy : BattlePiece, IKillable
         }
 
         // Empurra o corpo para traz
-        RigidBody.velocity = direction * force;
+        if(RigidBody != null)
+            RigidBody.velocity = direction * force;
     }
 
     public void Start()
     {
+        base.Start();
+
+        Speed -= 20;
+
         NewDirection();
         _hability = GetComponent<HabilityManager>();
 
-        // Carrega particulas
-        StaminaParticles = Resources.Load<GameObject>("Active Objects/Enemies/StaminaSeekParticles");
+        if(Smart)
+        {
+            Material smartmat = Resources.Load<Material>("Active Objects/Enemies/EnemySmartMaterial") as Material;
+            GetComponent<SpriteRenderer>().material = smartmat;
+        }
+        
     }
 
     void Update()
@@ -201,7 +233,11 @@ public class Enemy : BattlePiece, IKillable
     //Retorna o angulo entre o inimigo e o player
     public float ThisAngleFromPlayer()
     {
+        if (Player.Instance == null)
+            return 0;
+
         GameObject p = GameManager.Instance._Player;
+
 
         Vector2 normal = transform.position - p.transform.position;
         return Vector2.Dot(new Vector2(1, 0), normal.normalized);
@@ -209,7 +245,12 @@ public class Enemy : BattlePiece, IKillable
     //Retorna o angulo entre a area de ataque atual e o player
     public float AtkAreaAngleFromPlayer()
     {
+        if (Player.Instance == null)
+            return 0;
+
         GameObject p = GameManager.Instance._Player;
+        if (p == null)
+            return 0;
 
         Vector2 normal = CurrentAtkArea.position - p.transform.position;
         return Vector2.Dot(new Vector2(1, 0), normal.normalized);
@@ -217,7 +258,13 @@ public class Enemy : BattlePiece, IKillable
     //Retorna o angulo entre um GameObject e o player
     public float ObjectAngleFromPlayer(GameObject go)
     {
+        if (Player.Instance == null)
+            return 0;
+
         GameObject p = GameManager.Instance._Player;
+        if (p == null)
+            return 0;
+
         Vector2 normal = go.transform.position - p.transform.position;
         return Vector2.Dot(new Vector2(1, 0), normal.normalized);
     }
@@ -236,6 +283,17 @@ public class Enemy : BattlePiece, IKillable
     {
         Vector2 normal = (Vector2)transform.position - pos;
         return Vector2.Dot(new Vector2(1, 0), normal.normalized);
+    }
+
+
+    //// será usada pelas classes filhas de follow
+    protected bool PlayerIsRanged()
+    {
+        CHESSPIECE T = Player.Instance.GetComponent<Player>().GetClass.Type;
+        if (T == CHESSPIECE.QUEEN || T == CHESSPIECE.TOWER || T == CHESSPIECE.BISHOP)
+            return true;
+
+        return false;
     }
 
     #endregion

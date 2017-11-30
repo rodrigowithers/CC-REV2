@@ -8,7 +8,10 @@ public class RecoverState : StayStillState {
     public override void Enter(Piece piece)
     {
         time_stopped = 5;
-        base.Enter(piece);       
+        //_main_script.IsInvincible = false;
+        base.Enter(piece);
+        //_main_script._lifebar.SetActive(true);
+
     }
     public override void Execute(Piece piece)
     {
@@ -16,6 +19,7 @@ public class RecoverState : StayStillState {
         {
             if (piece != null)
             {
+                //_main_script._lifebar.SetActive(false);
                 _main_script.IsInvincible = true;
                 _main_script._stateMachine.ChangeState(new WalkAroundState());
             }

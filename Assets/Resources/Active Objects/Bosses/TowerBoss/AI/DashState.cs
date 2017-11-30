@@ -13,6 +13,11 @@ public class DashState : State
         _main_script = piece.GetComponent<TowerBoss>();
         _main_script.RigidBody.velocity = Vector2.zero;
         _main_script.StartCoroutine(CWaitToDash());
+        _main_script.RigidBody.velocity = Vector2.zero;
+
+        // Toca a animação
+        _main_script.GetComponent<ClassAnimator>().Stop();
+        _main_script.GetComponent<ClassAnimator>().Play("Prepare", 0, true,true);
     }
     public override void Execute(Piece piece)
     {
@@ -49,7 +54,7 @@ public class DashState : State
     //Roda a animação que prepara o boss para o dash
     IEnumerator CWaitToDash()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         finished = true;
     }
 

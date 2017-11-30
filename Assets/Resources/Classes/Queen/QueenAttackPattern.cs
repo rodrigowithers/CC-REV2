@@ -18,56 +18,72 @@ public class QueenAttackPattern : AttackPattern
         if (_isenemy)
         {
             base.Update();
-            UpdateAtkArea();
+            if (canupdate)
+                UpdateAtkArea();
         }
     }
 
 
     public override void UpdateAtkArea()
     {
-        if (_angle < -0.8) // right
-        {
-            _index = 0; // right attack area
-        }
-        else if (_angle >= -0.8 && _angle < -0.2) // topright && bottomright
-        {
+        //if (_angle < -0.8) // right
+        //{
+        //    _index = 0; // right attack area
+        //}
+        //else if (_angle >= -0.8 && _angle < -0.2) // topright && bottomright
+        //{
 
-            if (transform.position.y < _target_pos.y)
-            {
-                _index = 1;// topright attack area
-            }
-            else
-            {
-                _index = 7;// botright attack area
-            }
-        }
-        else if (_angle >= -0.2 && _angle < 0.2)// top && bottom
+        //    if (transform.position.y < _target_pos.y)
+        //    {
+        //        _index = 1;// topright attack area
+        //    }
+        //    else
+        //    {
+        //        _index = 7;// botright attack area
+        //    }
+        //}
+        //else if (_angle >= -0.2 && _angle < 0.2)// top && bottom
+        //{
+        //    if (transform.position.y < _target_pos.y)
+        //    {
+        //        _index = 2;// top attack area
+        //    }
+        //    else
+        //    {
+        //        _index = 6;// bot attack area
+        //    }
+        //}
+        //else if (_angle > 0.2 && _angle <= 0.8)// topleft && bottomleft
+        //{
+        //    if (transform.position.y < _target_pos.y)
+        //    {
+        //        _index = 3; // topleft attack area
+        //    }
+        //    else
+        //    {
+        //        _index = 5; // botleft attack area
+        //    }
+        //}
+        //else if (_angle > 0.8) // left
+        //{
+        //    _index = 4; // left attack area
+        //}
+        //closest = areas[_index];
+
+        var pos = _main_script.transform.position;
+        var player = _player.transform.position;
+
+        closest = areas[0];
+
+        float dist = Mathf.Infinity;
+        foreach (var area in areas)
         {
-            if (transform.position.y < _target_pos.y)
+            if((area.position - player).magnitude < dist)
             {
-                _index = 2;// top attack area
-            }
-            else
-            {
-                _index = 6;// bot attack area
+                closest = area;
+                dist = (area.position - player).magnitude;
             }
         }
-        else if (_angle > 0.2 && _angle <= 0.8)// topleft && bottomleft
-        {
-            if (transform.position.y < _target_pos.y)
-            {
-                _index = 3; // topleft attack area
-            }
-            else
-            {
-                _index = 5; // botleft attack area
-            }
-        }
-        else if (_angle > 0.8) // left
-        {
-            _index = 4; // left attack area
-        }
-        closest = areas[_index];
     }
 
 }

@@ -22,7 +22,7 @@ public class EnemyScene : Scene
         if (_enemies.Count <= 0)
             return false;
 
-        foreach(var e in _enemies)
+        foreach (var e in _enemies)
         {
             EnemyManager.Instance.AddEnemy(e.gameObject);
         }
@@ -41,43 +41,26 @@ public class EnemyScene : Scene
 
     public override bool SceneCompleted()
     {
-        //if (!EnemyManager.Instance.HasEnemies)
-        //{
-        //    if (!SpawnWave())
-        //    {
-        //        return true;
-        //    }
-        //}
-
-        //return true;
-
         if (!SpawnWave())
         {
-            // Sai da cena
             SceneExit();
-
-            return true;
         }
 
-        // Checa se existem inimigos ainda no EnemyManager
-        // Se não existirem, tenta spawnar 
-        // Se não conseguiu spawnar, retorna true
-
-        return base.SceneCompleted();
+        return false;
     }
 
     public override void SceneUpdate()
     {
-        //base.SceneUpdate();
+        base.SceneUpdate();
     }
 
     public override void SceneExit()
     {
-        for (int i = 0; i < _enemies.Count; i++)
-        {
-            if (_enemies[i] != null)
-                _enemies[i].Die();
-        }
+        //for (int i = 0; i < _enemies.Count; i++)
+        //{
+        //    if (_enemies[i] != null)
+        //        _enemies[i].Die();
+        //}
 
         _enemies = new List<Enemy>();
 

@@ -73,6 +73,19 @@ public class Tower_Normal : Class
                 // Checa se pode atacar
                 if (CanAttack)
                 {
+                    // Toca a Animação
+                    if (area.position.x > transform.position.x) // Direita
+                        GetComponent<ClassAnimator>().Play("AttackRight", 0, true);
+
+                    if (area.position.x < transform.position.x) // Esquerda
+                        GetComponent<ClassAnimator>().Play("AttackLeft", 0, true);
+
+                    if (area.position.y > transform.position.y) // Cima
+                        GetComponent<ClassAnimator>().Play("AttackUp", 0, true);
+
+                    if (area.position.y < transform.position.y) // Baixo
+                        GetComponent<ClassAnimator>().Play("AttackDown", 0, true);
+
                     // Reduz a Stamina do jogador
                     GetComponent<BattlePiece>().Stamina -= GetComponent<BattlePiece>().AttackCost;
                     GetComponent<BattlePiece>().CanRegen = false;
@@ -80,6 +93,10 @@ public class Tower_Normal : Class
                     StartCoroutine(area.GetComponent<AttackArea>().CAttack());
 
                     CanAttack = false;
+
+                    GetComponent<BattlePiece>().StopMoving();
+                    GetComponent<BattlePiece>().hitStun(AttackDuration);
+                    GetComponent<BattlePiece>().Pushback(-direction, 20);
                 }
             }
             else
@@ -91,9 +108,15 @@ public class Tower_Normal : Class
 
     void Start()
     {
-        // Troca a Sprite para a Sprite de um Pawn
-        Sprite s = Resources.Load<Sprite>("Sprites/tower");
-        GetComponent<SpriteRenderer>().sprite = s;
+        //// Troca a Sprite para a Sprite de um Pawn
+        //Sprite s = Resources.Load<Sprite>("Sprites/tower");
+        //GetComponent<SpriteRenderer>().sprite = s;
+
+        atkareacheck = 2;
+
+        // Carrega um ClassAnimator da classe novo
+        gameObject.AddComponent<ClassAnimator>();
+        gameObject.GetComponent<ClassAnimator>().LoadAnimations("Classes/Tower/Animations/TowerAnimationController");
 
         Type = CHESSPIECE.TOWER;
         // Carreaga a Area de Ataque

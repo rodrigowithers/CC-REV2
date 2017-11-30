@@ -18,7 +18,8 @@ public class KingAttackPattern : AttackPattern
         if (_isenemy)
         {
             base.Update();
-            UpdateAtkArea();
+            if (canupdate)
+                UpdateAtkArea();
         }
     }
 

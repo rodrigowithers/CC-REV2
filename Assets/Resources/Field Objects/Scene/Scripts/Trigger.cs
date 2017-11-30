@@ -8,6 +8,12 @@ public class Trigger : MonoBehaviour
 {
     public UnityEvent Event;
 
+    private void OnEnable()
+    {
+        if (!GetComponent<BoxCollider2D>().isTrigger)
+            GetComponent<BoxCollider2D>().isTrigger = true;
+    }
+
     private void Awake()
     {
         GetComponent<BoxCollider2D>().isTrigger = true;

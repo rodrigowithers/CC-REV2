@@ -13,6 +13,8 @@ public class SpawnPoint : MonoBehaviour
 
     private GameObject _effect;
 
+    public bool UseEvent = false;
+
     public Enemy Spawn(int currentWave)
     {
         if (currentWave >= Enemies.Length)
@@ -21,13 +23,19 @@ public class SpawnPoint : MonoBehaviour
         if (Enemies[currentWave].name == "")
             return null;
 
+        if (_enemy == null)
+            return null;
+
         var enemy = Instantiate(_enemy, transform.position, Quaternion.identity);
 
         // Randomiza o inimigo entre Lesser = 0   /Normal = 1 /Greater = 2 
-        enemy.GetComponent<Enemy_Tower>()._Level = (LEVEL)0;//Random.Range(0,3);
+        //enemy.GetComponent<Enemy_Tower>()._Level = (LEVEL)0;//Random.Range(0,3);
         //PieceManager.Instance.DecideRandomClass(enemy.GetComponent<BattlePiece>());
 
         enemy.GetComponent<Enemy>().Smart = Enemies[currentWave].smart;
+
+        if (UseEvent)
+            enemy.GetComponent<Enemy>().DieEvent = EnemyDieEvent;
 
         string type = Enemies[currentWave].name;
 
@@ -35,8 +43,8 @@ public class SpawnPoint : MonoBehaviour
 
         Instantiate(_effect, transform.position, Quaternion.identity);
 
-        
-        
+
+
         return enemy.GetComponent<Enemy>();
     }
 
@@ -45,7 +53,7 @@ public class SpawnPoint : MonoBehaviour
         var enemy = Instantiate(_enemy, transform.position, Quaternion.identity);
 
 
-        enemy.GetComponent<Enemy>().DieEvent = EnemyDieEvent;
+        //enemy.GetComponent<Enemy>().DieEvent = EnemyDieEvent;
 
         // Randomiza o inimigo entre Lesser = 0   /Normal = 1 /Greater = 2 
         enemy.GetComponent<Enemy_Tower>()._Level = (LEVEL)0;//Random.Range(0,3);

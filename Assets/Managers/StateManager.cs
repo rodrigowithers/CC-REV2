@@ -36,7 +36,7 @@ public class StateManager : MonoBehaviour {
         // Seleciona a partir do tipo da peça
         // * qual o follow adequado para 
         // * aquela dita peça
-        switch (e._Type)
+        switch (e.GetClass.Type)
         {
             case CHESSPIECE.KING:
                 e._StateMachine.ChangeState(new KingHuntState());

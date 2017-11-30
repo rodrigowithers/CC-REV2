@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42b1c309b8deb3489b82b72f3f5dff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Precision: 100
+  Precision: -1
 --- !u!212 &212335221371604668
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -119,4 +119,5 @@ SpriteRenderer:
   m_Size: {x: 10.333333, y: 9.333333}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0

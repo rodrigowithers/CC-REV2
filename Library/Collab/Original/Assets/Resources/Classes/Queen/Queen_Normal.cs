@@ -26,9 +26,23 @@ public class Queen_Normal : Class
         }
     }
 
+    public override string Hability
+    {
+        get
+        {
+            return "WallDash";
+        }
+    }
+
+    private Transform _lastAttackArea;
+    private float _charge = 0;
+
     public override void Attack(Vector2 direction)
     {
         base.Attack(direction);
+
+        if (_attackAreas == null)
+            return;
 
         // Verifica qual delas está no angulo da direção
         foreach (var area in _attackAreas)
@@ -47,11 +61,61 @@ public class Queen_Normal : Class
             {
                 area.GetComponent<AttackArea>().Selected = true;
 
-                // Checa se pode atacar
-                if (CanAttack)
+                // Verifica se é a mesma area de ataque do antigo frame
+                if (_lastAttackArea != area)
                 {
-                    StartCoroutine(area.GetComponent<AttackArea>().CAttack());
-                    CanAttack = false;
+                    _lastAttackArea = area;
+                    _charge = 0;
+                }
+                else
+                {
+                    // Checa se pode atacar
+                    if (CanAttack)
+                    {
+                        //print(_charge);
+
+                        // Checa a carga do arco
+                        if (_charge >= 16)
+                        {
+                            _charge = 0;
+                            GetComponent<Piece>().Speed = MovementSpeed;
+
+                            // Reduz a Stamina do jogador
+                            GetComponent<BattlePiece>().Stamina -= GetComponent<BattlePiece>().AttackCost;
+                            GetComponent<BattlePiece>().CanRegen = false;
+
+                            StartCoroutine(area.GetComponent<AttackArea>().CAttack());
+                            CanAttack = false;
+                        }
+                        else
+                        {
+                            if (_charge == 0)
+                            {
+                                if (area.position.y > transform.position.y)
+                                {
+                                    GetComponent<ClassAnimator>().Play("AttackUp", 0, true);
+                                }
+                                else if (area.position.y < transform.position.y)
+                                {
+                                    GetComponent<ClassAnimator>().Play("AttackDown", 0, true);
+                                }
+                                else if (area.position.x > transform.position.x)
+                                {
+                                    GetComponent<ClassAnimator>().Play("AttackRight", 0, true);
+                                }
+                                else if (area.position.x < transform.position.x)
+                                {
+                                    GetComponent<ClassAnimator>().Play("AttackLeft", 0, true);
+                                }
+                            }
+
+                            Camera.main.GetComponent<CameraController>().Shake(Mathf.Min(0.1f, 0.01f + (_charge / 100)));
+
+                            GetComponent<Piece>().Speed = 150;
+                            _charge++;
+
+                        }
+                    }
                 }
             }
             else
@@ -61,20 +125,28 @@ public class Queen_Normal : Class
         }
     }
 
-
-    public override void Start()
+    void Start()
     {
+        // Carrega um ClassAnimator da classe novo
+        gameObject.AddComponent<ClassAnimator>();
+        //gameObject.GetComponent<ClassAnimator>().LoadAnimations("Classes/Pawn/Animations/PawnAnimationController");
+        gameObject.GetComponent<ClassAnimator>().LoadAnimations("Classes/Queen/Animations/QueenAnimationController");
 
         Type = CHESSPIECE.QUEEN;
+
+        if (GetComponent<Enemy_Tower>() != null)
+        {
+            GetComponent<Enemy_Tower>()._Type = Type;
+        }
+
         // Carreaga a Area de Ataque
         this.AttackArea = Resources.Load<GameObject>("Classes/Queen/NormalAttackArea");
 
         // Instancia a Area de Ataque
-        Instantiate(AttackArea, transform, false);
+        _attackArea = Instantiate(AttackArea, transform, false);
 
-        this.AttackArea.transform.localPosition = Vector3.zero;
         // Adiciona a Habilidade correspondente
-        GetComponent<HabilityManager>().Hability = new Dash(this.GetComponent<Piece>());
+        GetComponent<HabilityManager>().Hability = new WallDash(this.GetComponent<Piece>());
 
         base.Start();
     }

@@ -17,7 +17,7 @@ public class FloorSpike : MonoBehaviour, IKillable
         throw new NotImplementedException();
     }
 
-    public void TakeDamage(Vector2 direction, float force = 10)
+    public void TakeDamage(Vector2 direction, float force = 10,int dmg = 1)
     {
         Life--;
 

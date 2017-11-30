@@ -47,6 +47,21 @@ public class DialogueBox : MonoBehaviour
 
     public DialogueTrigger CurrentTrigger;
 
+    public bool skipThis = false;
+
+    private static DialogueBox _instance;
+    public static DialogueBox Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<DialogueBox>();
+            }
+            return _instance;
+        }
+    }
+
     private float _speed;
 
     private void Awake()
@@ -67,6 +82,12 @@ public class DialogueBox : MonoBehaviour
         {
             _speed = 0.01f;
         }
+
+        if (Input.GetButtonUp("Cancel") && PressNext.gameObject.activeSelf == false)
+        {
+            skipThis = true;
+        }
+
     }
 
     private bool Next()
@@ -103,24 +124,34 @@ public class DialogueBox : MonoBehaviour
             Player.Instance.enabled = false;
             Player.Instance.GetComponent<PlayerController>().Enable = false;
             Player.Instance.GetComponent<Player>().CanMove = false;
+            if (SoundManager.Instance != null)
+                SoundManager.Instance.Mixer.FindSnapshot("Menus").TransitionTo(0.0f);
         }
         else
         {
-            //Debug.Log("Exiting Dialogue, setting box to false");
-
             Time.timeScale = 1;
             Player.Instance.enabled = true;
             Player.Instance.GetComponent<PlayerController>().Enable = true;
             Player.Instance.GetComponent<Player>().CanMove = true;
+
+            if(SoundManager.Instance != null)
+                SoundManager.Instance.Mixer.FindSnapshot("Main").TransitionTo(0.0f);
 
             if (CurrentTrigger != null)
                 CurrentTrigger.Exit();
         }
     }
 
+    public void StartDoingTheThing()
+    {
+        StartCoroutine(CExecuteNodes());
+    }
+
     public void GetDialogue(int index)
     {
-        CurrentDialogue = JsonHelper.Instance.Get(Filename, index);
+        if (Filename == "")
+            Filename = "0" + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        DialogueBox.Instance.CurrentDialogue = JsonHelper.Instance.Get(Filename, index);
     }
 
     public Sprite Adjust_Speaker_Img(int index)
@@ -130,7 +161,8 @@ public class DialogueBox : MonoBehaviour
 
         switch (abs)
         {
-            case 0: // PLAYER ??????
+            case 0:
+                toreturn = null;
                 break;
             case 1: // KING
                 if (index > 0)
@@ -193,9 +225,30 @@ public class DialogueBox : MonoBehaviour
         yield return null;
     }
 
+    private float _waitTime = 0.0f;
 
+    public void Wait(float seconds)
+    {
+        _waitTime = seconds;
+    }
+
+    private IEnumerator CWait()
+    {
+        Debug.Log("Waiting...");
+        yield return new WaitForSecondsRealtime(_waitTime);
+        _waitTime = 0.0f;
+        yield return null;
+    }
+
+    private bool _executing = false;
     public IEnumerator CExecuteNodes()
     {
+        // Checa se já está printando algo
+        if (_executing)
+            yield break;
+
+        _executing = true;
+
         // Desabilita o Player
         Player.Instance.enabled = false;
         Player.Instance.GetComponent<CharacterSwitch>().enabled = false;
@@ -207,11 +260,19 @@ public class DialogueBox : MonoBehaviour
         while (currentNode < Nodes.Count)
         {
             // Checa se não é um dialogo
-            if(Nodes[currentNode].GetPersistentMethodName(0) != "GetDialogue")
+            if (Nodes[currentNode].GetPersistentMethodName(0) != "GetDialogue")
             {
-                Nodes[currentNode].Invoke();
+                if (Nodes[currentNode].GetPersistentMethodName(0) == "Wait")
+                {
+                    Nodes[currentNode].Invoke();
+                    yield return StartCoroutine(CWait());
+                }
+                else
+                {
+                    Nodes[currentNode].Invoke();
+                }
             }
-            else if(Nodes[currentNode].GetPersistentMethodName(0) == "GetDialogue" && !Level.Instance.Completed)
+            else if(Nodes[currentNode].GetPersistentMethodName(0) == "GetDialogue" && (!Level.Instance.Completed && !skipThis))
             {
                 // Se é um dialogo, pega o dialogo atual
                 Nodes[currentNode].Invoke();
@@ -229,6 +290,13 @@ public class DialogueBox : MonoBehaviour
 
                 while (currentText < CurrentDialogue.Text.Length)
                 {
+                    if (skipThis)
+                    {
+                        Text.text = "";
+                        currentText++;
+                        continue;
+                    }
+
                     _speed = CurrentDialogue.Speed;
 
                     Text.text = "";
@@ -237,23 +305,46 @@ public class DialogueBox : MonoBehaviour
 
                     for (int i = 0; i < textString.Length; i++)
                     {
+                        if (skipThis)
+                        {
+                            Text.text = "";
+                            continue;
+                        }
+
                         // Checa se não é um espaço
                         if (textString[i] == ' ')
                         {
                             Text.text += textString[i];
                             continue;
                         }
-                        //if (textString[i] == '[')
-                        //{
-                        //    switch (textString[i + 1])
-                        //    {
-                        //        case 'w':
-                        //            yield return new WaitForSecondsRealtime(0.5f);
-                        //            i += 2;
-                        //            break;
-                        //    }
-                        //    continue;
-                        //}
+                        if (textString[i] == '#')
+                        {
+                            yield return new WaitForSecondsRealtime(0.1f);
+                            //i++;
+
+                            continue;
+                        }
+                        if (textString[i] == '$')
+                        {
+                            _speed /= 2;
+
+
+                            continue;
+                        }
+
+                        if (textString[i] == '%')
+                        {
+                            _speed *= 2;
+
+
+                            continue;
+                        }
+                        if (textString[i] == '+')
+                        {
+                            Camera.main.GetComponent<Flash>().StartFlash(true);
+                            SoundManager.Play("flash", 0.5f);
+                            continue;
+                        }
 
                         // Beeps.
                         float pitch = CurrentDialogue.VocalTone + Random.Range(-CurrentDialogue.VocalRange, CurrentDialogue.VocalRange);
@@ -271,19 +362,13 @@ public class DialogueBox : MonoBehaviour
                     PressNext.gameObject.SetActive(false);
                     currentText++;
                 }
-
-                // Executa o evento de final de fala
-                //CurrentDialogue.EndOfDialogueEvent.Invoke();
             }
 
             // Troca o Node
             currentNode++;
-
-            //Debug.Log("Next Node");
+            yield return null;
         }
-
-        //Debug.Log("Returning Player Control...");
-
+        
         // Limpa
         Text.text = "";
 
@@ -291,9 +376,10 @@ public class DialogueBox : MonoBehaviour
         Player.Instance.enabled = true;
         Player.Instance.GetComponent<CharacterSwitch>().enabled = true;
 
-        //Debug.Log(Player.Instance.enabled);
-
         Set(false);
+        _executing = false;
+
+        skipThis = false;
 
         yield return null;
     }
@@ -341,20 +427,16 @@ public class DialogueBox : MonoBehaviour
                         Text.text += textString[i];
                         continue;
                     }
-                    if (textString[i] == '[')
+                    if (textString[i] == '#')
                     {
-                        switch (textString[i + 1])
-                        {
-                            case 'w':
-                                yield return new WaitForSecondsRealtime(0.5f);
-                                i += 2;
-                                break;
-                        }
+                        //yield return new WaitForSecondsRealtime(0.5f);
+                        i++;
+
                         continue;
                     }
 
                     // Beeps.
-                    float pitch = CurrentDialogue.VocalTone + Random.Range(-CurrentDialogue.VocalRange, CurrentDialogue.VocalRange);
+                    float pitch = CurrentDialogue.VocalTone + Random.Range(-0.25f, 0.25f);
                     Beep.pitch = pitch;
                     Beep.Play();
 

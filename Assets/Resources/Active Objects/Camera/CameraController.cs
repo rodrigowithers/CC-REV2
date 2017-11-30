@@ -128,7 +128,7 @@ public class CameraController : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, originalPos, 0.5f);
 
             time += Time.deltaTime;
-            yield return null;
+            yield return new WaitForEndOfFrame();
         }
 
         transform.position = originalPos;
@@ -176,6 +176,7 @@ public class CameraController : MonoBehaviour
         yield return null;
     }
 
+  
     private void FixedUpdate()
     {
         if (_changingTarget || _zooming)

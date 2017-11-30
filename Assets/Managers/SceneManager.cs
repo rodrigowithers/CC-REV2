@@ -33,8 +33,6 @@ public class SceneManager : MonoBehaviour
     public GameObject ScenePrefab;
     private List<IScene> _scenes = new List<IScene>();
 
-
-
     public IScene currentScene;
     public IScene CurrentScene
     {

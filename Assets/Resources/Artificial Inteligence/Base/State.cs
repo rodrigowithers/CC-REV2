@@ -13,27 +13,32 @@ public enum STATETYPE
 }
 
 [System.Serializable]
-public class State  {
+public class State
+{
     protected Unit unit;
     protected GameObject player;
     protected Enemy main_script;
     public STATETYPE Type;
 
     // Use this for initialization
-    public virtual void Enter (Piece piece) {
+    public virtual void Enter(Piece piece)
+    {
+        //Debug.Log("Entering " + this.ToString());
+
         if (piece.tag == "Enemy")
         {
             unit = piece.GetComponent<Unit>();
             main_script = piece.GetComponent<Enemy>();
         }
-        if(player == null)
+        if (player == null)
             player = Player.Instance.gameObject;
     }
 
     // Update is called once per frame
-    public virtual void Execute (Piece piece) {
-		
-	}
+    public virtual void Execute(Piece piece)
+    {
+
+    }
 
     public virtual void Exit(Piece piece)
     {

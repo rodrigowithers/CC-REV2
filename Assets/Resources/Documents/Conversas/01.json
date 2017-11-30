@@ -7,58 +7,79 @@
                 "s": "This is an official notice by the king"
             },
             {
-                "s": "All knights should report to duty this saturday, September the 4th, for the official promotion of out new Champion, the Queen Veneria."
+                "s": "All knights should report to duty this saturday,## September the 4th,## for the official promotion of out new Champion,## the Queen Veneria."
             },
             {
-                "s": "This event is mandatory, and tardiness will not be tolerated."
+                "s": "This event is mandatory,## and tardiness will not be tolerated."
             }
         ]
     },
-    {
-        "index": 1,
-        "person": 6,
-        "string": [
-            {
-                "s": "I'm already late! I better run!"
-            }
-        ]
-    },
-    {
+   {
+     "index": 1,
+     "person": 6,
+     "string": [
+       {
+         "s": "%Huh# .# .# . #######$I'm already late! I better run!"
+       }
+     ]
+   },
+   {
         "index": 2,
         "person": 6,
         "string": [
             {
-                "s": "What is that up ahead?!"
+                "s": " Huh?### What's this?"
+            },
+            {
+                "s": "A tutorial on how to#% walk? $Who needs this?"
             }
         ]
     },
     {
         "index": 3,
-        "person": -6,
+        "person": 0,
         "string": [
             {
-                "s": "You!"
+                "s": "How to walk:"
             },
             {
-                "s": "Are you with king Edgar?"
+                "s": "Use## your## legs."
             }
         ]
     },
     {
         "index": 4,
-        "person": 6,
+        "person": 0,
         "string": [
             {
-                "s": "Of course!"
+                "s": "Actually:"
+            },
+            {
+                "s": "WASD - Movement"
+            },
+            {
+                "s": "Arrow Keys - Attack - using your character attack pattern, for exemple, diagonals using left+up and so on... You'll figure it out. This consumes your Stamina (the green bar)!"
+            },
+            {
+                "s": "Space - Special Move - different for every character, you'll have to try them out and see what each of them do. This consumes your Mana (the blue bar)!"
+            },
+            {
+                "s": "E - Pause"
+            },
+            {
+                "s": "Now, to progress, attack me!"
             }
         ]
     },
     {
         "index": 5,
-        "person": -6,
+        "person": 6,
         "string": [
             {
-                "s": "Then die!"
+                "s": "Geez, what a weird sign..."
+            },
+            {
+                "s": "Guess I'll kill it then!"
             }
         ]
     },
@@ -67,52 +88,46 @@
         "person": 6,
         "string": [
             {
-                "s": "What?!"
+                "s": " What's that up ahead?!"
             }
         ]
     },
     {
         "index": 7,
-        "person": 6,
+        "person": -6,
         "string": [
             {
-                "s": "I wonder why those knights attacked me..."
+                "s": "$+You!"
             },
             {
-                "s": "Shit, there are more up ahead..."
-            },
-            {
-                "s": "I better get ready to fight untill I can find the answer!"
+                "s": "Are you with king Edgar?"
             }
         ]
     },
     {
         "index": 8,
-        "person": -6,
+        "person": 6,
         "string": [
             {
-                "s": "You!"
+                "s": "Of course!"
             }
         ]
     },
     {
         "index": 9,
-        "person": 6,
+        "person": -6,
         "string": [
             {
-                "s": "Yeah, I get it, come!"
+                "s": "Then die!+"
             }
         ]
     },
     {
         "index": 10,
-        "person": 1,
+        "person": 6,
         "string": [
             {
-                "s": "You there, Pawn!"
-            },
-            {
-                "s": "I saw you fighting the other knigts-"
+                "s": "+What?!"
             }
         ]
     },
@@ -121,16 +136,22 @@
         "person": 6,
         "string": [
             {
-                "s": "Your Majesty, I was only defending myself!"
+                "s": "%I wonder why that knight attacked me..."
+            },
+            {
+                "s": "%+Crap!## $There are more up ahead!+"
+            },
+            {
+                "s": "I guess I'll just have to beat them up to get an answer!+"
             }
         ]
     },
     {
         "index": 12,
-        "person": 1,
+        "person": -6,
         "string": [
             {
-                "s": "Then whose side are you on?"
+                "s": "You!"
             }
         ]
     },
@@ -139,7 +160,7 @@
         "person": 6,
         "string": [
             {
-                "s": "Yours, obviously!"
+                "s": "Yeah, I get it now,# +come on!"
             }
         ]
     },
@@ -148,16 +169,19 @@
         "person": 1,
         "string": [
             {
-                "s": "Fantastic, then join me, I'll explain after we've delt with these deserters..."
+                "s": "You there,## Pawn!"
+            },
+            {
+                "s": "I saw you fighting the other knights--"
             }
         ]
     },
     {
         "index": 15,
-        "person": 0,
+        "person": 6,
         "string": [
             {
-                "s": "King Edgar has joined your Party!"
+                "s": "$Your Majesty,## I was only defending myself!"
             }
         ]
     },
@@ -166,52 +190,46 @@
         "person": 1,
         "string": [
             {
-                "s": "Press E to open Character Select Screen"
+                "s": "Then whose side are you on?"
             }
         ]
     },
     {
         "index": 17,
-        "person": 1,
+        "person": 6,
         "string": [
             {
-                "s": "The new Champion turned against the kingdom in the middle of the cerimony."
-            },
-            {
-                "s": "Turns out, she had the whole military on her side, except for you, apparently."
-            },
-            {
-                "s": "Now she's on her way to the castle, I need to go stop her while I still can."
+                "s": "Yours,## obviously!"
             }
         ]
     },
     {
         "index": 18,
-        "person": 6,
+        "person": 1,
         "string": [
             {
-                "s": "The Champion? I always thought they were the best of the best, our greatests warriors..."
+                "s": "Fantastic!## Join me,## and I'll explain after we're done with these deserters..."
             }
         ]
     },
     {
         "index": 19,
-        "person": 1,
+        "person": 0,
         "string": [
             {
-                "s": "Indeed they were, 10 years ago..."
-            },
-            {
-                "s": "She was supposed to be the first new Champion in the last decade, seeing as all the old ones have left their services."
+                "s": "+King Edgar has joined your party!"
             }
         ]
     },
     {
         "index": 20,
-        "person": 6,
+        "person": 1,
         "string": [
             {
-                "s": "Can you defeat her?"
+                "s": "$Press E to open Character Select screen and use SPACE to select another character!"
+            },
+            {
+                "s": "$Also, you can use this blue guy here to train your habilities! He won't attack you!"
             }
         ]
     },
@@ -220,22 +238,22 @@
         "person": 1,
         "string": [
             {
-                "s": "I fear not, but I must try..."
+                "s": "The new Champion turned against the kingdom## in the middle of the cerimony."
+            },
+            {
+                "s": "Turns out,## she had the whole military on her side,## except for you,## apparently."
+            },
+            {
+                "s": "Now## she's on her way to the castle,## I need to go stop her while I still can."
             }
         ]
     },
     {
         "index": 22,
-        "person": -2,
+        "person": 6,
         "string": [
             {
-                "s": "The kingdom is mine now, Edgar!"
-            },
-            {
-                "s": "You and your little Pawn friend have no choice but to conforme to the new Law, that is me!"
-            },
-            {
-                "s": "Towers, kill them!"
+                "s": "The Champion?## I always thought they were the best of the best,## our greatests warriors..."
             }
         ]
     },
@@ -244,22 +262,76 @@
         "person": 1,
         "string": [
             {
-                "s": "She ran away..."
+                "s": "Indeed they were,## 10 years ago..."
             },
             {
-                "s": "Thank you knight, for standing by my side. But now, we must part ways."
-            },
-            {
-                "s": "Go back to your family, and leave this kingdom, I fear nowhere is safe anymore."
+                "s": "She was supposed to be the first new Champion of this decade. All the old ones have retired."
             }
         ]
     },
     {
         "index": 24,
+        "person": 6,
+        "string": [
+            {
+                "s": "...####Can you defeat her?"
+            }
+        ]
+    },
+    {
+        "index": 25,
+        "person": 1,
+        "string": [
+            {
+                "s": "%I fear not,## but I must try..."
+            }
+        ]
+    },
+    {
+        "index": 26,
+        "person": -2,
+        "string": [
+            {
+                "s": "The kingdom is mine now, Edgar!"
+            },
+            {
+                "s": "You and your little Pawn friend have no choice but to conform to the new Law -- me!"
+            },
+            {
+                "s": "Rooks, +kill them!"
+            }
+        ]
+    },
+    {
+        "index": 27,
+        "person": 1,
+        "string": [
+            {
+                "s": "She ran away..."
+            },
+            {
+                "s": "Thank you warrior, for standing by my side. But now, we must part ways."
+            },
+            {
+                "s": "Go back to your family and leave this kingdom, I fear nowhere is safe anymore."
+            }
+        ]
+    },
+    {
+        "index": 28,
         "person": 0,
         "string": [
             {
-                "s": "King Edgar has left your Party!"
+                "s": "King Edgar has left your party!"
+            }
+        ]
+    },
+    {
+        "index": 29,
+        "person": 0,
+        "string": [
+            {
+                "s": "One year later..."
             }
         ]
     }

@@ -14,6 +14,7 @@ public class AccurateAtkState : State
         base.Enter(piece);
         _main_script = piece.GetComponent<TowerBoss>();
         _main_script.RigidBody.velocity = Vector2.zero;
+        _main_script.MovementDirection = Vector2.zero;
         _main_script.CanMove = false;
     }
     public override void Execute(Piece piece)
@@ -42,8 +43,41 @@ public class AccurateAtkState : State
     }
     protected GameObject CreateAtkArea(Vector2 pos)
     {
+        bool isspecial = true;
+        if (!(_main_script._stateMachine.GetCurrentState() is ShowerAtkState) && !(_main_script._stateMachine.GetCurrentState() is SceneShowerAtkState) )
+        {
+            isspecial = false;
+
+            float ang = _main_script.ThisAngleFromPlayer();
+
+
+            // Toca a animação
+            _main_script.GetComponent<ClassAnimator>().Stop();
+
+            if (ang > 0.6)
+            {   // left attack area
+                _main_script.GetComponent<ClassAnimator>().Play("AttackLeft", 0, true, true); ;
+            }
+            else if (ang <= 0.6 && ang >= -0.6)
+            {
+                if (_main_script.transform.position.y < Player.Instance.transform.position.y)
+                {   // top attack area
+                    _main_script.GetComponent<ClassAnimator>().Play("AttackUp", 0, true, true); ;
+                }
+                else
+                {   // bot attack area
+                    _main_script.GetComponent<ClassAnimator>().Play("AttackDown", 0, true, true); ;
+                }
+            }
+            else if (ang < -0.6)
+            {   // right attack area
+                _main_script.GetComponent<ClassAnimator>().Play("AttackRight", 0, true, true); ;
+            }
+        }
+
         GameObject toreturn = GameObject.Instantiate(_main_script._atkArea);
         toreturn.transform.position = pos;
+        toreturn.GetComponent<TowerBossAttackArea>().special = isspecial;
         return toreturn;
     }
 

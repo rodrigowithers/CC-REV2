@@ -24,6 +24,9 @@ public class Lance : MonoBehaviour, IAttack
     {
         //Direction = Destination - transform.position.xy();
         transform.localRotation = Quaternion.FromToRotation(Vector3.up, Direction);
+
+        // Toca o som
+        SoundManager.Play("corte 1");
     }
 
     // Update is called once per frame

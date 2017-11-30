@@ -11,6 +11,8 @@ public class ChangePanel : MonoBehaviour
 
     public Button Starting;
 
+    public Button Selected;
+
     private Sprite GetSprite(string name)
     {
         foreach (var image in images)
@@ -35,9 +37,10 @@ public class ChangePanel : MonoBehaviour
             if(PartyManager.Instance.Classes.Count > i)
             {
                 Classes[i].gameObject.SetActive(true);
-                Classes[i].image.sprite = GetSprite(PartyManager.Instance.Classes[i]);
+                Classes[i].image.sprite = GetSprite(PartyManager.Instance.Classes[i].Name);
 
                 Classes[i].Select();
+                Selected = Classes[i];
             }
         }
 
@@ -53,15 +56,21 @@ public class ChangePanel : MonoBehaviour
 
     public void ChangeClass(int index)
     {
+        Player player = Player.Instance;
+
+        PartyManager.Instance.SetCharacterLife(player.GetClass.GetType().Name, Player.Instance.Life);
+
         //System.Type t = System.Type.GetType(Player.Instance.GetComponent<CharacterSwitch>().ClassesDebug[index]);
-        System.Type t = System.Type.GetType(PartyManager.Instance.Classes[index]);
+        System.Type t = System.Type.GetType(PartyManager.Instance.Classes[index].Name);
 
+        //////////////// muda a vida do player //////////////////////////////
+        player.Life = PartyManager.Instance.Classes[index].Life;
 
-        PieceManager.Instance.ChangeClass(Player.Instance, t);
+        PieceManager.Instance.ChangeClass(player, t);
 
         Time.timeScale = 1.0f;
         CanvasManager.Instance.CurrentPanel = CanvasManager.Instance.ScenarioPanel;
-        Player.Instance.enabled = true;
+        player.enabled = true;
     }
 
     private void Update()

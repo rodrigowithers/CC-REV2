@@ -16,6 +16,7 @@ public class WalkAroundState : State
         _main_script.CanMove = true;
         destination = ChooseDestination();
         dir = DirectionToDestination();
+
         _main_script.StartCoroutine(CWalkTime());
         _main_script.RigidBody.velocity = Vector2.zero;
 
@@ -31,7 +32,7 @@ public class WalkAroundState : State
         {
             if (piece != null)
                 StateChange();
-
+                //_main_script._stateMachine.ChangeState(new AccurateAtkState());
         }
         _main_script.Move(dir * _main_script.Speed);               
     }
@@ -66,14 +67,22 @@ public class WalkAroundState : State
     void StateChange()
     {
         StateMachine SM = _main_script._stateMachine;
-        if (SM.GetPreviousState() is GiantAtkState || SM.GetPreviousState() is WalkAroundState)
-            SM.ChangeState(new AccurateAtkState());
-        else if (SM.GetPreviousState() is AccurateAtkState || SM.GetPreviousState() is DashState)
-            SM.ChangeState(new SpawnMinionState());
-        else if (SM.GetPreviousState() is DashState )
-            SM.ChangeState(new ShowerAtkState());
-        else if (SM.GetPreviousState() is RecoverState)
-            SM.ChangeState(new SceneShowerAtkState());
+
+        if (Random.Range(0, 2) == 0 && !(SM.GetPreviousState() is WalkAroundState) && !(SM.GetPreviousState() is RecoverState))
+        {
+            SM.ChangeState(new WalkAroundState());
+        }
+        else
+        {
+            if (SM.GetPreviousState() is GiantAtkState || SM.GetPreviousState() is WalkAroundState)
+                SM.ChangeState(new AccurateAtkState());
+            else if (SM.GetPreviousState() is AccurateAtkState || SM.GetPreviousState() is DashState)
+                SM.ChangeState(new SpawnMinionState());
+            else if (SM.GetPreviousState() is DashState)
+                SM.ChangeState(new ShowerAtkState());
+            else if (SM.GetPreviousState() is RecoverState)
+                SM.ChangeState(new SceneShowerAtkState());
+        }
     }
 
 }

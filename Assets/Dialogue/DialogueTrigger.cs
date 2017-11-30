@@ -29,58 +29,22 @@ public class DialogueTrigger : MonoBehaviour
         if (!enabled)
             return;
 
-
-        /// TODO: Refazer isso
-        //if (Level.Instance.Completed)
-        //{
-        //    _dialogueBox.Dialogues = _dialogues;
-
-        //    foreach (var dialogue in _dialogueBox.Dialogues)
-        //    {
-        //        //dialogue.EndOfDialogueEvent.Invoke();
-        //    }
-        
-        //    return;
-        //}
-
         _dialogueBox.Set(true);
         _dialogueBox.Dialogues = _dialogues;
         _dialogueBox.Nodes = Nodes;
         _dialogueBox.Filename = DialoguePath;
         _dialogueBox.CurrentTrigger = this;
 
-        _dialogueBox.StartCoroutine(_dialogueBox.CExecuteNodes());
+        _dialogueBox.StartDoingTheThing();
     }
 
     public void Exit()
     {
-        //Time.timeScale = 1.0f;
         enabled = false;
     }
 
     public void Start()
     {
         _dialogueBox = FindObjectOfType<DialogueBox>().GetComponent<DialogueBox>();
-        //LoadDialogues();
-
-        //foreach(var node in Nodes)
-        //{
-        //    if(node.GetPersistentMethodName(0) == "GetDialogue")
-        //    {
-                
-        //    }
-        //}
     }
-
-    private void LoadDialogues()
-    {
-        //// List<Dialogue> temp = JsonHelper.Instance.Retrieve_Conversation(DialoguePath);
-        //Dialogues = JsonHelper.Instance.Retrieve_Conversation(DialoguePath).ToArray();
-        //for (int i = 0;i< Dialogues.Length;i++)
-        //{
-        //    //Dialogues[i] = temp[i];
-        //    Dialogues[i].Speaking = Adjust_Speaker_Img(Dialogues[i].person);
-        //}
-    }
-
 }

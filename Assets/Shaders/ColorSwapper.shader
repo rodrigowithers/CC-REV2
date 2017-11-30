@@ -5,6 +5,8 @@
 		_MainTex ("Texture", 2D) = "white" {}
 		_Color ("New Color", Color) = (1, 1, 1, 1)
 
+		_Transparency("Transparency Cutout", Range(0,1)) = 0.5
+
 		_Cutoff("Cutoff", Range(0, 1)) = 0
 		_Cutin("Cutin", Range(0, 1)) = 0
 		_Lerp("Lerp", Range(0, 1)) = 0
@@ -15,13 +17,12 @@
 	}
 	SubShader
 	{
-		Tags { "RenderType"="Transparent" }
+		Tags { "RenderType"="Transparent" "RenderQueue"="Transparent"}
 		LOD 100
 
 		Pass
 		{
-			Blend SrcAlpha OneMinusSrcAlpha
-
+	
 			Cull Off
 
 			CGPROGRAM
@@ -41,11 +42,12 @@
 			struct v2f
 			{
 				float2 uv : TEXCOORD0;
-				UNITY_FOG_COORDS(1)
 				float4 vertex : SV_POSITION;
 			};
 
 			float4 _Color;
+
+			float _Transparency;
 
 			float _Cutoff;
 			float _Cutin;
@@ -63,7 +65,6 @@
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				UNITY_TRANSFER_FOG(o,o.vertex);
 				return o;
 			}
 			
@@ -72,14 +73,14 @@
 				// sample the texture
 				fixed4 col = tex2D(_MainTex, i.uv);
 
+				if(col.a < _Transparency) discard;
+
 				// Multiplica cor
 				if (col.r <= _Cutoff && col.r >= _Cutin)
 					col = lerp(col, _Color, _Lerp);
 
 				// Flash
 				col.rgb = lerp(col.rgb, float3(1.0, 1.0, 1.0), _Flash);
-
-
 				return col;
 			}
 			ENDCG

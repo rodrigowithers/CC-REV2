@@ -29,6 +29,10 @@ public class StayStillState : State
     IEnumerator CWaitTime()
     {
         yield return new WaitForSeconds(time_stopped);
+        _main_script.GetComponent<ClassAnimator>().Stop();
+        _main_script.GetComponent<ClassAnimator>().Play("Recover", 0, true, true);
+
+        yield return new WaitForSeconds(1.5f);
         finished = true;
     }
 

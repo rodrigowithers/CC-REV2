@@ -10,7 +10,7 @@ public class Piece : MonoBehaviour
 
     #region Variables
         #region PRIVATE
-            private Rigidbody2D _rigidBody;
+            protected Rigidbody2D _rigidBody;
             protected SpriteRenderer _renderer;
 
             private bool _canMove = true;
@@ -44,11 +44,11 @@ public class Piece : MonoBehaviour
         }
     }
 
-    private void UpdateAnimator(Vector2 input)
+    protected void UpdateAnimator()
     {
         var anim = GetComponent<ClassAnimator>();
         if (anim == null)
-            return;
+            return; 
 
         // Usa o Movement Direction para dizer para onde a peça está se movendo
         if (MovementDirection.y > 0)
@@ -85,11 +85,10 @@ public class Piece : MonoBehaviour
     {
         if (!CanMove)
             return;
-
         if (_rigidBody == null)
             _rigidBody = GetComponent<Rigidbody2D>();
 
-        if (input.magnitude < 0.5f)
+        if (input.magnitude < 0.1f)
         {
             _rigidBody.velocity = Vector2.zero;
         }
@@ -97,10 +96,10 @@ public class Piece : MonoBehaviour
         {
             _rigidBody.velocity = input.normalized * Speed * Time.deltaTime;
         }
-
+        Direction = input;
         MovementDirection = input.normalized;
 
-        UpdateAnimator(input);
+        UpdateAnimator();
     }
     public void Move()
     {
@@ -120,7 +119,7 @@ public class Piece : MonoBehaviour
         }
 
         MovementDirection = Direction.normalized;
-        UpdateAnimator(MovementDirection);
+        UpdateAnimator();
     }
 
     public void StopMoving()
@@ -139,6 +138,34 @@ public class Piece : MonoBehaviour
         _renderer = GetComponent<SpriteRenderer>();
     }
 
+
+    // Alterna entre a cor da sprite e branco
+    public IEnumerator CDamageFlash()
+    {
+        var renderer = GetComponent<SpriteRenderer>();
+        var mat = renderer.material;
+
+        float time = 0.0f;
+        while (time < 1.0f)
+        {
+            mat.SetFloat("_Flash", time);
+
+            time += Time.deltaTime * 6.0f;
+            yield return null;
+        };
+
+        while (time > 0.0f)
+        {
+            mat.SetFloat("_Flash", time);
+
+            time -= Time.deltaTime * 6.0f;
+            yield return null;
+        };
+
+        mat.SetFloat("_Flash", 0);
+        yield return null;
+    }
+    
     private void Start()
     {
         NewDirection();
@@ -152,6 +179,8 @@ public class Piece : MonoBehaviour
     {
 
     }
+
+
 
     public void Push(Vector2 dir , float mag = 10)
     {
@@ -177,5 +206,10 @@ public class Piece : MonoBehaviour
         Vector2 toreturn = new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f));
         return toreturn;
     }
-
+    //Retorna o angulo entre o inimigo e o player
+    public float ThisAngleFromPlayer()
+    {
+        Vector2 normal = transform.position - Player.Instance.transform.position;
+        return Vector2.Dot(new Vector2(1, 0), normal.normalized);
+    }
 }

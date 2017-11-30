@@ -55,16 +55,34 @@ public class CanvasManager : MonoBehaviour
 
     private TextSpawner _textSpawner;
 
+    private GameObject _currentPanel;
     public GameObject CurrentPanel
     {
         set
         {
-            ScenarioPanel.SetActive(false);
+            //ScenarioPanel.SetActive(false);
             MenuPanel.SetActive(false);
             ChangePanel.SetActive(false);
 
             if (value != null)
+            {
+                if (value == ScenarioPanel)
+                {
+                    SoundManager.Instance.Mixer.FindSnapshot("Main").TransitionTo(0.0f);
+                }
+                else
+                {
+                    SoundManager.Instance.Mixer.FindSnapshot("Menus").TransitionTo(0.0f);
+                }
+
                 value.SetActive(true);
+            }
+
+            _currentPanel = value;
+        }
+        get
+        {
+            return _currentPanel;
         }
     }
 
@@ -158,6 +176,9 @@ public class CanvasManager : MonoBehaviour
         //{
         //    transform.GetChildOfType<CanvasScenarioPanel>().gameObject.SetActive(true);
         //}
+
+        if (_player == null)
+            return;
 
         UpdateEnergyBar();
         UpdateStaminaBar();

@@ -33,18 +33,36 @@ public class Unit : MonoBehaviour
         StopAllCoroutines();
     }
 
+    Coroutine follow;
+
     public void OnPathFound(Vector2[] waypoints, bool pathsucessful)
     {
         if (pathsucessful && waypoints != null && main_script.CanMove)
         {
             path = new Path(waypoints, transform.position, turnSpd);
-            StopCoroutine(FollowPath());
-            StartCoroutine(FollowPath());
+
+            if(follow == null)
+            {
+                follow = StartCoroutine(FollowPath());
+            }
+            else
+            {
+                //Debug.Log("Reiniciando Follow");
+
+                StopCoroutine(follow);
+                follow = StartCoroutine(FollowPath());
+            }
+
+            //StopAllCoroutines();
+            //StopCoroutine(FollowPath());
+            //StartCoroutine(FollowPath());
         }
     }
 
     IEnumerator FollowPath()
     {
+        //Debug.Log("Iniciou Nova Paradinha");
+
         bool following = true;
         int pathindex = 0;
 
@@ -58,42 +76,43 @@ public class Unit : MonoBehaviour
 
             if (path.turnBoundaries.Length != 0)
             {
-                //Debug.Log("path size" + path.turnBoundaries.Length);
-                //Debug.Log("path index " + pathindex);
 
-
-                while (path.turnBoundaries[pathindex].HasCrossedLine(transform.position) && main_script.CanMove)
+                if(path.turnBoundaries.Length > pathindex)
                 {
-                    if (pathindex == path.finishLineIndex)
+                    while (path.turnBoundaries[pathindex].HasCrossedLine(transform.position) && main_script.CanMove)
                     {
-                        following = false;
-                        break;
-                    }
-                    else
-                    {
-                        pathindex++;
+                        if (pathindex == path.finishLineIndex)
+                        {
+                            following = false;
+                            break;
+                        }
+                        else
+                        {
+                            pathindex++;
+                        }
                     }
                 }
             }
             if (following && main_script.Use_Path)
             {
-                //Quaternion targetrot = Quaternion.LookRotation(path.lookPoints[pathindex] - (Vector2)transform.position);
-                //transform.rotation = Quaternion.Lerp(transform.rotation, targetrot, Time.deltaTime * turnSpd);
-                //transform.Translate(Vector2.up * Time.deltaTime * speed, Space.Self);
-
-                //float ang = Vector2.Angle(transform.up, path.lookPoints[pathindex] - (Vector2)transform.position);
-                //transform.Rotate(Vector3.forward,ang);
                 if (pathindex >= path.lookPoints.Length)
-                    yield return null;
+                    yield break;
                 else
                 {
                     Vector2 dir = (path.lookPoints[pathindex] - (Vector2)transform.position).normalized;
-                    //transform.Translate(dir * Time.deltaTime * speed);
+
+                    //yield return new WaitForSeconds(1.0f);
+
+                    //Debug.Log("Moving...");
+
+                    //transform.position = path.lookPoints[pathindex];
+
                     main_script.Move(dir);
+                    //transform.Translate(dir * Time.deltaTime);
                 }
             }
-            
-            yield return null;
+
+            yield return new WaitForFixedUpdate();
         }
     }
 
@@ -131,10 +150,11 @@ public class Unit : MonoBehaviour
 
     public bool FinishedPath()
     {
+        Debug.Log((Target - (Vector2)transform.position).magnitude < 2);
+
         if ((Target - (Vector2)transform.position).magnitude < 2)
         {
             return true;
-            //(RequestNewPathTo());
         }
         return false;
     }
@@ -168,11 +188,13 @@ public class Unit : MonoBehaviour
 
         //PathRequestManager.RequestPath(new PathRequest(transform.position, Target.transform.position, OnPathFound));
 
-        yield return null;
+        yield return new WaitForEndOfFrame();
     }
 
     public IEnumerator RequestNewPathTo(Vector2 pos)
     {
+        DebugExtension.DebugCircle(pos, Vector3.forward, Color.blue, 0.2f);
+
         Vector2 cam = Camera.main.transform.position;
         if (pos.x == -1000)
         {
@@ -196,7 +218,7 @@ public class Unit : MonoBehaviour
         }
         PathRequestManager.RequestPath(new PathRequest(transform.position, Target, OnPathFound));
 
-        yield return null;
+        yield return new WaitForEndOfFrame();
     }
 
     void OnDrawGizmos()

@@ -1,0 +1,311 @@
+[
+    {
+        "index": 0,
+        "person": 1,
+        "string": [
+            {
+                "s": "I'm fairly certain there's a village up ahead..."
+            },
+            {
+                "s": "Maybe I'll find someone there,### it's clear I can't do this on my own..."
+            },
+            {
+                "s": "I just have to be careful not to allert those guards..."
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "person": -6,
+        "string": [
+            {
+                "s": "You there, halt!"
+            },
+            {
+                "s": "This village is protected by Her Majesty's troops!"
+            },
+            {
+                "s": "Everyone must pass inspection before entering!"
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "person": 1,
+        "string": [
+            {
+                "s": "Damn...#Not now..."
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "person": -6,
+        "string": [
+            {
+                "s": "%Wait#.#.#. $I know who you are!"
+            },
+            {
+                "s": "$$+Guards!"
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "person": -3,
+        "string": [
+            {
+                "s": "$+We saw you fighting the other guards!"
+            },
+            {
+                "s": "$+There's no way you can escape from us now!!"
+            }
+        ]
+    },
+    {
+        "index": 5,
+        "person": 1,
+        "string": [
+            {
+                "s": "Just how many guards are here?"
+            },
+            {
+                "s": "%I'm beginning to think this was a bad idea..."
+            }
+        ]
+    },
+    {
+        "index": 6,
+        "person": 1,
+        "string": [
+            {
+                "s": "%%Hmm..."
+            },
+            {
+                "s": "This town seems to be empty."
+            },
+            {
+                "s": "Why were the guards here then?"
+            },
+            {
+                "s": "Searching for me? ##No... Maybe searching for someone else#.#.#."
+            }
+        ]
+    },
+    {
+        "index": 7,
+        "person": 3,
+        "string": [
+            {
+                "s": "+#####+#####+"
+            }
+        ]
+    },
+    {
+        "index": 8,
+        "person": 1,
+        "string": [
+            {
+                "s": "$$What was +that?"
+            },
+            {
+                "s": "$$Is someone there?!### +Show yourself!"
+            }
+        ]
+    },
+    {
+        "index": 9,
+        "person": 3,
+        "string": [
+            {
+                "s": "You're running away from them too,## $aren't you?"
+            },
+            {
+                "s": "+#####+#####+I can help you,##+ Old King!"
+            },
+            {
+                "s": "That is...##If you can help me!"
+            }
+        ]
+    },
+    {
+        "index": 10,
+        "person": 1,
+        "string": [
+            {
+                "s": "And why would I do that?"
+            },
+            {
+                "s": "How do I know you're not just here to kill me too?"
+            }
+        ]
+    },
+    {
+        "index": 11,
+        "person": 3,
+        "string": [
+            {
+                "s": "Well,## I'm hidding from those guards,##they are clearly chasing me down."
+            }
+        ]
+    },
+    {
+        "index": 12,
+        "person": 1,
+        "string": [
+            {
+                "s": "So they were after#.#.#. %You?"
+            },
+            {
+                "s": "Ok then,## You can come with me."
+            }
+        ]
+    },
+    {
+        "index": 13,
+        "person": 3,
+        "string": [
+            {
+                "s": "+$Great!## Let's go!"
+            }
+        ]
+    },
+    {
+        "index": 14,
+        "person": 0,
+        "string": [
+            {
+                "s": "+The Tower joined your Party!"
+            }
+        ]
+    },
+    {
+        "index": 15,
+        "person": 3,
+        "string": [
+            {
+                "s": "Heh,## looks like we've got company!"
+            },
+            {
+                "s": "But this time,## I'm not alone!"
+            }
+        ]
+    },
+    {
+        "index": 16,
+        "person": 1,
+        "string": [
+            {
+                "s": "%Yeah#.#.#."
+            },
+            {
+                "s": "$You're all +dead!"
+            }
+        ]
+    },
+    {
+        "index": 17,
+        "person": 1,
+        "string": [
+            {
+                "s": "$+Wait!###Is that?!"
+            }
+        ]
+    },
+    {
+        "index": 18,
+        "person": -2,
+        "string": [
+            {
+                "s": "Your crusade ends now,## King!"
+            }
+        ]
+    },
+    {
+        "index": 19,
+        "person": 1,
+        "string": [
+            {
+                "s": "$+Veneria!## You monster!## Look at what you did to my kingdom!"
+            }
+        ]
+    },
+    {
+        "index": 20,
+        "person": 3,
+        "string": [
+            {
+                "s": "$That's not Queen Veneria!"
+            },
+            {
+                "s": "I know this guy...## He's a Pawn,## he got famous in the army because of his...##% well,## disguise techniques..."
+            }
+        ]
+    },
+    {
+        "index": 21,
+        "person": 1,
+        "string": [
+            {
+                "s": "He's a#.#.#. ####%guy?"
+            },
+            {
+                "s": "Very well then, he's a dead man!"
+            }
+        ]
+    },
+    {
+        "index": 22,
+        "person": -2,
+        "string": [
+            {
+                "s": "%Heh..."
+            },
+            {
+                "s": "%You might have got to me,## False King"
+            },
+            {
+                "s": "%But you'll never get past our brand new +Champion!"
+            }
+        ]
+    },
+    {
+        "index": 23,
+        "person": 1,
+        "string": [
+            {
+                "s": "$What?!"
+            },
+            {
+                "s": "$A new Champion so soon?"
+            },
+            {
+                "s": "$What is going on here?!"
+            }
+        ]
+    },
+    {
+        "index": 24,
+        "person": 3,
+        "string": [
+            {
+                "s": "%Looks like we need to get to the botton of this..."
+            },
+            {
+                "s": "C'mon,# Old King,# we've got a Champion to hunt!"
+            }
+        ]
+    },
+    {
+        "index": 25,
+        "person": 0,
+        "string": [
+            {
+                "s": "And so,## the King and the Tower kept going North,## trying to find this new Champion..."
+            },
+	    {
+                "s": "A week later..."
+            }
+        ]
+    }
+]

@@ -11,6 +11,10 @@ public class SceneShowerAtkState : AccurateAtkState {
         base.Enter(piece);
         atktimes = 20;
         _main_script.StartCoroutine(CAttack());
+        
+        // Toca a animação
+        _main_script.GetComponent<ClassAnimator>().Stop();
+        _main_script.GetComponent<ClassAnimator>().Play("Prepare", 0, true,true);
     }
     public override void Execute(Piece piece)
     {
@@ -23,12 +27,20 @@ public class SceneShowerAtkState : AccurateAtkState {
     }
     public override void Exit(Piece piece)
     {
+        // Toca a animação
+        _main_script.GetComponent<ClassAnimator>().Stop();
+        _main_script.GetComponent<ClassAnimator>().Play("Idle", 0, true,true);
+
         atkList.Clear();
         //  base.Exit(piece);
     }
 
     IEnumerator CAttack()
     {
+   yield return new WaitForSeconds(0.5f);        // Toca a animação
+        _main_script.GetComponent<ClassAnimator>().Stop();
+        _main_script.GetComponent<ClassAnimator>().Play("Special", 0, true, true);
+
         int num = 0;
         while (num < atktimes)
         {
@@ -38,6 +50,11 @@ public class SceneShowerAtkState : AccurateAtkState {
             num++;
             yield return new WaitForSeconds(timebetweenatks);
         }
+
+        // Toca a animação
+        _main_script.GetComponent<ClassAnimator>().Stop();
+        _main_script.GetComponent<ClassAnimator>().Play("Idle", 0, true, true);
+
         finished = true;
         yield return null;
     }

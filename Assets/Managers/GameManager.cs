@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public enum GameMode
+    {
+        NORMAL,
+        HARD,
+        QUEEN
+    }
+
     private GameObject _player;
     public GameObject _Player
     {
@@ -49,17 +56,86 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool Dead
+    {
+        set
+        {
+            if (value)
+            {
+                if(YouDied != null)
+                {
+                    YouDied.SetActive(true);
+                }
+
+                foreach(var enemy in EnemyManager.Instance.EnemyList)
+                {
+                    enemy.GetComponent<StateMachine>().SetCurrentState(new WanderState());
+
+                    //Destroy(enemy.GetComponent<Piece>());
+                    //Destroy(enemy.GetComponent<StateMachine>());
+                }
+
+                Time.timeScale = 0.0f;
+
+                StartCoroutine(WaitAnyInput());
+            }
+        }
+    }
+
+    public bool Pause
+    {
+        set
+        {
+            if (value)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+    }
+
+    public GameObject YouDied;
 
     public List<Sprite> _Portraits = new List<Sprite>();
 
+    public GameMode Mode = GameMode.NORMAL;
+
+    private bool Next()
+    {
+        bool hasPressed = Input.GetButtonUp("Hability");
+        return hasPressed;
+
+    }
+
+    private IEnumerator WaitAnyInput()
+    {
+        bool input = false;
+
+        System.Func<bool> Pressed = new System.Func<bool>(Next);
+
+        yield return new WaitForSecondsRealtime(1.0f);
+
+        yield return new WaitUntil(Pressed);
+
+        // Pega a cena atual
+        var scene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(scene.name);
+
+        yield return null;
+    }
 
     void Awake()
     {
-        //Player = FindObjectOfType<Player>().gameObject;
-        _Player = Player.Instance.gameObject;
         LoadAllSprites();
     }
 
+    private void Start()
+    {
+
+    }
 
     public void LoadScene(string name)
     {
@@ -84,6 +160,11 @@ public class GameManager : MonoBehaviour
         _Portraits.Add(Resources.Load<Sprite>("Active Objects/Player/Character Switch/Portraits/Bishop_Normal"));
         _Portraits.Add(Resources.Load<Sprite>("Active Objects/Player/Character Switch/Portraits/Pawn_Normal"));
 
+    }
+
+    private void Update()
+    {
+        
     }
 
     //private Object[] _piecesprites;

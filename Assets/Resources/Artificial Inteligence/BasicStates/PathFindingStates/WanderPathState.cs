@@ -10,7 +10,6 @@ public class WanderPathState : State
     float time_to_next_walk = 2;
 
 
-
     public override void Enter(Piece piece)
     {
         base.Enter(piece);
@@ -31,8 +30,9 @@ public class WanderPathState : State
             is_changing = true;
             main_script.StartCoroutine(TimeToChange());
         }
+        CheckifPlayerIsClose(2);
 
-        if (SeenPlayer() || max_times_walked < 0)
+        if ((SeenPlayer() || max_times_walked < 0) && main_script.IsAttacking)
         {
             main_script._StateMachine.ChangeState(new AwareState());
         }
@@ -42,12 +42,16 @@ public class WanderPathState : State
         //  base.Exit(piece);
     }
 
+    protected virtual Vector2 WhereTo()
+    {
+        return new Vector2(-1000,0);
+    } 
 
     IEnumerator TimeToChange()
     {
         yield return new WaitForSeconds(time_to_next_walk);
 
-        unit.StartCoroutine(unit.RequestNewPathTo(new Vector2(-1000, 0)));
+        unit.StartCoroutine(unit.RequestNewPathTo(WhereTo()));
         is_changing = false;
         max_times_walked--;
 
@@ -64,5 +68,13 @@ public class WanderPathState : State
                 return true;
         }
         return false;
+    }
+
+    void CheckifPlayerIsClose(float dist)
+    {
+        if( (player.transform.position - main_script.transform.position).magnitude < dist )
+        {
+            EnemyManager.Instance.GotTooCloseFromPlayer(main_script.gameObject);
+        }
     }
 }

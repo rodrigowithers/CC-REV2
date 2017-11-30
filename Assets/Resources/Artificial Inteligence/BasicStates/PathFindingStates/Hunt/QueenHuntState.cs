@@ -16,6 +16,13 @@ public class QueenHuntState : HuntState
         ///Regras para que o Rainha utilize a sua habilidade especial//
         //////////////////////////////////////////////////////////////
 
+        if (main_script.AtkAreaDistPlayer() <= 0.5f)
+        {
+            main_script._StateMachine.ChangeState(new PrepareAttackState());
+        }
+
+        CheckToAttack();
+
         if (main_script._Hability.HasStamina())
         {
             if(Cornered())
@@ -34,12 +41,6 @@ public class QueenHuntState : HuntState
         {
             base.Execute(piece);
         }
-
-
-        // Regras para após de o peao utilizar habiidade
-
-
-
     }
     public override void Exit(Piece piece)
     {
@@ -49,9 +50,10 @@ public class QueenHuntState : HuntState
     bool VerifyBorder()
     {
         Vector2 pos = main_script.transform.position;
+        Vector2 cam = Camera.main.transform.position;
         if (pos.x > 15 || pos.x < -15)
             return true;
-        if (pos.y > 8 || pos.y < -8)
+        if (pos.y > cam.y + 8 || pos.y < cam.y - 8)
             return true;
 
         return false;
@@ -59,8 +61,8 @@ public class QueenHuntState : HuntState
 
     bool Cornered()
     {
-        if (!VerifyBorder())
-            return false;
+        if (VerifyBorder())
+            return true;
         else
         {
             if (PlayerIsRanged())
@@ -70,11 +72,30 @@ public class QueenHuntState : HuntState
             }
             else
             {
-                if (main_script.EnemyDistPlayer() < 5 && main_script.EnemyDistPlayer() > 2)
+                if (main_script.EnemyDistPlayer() < 2 && main_script.EnemyDistPlayer() > 1)
                     return true;
             }
         }
         return false;
+    }
+    
+    void CheckToAttack()
+    {
+        Vector2 postoatkarea = main_script.CurrentAtkArea.position - main_script.transform.position;
+        Vector2 dir = postoatkarea.normalized;
+        float dist = postoatkarea.magnitude;
+        if (dist < 10)
+        {
+
+            RaycastHit2D[] hit = Physics2D.RaycastAll(main_script.transform.position, dir);
+            foreach (RaycastHit2D h in hit)
+            {
+                if (h.collider.GetComponent<Player>())
+                {
+                    main_script._StateMachine.ChangeState(new PrepareAttackState());
+                }
+            }
+        }
     }
 
 }

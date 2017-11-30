@@ -16,7 +16,8 @@ public class BishopAttackPattern : AttackPattern {
         if (_isenemy)
         {
             base.Update();
-            UpdateAtkArea();
+            if(canupdate)
+                UpdateAtkArea();
         }
     }
 

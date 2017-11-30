@@ -11,9 +11,8 @@ public class AwareState : State
         base.Enter(piece);
 
         //main_script.IsAware = true;
-        Type = STATETYPE.WANDER;
-        main_script.RigidBody.velocity = Vector2.zero;
-        
+        piece.RigidBody.velocity = Vector2.zero;
+
         main_script.SetColor(Color.grey);
         main_script.StartCoroutine(ShowExclamation(piece));
         main_script.Use_Path = false;
@@ -44,7 +43,7 @@ public class AwareState : State
         yield return new WaitForSeconds(time);
 
         //Managerscript.instance.PlayerSighted();
-        yield return new WaitForSeconds(time);
+        //yield return new WaitForSeconds(time);
         finished = true;
         yield return null;
     }

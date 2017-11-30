@@ -7,6 +7,8 @@ public class Class : MonoBehaviour
     public GameObject AttackArea;
     protected GameObject _attackArea;
 
+    public float  atkareacheck = 0.5f;
+
     private string _hability;
     public virtual string Hability
     {
@@ -118,5 +120,22 @@ public class Class : MonoBehaviour
                 CanAttack = true;
             }
         }
+    }
+
+    public virtual void Hunt_Close()
+    {
+
+    }
+    public virtual void Hunt_Ranged()
+    {
+
+    }
+    public virtual void Hunt_Close_Smart()
+    {
+
+    }
+    public virtual void Hunt_Ranged_Smart()
+    {
+
     }
 }

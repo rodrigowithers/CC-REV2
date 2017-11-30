@@ -36,10 +36,7 @@ public class BattlePiece : Piece, IAttacker, IKillable
         }
     }
 
-    public void TakeDamage(Vector2 direction, float force = 10)
-    {
-
-    }
+   
 
     public void Die()
     {
@@ -99,33 +96,15 @@ public class BattlePiece : Piece, IAttacker, IKillable
     }
 
     public AnimationCurve DamageCurve;
+    public GameObject HitParticles;
 
-
-    // Alterna entre a cor da sprite e branco
-    public IEnumerator CDamageFlash()
+    public void TakeDamage(Vector2 direction, float force = 10, int dmg = 1)
     {
-        var renderer = GetComponent<SpriteRenderer>();
-        var mat = renderer.material;
+        // Toca um som
+        SoundManager.Play("hit");
 
-        float time = 0.0f;
-        while (time < 1.0f)
-        {
-            mat.SetFloat("_Flash", time);
-
-            time += Time.deltaTime * 6.0f;
-            yield return null;
-        };
-
-        while (time > 0.0f)
-        {
-            mat.SetFloat("_Flash", time);
-
-            time -= Time.deltaTime * 6.0f;
-            yield return null;
-        };
-
-        mat.SetFloat("_Flash", 0);
-        yield return null;
+        // Spawna particulas
+        Instantiate(HitParticles, transform.position, Quaternion.identity);
     }
 
     public void Attack()
@@ -147,9 +126,10 @@ public class BattlePiece : Piece, IAttacker, IKillable
 
 
     // Use this for initialization
-    void Start()
+    public void Start()
     {
-
+        // Carrega particulas
+        HitParticles = Resources.Load<GameObject>("Field Objects/HitParticles");
     }
 
     // Update is called once per frame

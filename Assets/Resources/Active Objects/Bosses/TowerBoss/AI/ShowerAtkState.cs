@@ -11,13 +11,22 @@ public class ShowerAtkState : AccurateAtkState {
         base.Enter(piece);
         atktimes = 7;
         _main_script.StartCoroutine(CAttack());
+
+        // Toca a animação
+        _main_script.GetComponent<ClassAnimator>().Stop();
+        _main_script.GetComponent<ClassAnimator>().Play("Prepare", 0, true,true);
     }
     public override void Execute(Piece piece)
     {
         if (finished)
         {
             if (piece != null)
-                _main_script._stateMachine.ChangeState(new DashState());
+            {
+                if(_main_script._life < 10)
+                    _main_script._stateMachine.ChangeState(new GiantAtkState());
+                else
+                    _main_script._stateMachine.ChangeState(new DashState());
+            }
         }
       
     }
@@ -29,6 +38,12 @@ public class ShowerAtkState : AccurateAtkState {
 
     IEnumerator CAttack()
     {
+        yield return new WaitForSeconds(0.5f);
+
+        // Toca a animação
+        _main_script.GetComponent<ClassAnimator>().Stop();
+        _main_script.GetComponent<ClassAnimator>().Play("Special", 0, true, true);
+
         int num = 0;
         while(num < atktimes)
         {
@@ -38,6 +53,9 @@ public class ShowerAtkState : AccurateAtkState {
             num++;
             yield return new WaitForSeconds(timebetweenatks);
         }
+
+        _main_script.GetComponent<ClassAnimator>().Stop();
+        _main_script.GetComponent<ClassAnimator>().Play("Idle", 0, true, true);
         finished = true;
         yield return null;
     }

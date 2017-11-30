@@ -15,31 +15,29 @@ public class FollowPathState : State
         main_script.Use_Path = true;
         unit = main_script.GetComponent<Unit>();
         player = GameManager.Instance._Player;
-        unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position));
+        // Cancela todas as corrotinas da unidade e inicia uma nova de perseguir o player
+       // unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position));
 
     }
+
+    float __time = 0.0f;
+
     public override void Execute(Piece piece)
     {
-
-
-        // Cancela todas as corrotinas da unidade e inicia uma nova de perseguir o player
-        unit.StopAllCoroutines();
+        EnemyManager.Instance.AtkAreaUpdate(main_script.gameObject);
 
         if (main_script.Smart)
         {
             if ((player.transform.position - main_script.transform.position).magnitude <= 6)
             {
-                // player ja chegou perto 
-                // muda de estado 
-                main_script._StateMachine.ChangeState(new PawnHuntState());    
-            //StateManager.Instance.AdjustHunt(main_script);
+                StateManager.Instance.AdjustHunt(main_script);
             }
             else
-                unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position));
+                unit.StartCoroutine(unit.RequestNewPathTo(player.transform.position - (Vector3)main_script.AtkAreaToEnemy()));
         }
         else
         {
-            if (main_script.AtkAreaDistPlayer() <= 0.5f)
+            if (main_script.AtkAreaDistPlayer() <= main_script.GetClass.atkareacheck)
             {
                 main_script._StateMachine.ChangeState(new PrepareAttackState());
             }
@@ -77,7 +75,6 @@ public class FollowPathState : State
         CHESSPIECE T = GameManager.Instance._Player.GetComponent<Player>().GetClass.Type;
         if (T == CHESSPIECE.QUEEN || T == CHESSPIECE.TOWER || T == CHESSPIECE.BISHOP)
             return true;
-
         return false;
     }
 

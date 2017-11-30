@@ -31,6 +31,8 @@ public class Harpoon : MonoBehaviour
         Destroy(this.gameObject, 5);
 
         transform.localRotation = Quaternion.FromToRotation(Vector3.up, Direction);
+        // Toca o som
+        SoundManager.Play("tiro");
     }
 
     // Update is called once per frame

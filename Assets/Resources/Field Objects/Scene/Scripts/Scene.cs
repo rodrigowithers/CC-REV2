@@ -25,7 +25,7 @@ public class Scene : MonoBehaviour, IScene, IStopDash
             col.enabled = true;
         }
 
-        
+
         SceneManager.Instance.CurrentScene = this;
 
         // Seta o Canvas
@@ -71,19 +71,19 @@ public class Scene : MonoBehaviour, IScene, IStopDash
 
     public virtual bool SceneCompleted()
     {
-        if (Input.GetKey(KeyCode.K))
-            return true;
+        //if (Input.GetKey(KeyCode.K))
+        //    return true;
 
         return false;
     }
 
     public virtual void SceneUpdate()
     {
-        // Checa se completou
-        if (SceneCompleted())
-        {
-            SceneExit();
-        }
+        //// Checa se completou
+        //if (SceneCompleted())
+        //{
+        //    SceneExit();
+        //}
     }
 
     protected void Start()

@@ -35,7 +35,7 @@ public class HarpoonShooter : MonoBehaviour, IKillable
         yield return null;
     }
 
-    public void TakeDamage(Vector2 direction, float force = 10)
+    public void TakeDamage(Vector2 direction, float force = 10,int dmg = 1)
     {
         Life--;
 
@@ -77,7 +77,7 @@ public class HarpoonShooter : MonoBehaviour, IKillable
 
         foreach(var hit in hits)
         {
-            if (hit.collider.GetComponent<BattlePiece>())
+            if (hit.collider.GetComponent<Player>())
             {
                 if(_currentCooldown >= AttackCooldown)
                 {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerBossExplosion : MonoBehaviour
 {
     public float Scale = 1;
-
+    public int damage = 1;
     void Start()
     {
         // Casta um circulo ao redor, para dar dano
@@ -18,7 +18,8 @@ public class TowerBossExplosion : MonoBehaviour
             if (obj != null && hit.collider.GetComponent<TowerBoss>() == null)
             {
                 Vector2 dir = (hit.transform.position - transform.position).normalized;
-                obj.TakeDamage(dir, 10);
+
+                obj.TakeDamage(dir, 10,damage);
             }
         }
     }

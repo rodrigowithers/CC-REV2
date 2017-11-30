@@ -15,8 +15,8 @@
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
-    <UnityVersion>5.6.2f1</UnityVersion>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2017.2.0f3</UnityVersion>
     <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
@@ -27,7 +27,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_2;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_0;UNITY_2017_2;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -37,7 +37,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_2;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_2_0;UNITY_2017_2;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
@@ -49,8 +49,140 @@
     <Reference Include="UnityScript.Lang" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WebModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.WebModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>Library\UnityAssemblies\UnityEngine.WindModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
@@ -64,23 +196,34 @@
     <Reference Include="nunit.framework">
       <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>Library\UnityAssemblies\UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.VR">
-      <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="LitJson">
       <HintPath>Assets\External Assets\LitJson.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Animation\MoveablePiece\MovementTrigger.cs" />
+    <Compile Include="Assets\Animation\MovimentationScript.cs" />
     <Compile Include="Assets\AStar_PathFinding\Grid.cs" />
     <Compile Include="Assets\AStar_PathFinding\Heap.cs" />
     <Compile Include="Assets\AStar_PathFinding\Line.cs" />
@@ -89,11 +232,16 @@
     <Compile Include="Assets\AStar_PathFinding\PathFinding.cs" />
     <Compile Include="Assets\AStar_PathFinding\PathRequestManager.cs" />
     <Compile Include="Assets\AStar_PathFinding\Unit.cs" />
+    <Compile Include="Assets\Audio\SoundManager.cs" />
     <Compile Include="Assets\Dialogue\DialogueBox.cs" />
     <Compile Include="Assets\Dialogue\DialogueTrigger.cs" />
     <Compile Include="Assets\External Assets\DebugDrawingExtension\DebugExtension.cs" />
+    <Compile Include="Assets\External Assets\TextRigidBody\TextRigidBody.cs" />
+    <Compile Include="Assets\External Assets\TextRigidBody\TextSpawner.cs" />
+    <Compile Include="Assets\FakeEnemy.cs" />
     <Compile Include="Assets\Helpers\AutoKillParticles.cs" />
     <Compile Include="Assets\Helpers\ExtensionMethods.cs" />
+    <Compile Include="Assets\Helpers\FPS.cs" />
     <Compile Include="Assets\Helpers\GoodDictionary.cs" />
     <Compile Include="Assets\Helpers\JsonHelper.cs" />
     <Compile Include="Assets\Helpers\OrderInLayerByPosition.cs" />
@@ -104,6 +252,7 @@
     <Compile Include="Assets\Interfaces\IKillable.cs" />
     <Compile Include="Assets\Interfaces\IScene.cs" />
     <Compile Include="Assets\Interfaces\IStopDash.cs" />
+    <Compile Include="Assets\LevelsAsset.cs" />
     <Compile Include="Assets\Managers\CanvasManager.cs" />
     <Compile Include="Assets\Managers\EnemyManager.cs" />
     <Compile Include="Assets\Managers\GameManager.cs" />
@@ -126,6 +275,7 @@
     <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\SpawnMinionState.cs" />
     <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\StayStillState.cs" />
     <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AI\WalkAroundState.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AtkArea\FakeCannonBall.cs" />
     <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AtkArea\TowerBossAttackArea.cs" />
     <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\AtkArea\TowerBossExplosion.cs" />
     <Compile Include="Assets\Resources\Active Objects\Bosses\TowerBoss\BossStopper.cs" />
@@ -134,6 +284,7 @@
     <Compile Include="Assets\Resources\Active Objects\Camera\CanvasMenuPanel.cs" />
     <Compile Include="Assets\Resources\Active Objects\Camera\CanvasScenarioPanel.cs" />
     <Compile Include="Assets\Resources\Active Objects\Camera\Flash.cs" />
+    <Compile Include="Assets\Resources\Active Objects\Camera\InGameMenu.cs" />
     <Compile Include="Assets\Resources\Active Objects\Drops\Drop.cs" />
     <Compile Include="Assets\Resources\Active Objects\Enemies\Enemy.cs" />
     <Compile Include="Assets\Resources\Active Objects\Enemies\StaminaParticles.cs" />
@@ -152,7 +303,9 @@
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\FleeState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\FollowState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\FindSafePath.cs" />
+    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\FollowDiferentState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\FollowPathState.cs" />
+    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\GetAwayState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\BishopHuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\HorseHuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\HuntState.cs" />
@@ -160,6 +313,7 @@
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\PawnHuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\QueenHuntState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\Hunt\TowerHuntState.cs" />
+    <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\WanderAroundPathState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PathFindingStates\WanderPathState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\PrepareAttackState.cs" />
     <Compile Include="Assets\Resources\Artificial Inteligence\BasicStates\TiedState.cs" />
@@ -168,11 +322,11 @@
     <Compile Include="Assets\Resources\Classes\AttackArea\AttackAreaFollow.cs" />
     <Compile Include="Assets\Resources\Classes\AttackArea\AttackAreaStay.cs" />
     <Compile Include="Assets\Resources\Classes\AttackArea\AttackPattern.cs" />
-    <Compile Include="Assets\Resources\Classes\Bishop\BishopAttackPattern.cs" />
-    <Compile Include="Assets\Resources\Classes\Bishop\Bishop_Normal.cs" />
     <Compile Include="Assets\Resources\Classes\Bishop\Bishop_NormalAttackArea.cs" />
+    <Compile Include="Assets\Resources\Classes\Bishop\BishopAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Bishop\RopeDash.cs" />
     <Compile Include="Assets\Resources\Classes\Bishop\RopePull.cs" />
+    <Compile Include="Assets\Resources\Classes\Bishop\Sicle\Bishop_Normal.cs" />
     <Compile Include="Assets\Resources\Classes\Bishop\Sicle\Sicle.cs" />
     <Compile Include="Assets\Resources\Classes\BossDash.cs" />
     <Compile Include="Assets\Resources\Classes\Class.cs" />
@@ -181,55 +335,81 @@
     <Compile Include="Assets\Resources\Classes\Habilities\Hability.cs" />
     <Compile Include="Assets\Resources\Classes\Habilities\HabilityManager.cs" />
     <Compile Include="Assets\Resources\Classes\Horse\Energy\Energy.cs" />
-    <Compile Include="Assets\Resources\Classes\Horse\HorseAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Horse\Horse_Normal.cs" />
     <Compile Include="Assets\Resources\Classes\Horse\Horse_NormalAttackArea.cs" />
+    <Compile Include="Assets\Resources\Classes\Horse\HorseAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Horse\SpeedUp.cs" />
-    <Compile Include="Assets\Resources\Classes\King\KingAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\King\King_Normal.cs" />
     <Compile Include="Assets\Resources\Classes\King\King_NormalAttackArea.cs" />
+    <Compile Include="Assets\Resources\Classes\King\KingAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\King\Sword\Sword.cs" />
     <Compile Include="Assets\Resources\Classes\King\Teleport.cs" />
     <Compile Include="Assets\Resources\Classes\Pawn\InvincibleDash.cs" />
     <Compile Include="Assets\Resources\Classes\Pawn\Lance\Lance.cs" />
-    <Compile Include="Assets\Resources\Classes\Pawn\PawnAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Pawn\Pawn_Normal.cs" />
     <Compile Include="Assets\Resources\Classes\Pawn\Pawn_NormalAttackArea.cs" />
+    <Compile Include="Assets\Resources\Classes\Pawn\PawnAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Queen\Arrow\Arrow.cs" />
-    <Compile Include="Assets\Resources\Classes\Queen\QueenAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Queen\Queen_Normal.cs" />
     <Compile Include="Assets\Resources\Classes\Queen\Queen_NormalAttackArea.cs" />
+    <Compile Include="Assets\Resources\Classes\Queen\QueenAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Queen\WallDash.cs" />
     <Compile Include="Assets\Resources\Classes\Tower\Cannon\CannonBall.cs" />
     <Compile Include="Assets\Resources\Classes\Tower\DamageDash.cs" />
-    <Compile Include="Assets\Resources\Classes\Tower\TowerAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Tower\Tower_Normal.cs" />
     <Compile Include="Assets\Resources\Classes\Tower\Tower_NormalAttackArea.cs" />
+    <Compile Include="Assets\Resources\Classes\Tower\TowerAttackPattern.cs" />
     <Compile Include="Assets\Resources\Classes\Tower\TurretMode.cs" />
+    <Compile Include="Assets\Resources\Field Objects\All\Destructable.cs" />
+    <Compile Include="Assets\Resources\Field Objects\All\Destructable_Life.cs" />
+    <Compile Include="Assets\Resources\Field Objects\Bushes\Bush.cs" />
     <Compile Include="Assets\Resources\Field Objects\Button\FieldButton.cs" />
+    <Compile Include="Assets\Resources\Field Objects\Explosion\Explosion.cs" />
     <Compile Include="Assets\Resources\Field Objects\FloorSpike\FloorSpike.cs" />
+    <Compile Include="Assets\Resources\Field Objects\Fountain\FountainScript.cs" />
     <Compile Include="Assets\Resources\Field Objects\Harpoon\Harpoon.cs" />
     <Compile Include="Assets\Resources\Field Objects\Harpoon\HarpoonShooter.cs" />
     <Compile Include="Assets\Resources\Field Objects\Houses\BarrelDrop.cs" />
+    <Compile Include="Assets\Resources\Field Objects\Pillar\Pillar.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\ButtonScene.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\EnemyScene.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\Scene.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\SceneBuilder.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\SceneLimit.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\SpawnPoint.cs" />
+    <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\SpawnPointBoss.cs" />
     <Compile Include="Assets\Resources\Field Objects\Scene\Scripts\Trigger.cs" />
+    <Compile Include="Assets\Resources\Field Objects\Standart\Standart.cs" />
+    <Compile Include="Assets\Resources\Field Objects\TreeStump\Tree_Stump_script.cs" />
     <Compile Include="Assets\Resources\Field Objects\Wall\Wall.cs" />
-    <Compile Include="Assets\TextRigidBody\TextRigidBody.cs" />
-    <Compile Include="Assets\TextRigidBody\TextSpawner.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\GetController.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\LevelLoader.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\Menu.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\MenuController.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\PieceRun.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\PropertyAnimationCurve.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\ScrollingTexture.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\States\Menu_Credits.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\States\Menu_Main.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\States\Menu_Scenarios.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\States\Menu_Settings.cs" />
+    <Compile Include="Assets\Resources\Menu\Menu\TextVisibilityAnimationCurve.cs" />
+    <Compile Include="Assets\Resources\Menu\NewGameButton.cs" />
+    <Compile Include="Assets\Resources\Menu\PlayButton.cs" />
+    <Compile Include="Assets\Shaders\Blackout\Blackout.cs" />
+    <Compile Include="Assets\Sign.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Documents\PieceInfo_Fast.xml" />
     <None Include="Assets\Resources\Documents\SceneInfo.xml" />
     <None Include="Assets\Resources\Documents\TowerBossDialogue.xml" />
     <None Include="Assets\Resources\Documents\TowerBossDialogue2.xml" />
+    <None Include="Assets\Resources\Field Objects\Harpoon\HarpoonLine.shader" />
+    <None Include="Assets\Shaders\Blackout\Blackout.shader" />
     <None Include="Assets\Shaders\ColorSwapper.shader" />
     <None Include="Assets\Shaders\Flash\Flash.shader" />
     <None Include="Assets\Shaders\Ground\Ground.shader" />
+    <None Include="Assets\Shaders\InstancedSprites\InstancedSprites.shader" />
     <None Include="Assets\Shaders\Tiles.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

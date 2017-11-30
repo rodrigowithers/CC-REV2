@@ -35,7 +35,7 @@ public class JsonHelper : MonoBehaviour
 
     public void Awake()
     {
-        
+
 
     }
     //public void LoadAllLevels()
@@ -58,7 +58,7 @@ public class JsonHelper : MonoBehaviour
     //        ftemp.StarPointsAdjust(s1, s2, s3);
     //        ltemp.Add(ftemp);
     //    }
-        
+
     //}
     //public void SaveAllLevels()
     //{
@@ -93,6 +93,9 @@ public class JsonHelper : MonoBehaviour
 
     JsonData Retrieve_Data(string path)
     {
+        if (path == "")
+            return null;
+
         TextAsset Text = (TextAsset)Resources.Load(path, typeof(TextAsset));
         string JsonString = Text.text;
         JsonData Jdata = JsonMapper.ToObject(JsonString);
@@ -102,7 +105,7 @@ public class JsonHelper : MonoBehaviour
 
     public List<Dialogue> Retrieve_Conversation(string filename)
     {
-        string path = "Documents/Conversas/" + filename ;
+        string path = "Documents/Conversas/" + filename;
         JsonData JData = Retrieve_Data(path);
 
         //Debug.Log(JData.Count);
@@ -116,10 +119,10 @@ public class JsonHelper : MonoBehaviour
             ftemp.person = int.Parse(JData[i]["person"].ToString());
             ftemp.Speed = float.Parse(JData[i]["speed"].ToString());
             ftemp.VocalTone = float.Parse(JData[i]["tone"].ToString());
-            
+
             List<string> stemp = new List<string>();
 
-            for (int s = 0; s < JData[i]["string"].Count;s++)
+            for (int s = 0; s < JData[i]["string"].Count; s++)
             {
                 stemp.Add(JData[i]["string"][s]["s"].ToString());
                 Debug.Log(stemp[s]);
@@ -157,5 +160,23 @@ public class JsonHelper : MonoBehaviour
 
         throw new System.Exception("Não encontrou dialogo com o index " + index + " no filename " + filename);
     }
+public List<Movement> Retrieve_Movement(string filename)
+    {
+        string path = "Documents/Animations/" + filename;
+        JsonData data = Retrieve_Data(path);
+        List<Movement> temp = new List<Movement>();
+        Movement mtemp;
+        for (int i = 0; i < data.Count; i++)
+        {
+            mtemp = new Movement();
+            mtemp.walk_x = float.Parse(data[i]["x"].ToString());
+            mtemp.walk_y = float.Parse(data[i]["y"].ToString());
+            mtemp.walk_dir = int.Parse(data[i]["dir"].ToString());
+            mtemp.duration = float.Parse(data[i]["time"].ToString());
+            temp.Add(mtemp);
+        }
+        return temp;
+    }
+
 
 }
