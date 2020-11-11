@@ -1,53 +1,138 @@
 fileFormatVersion: 2
 guid: 743666d18586a7b49aaa18fc3581cc7d
-timeCreated: 1505918964
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: idle_0
-    21300002: idle_1
-    21300004: idle_2
-    21300006: wDown_0
-    21300008: wDown_1
-    21300010: wUp_0
-    21300012: wUp_1
-    21300014: wLeft_0
-    21300016: wLeft_1
-    21300018: peao_nv-Sheet_9
-    21300020: peao_nv-Sheet_10
-    21300022: peao_nv-Sheet_11
-    21300024: peao_nv-Sheet_12
-    21300026: peao_nv-Sheet_13
-    21300028: peao_nv-Sheet_14
-    21300030: peao_nv-Sheet_15
-    21300032: peao_nv-Sheet_16
-    21300034: peao_nv-Sheet_17
-    21300036: peao_nv-Sheet_18
-    21300038: peao_nv-Sheet_19
-    21300040: peao_nv-Sheet_20
-    21300042: peao_nv-Sheet_21
-    21300044: peao_nv-Sheet_22
-    21300046: peao_nv-Sheet_23
-    21300048: peao_nv-Sheet_24
-    21300050: aDownLeft_0
-    21300052: aDownLeft_1
-    21300054: aDownLeft_2
-    21300056: aDownRight_0
-    21300058: aDownRight_1
-    21300060: aDownRight_2
-    21300062: aUpRight_0
-    21300064: aUpRight_1
-    21300066: spr_pawn_17
-    21300068: aUpLeft_0
-    21300070: aUpLeft_1
-    21300072: aUpLeft_2
-    21300074: shieldDown_0
-    21300076: shieldDown_1
-    21300078: shieldUp_0
-    21300080: shieldUp_1
-    21300082: shieldLeft_0
-    21300084: shieldLeft_1
-  serializedVersion: 4
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: idle_0
+  - first:
+      213: 21300002
+    second: idle_1
+  - first:
+      213: 21300004
+    second: idle_2
+  - first:
+      213: 21300006
+    second: wDown_0
+  - first:
+      213: 21300008
+    second: wDown_1
+  - first:
+      213: 21300010
+    second: wUp_0
+  - first:
+      213: 21300012
+    second: wUp_1
+  - first:
+      213: 21300014
+    second: wLeft_0
+  - first:
+      213: 21300016
+    second: wLeft_1
+  - first:
+      213: 21300018
+    second: peao_nv-Sheet_9
+  - first:
+      213: 21300020
+    second: peao_nv-Sheet_10
+  - first:
+      213: 21300022
+    second: peao_nv-Sheet_11
+  - first:
+      213: 21300024
+    second: peao_nv-Sheet_12
+  - first:
+      213: 21300026
+    second: peao_nv-Sheet_13
+  - first:
+      213: 21300028
+    second: peao_nv-Sheet_14
+  - first:
+      213: 21300030
+    second: peao_nv-Sheet_15
+  - first:
+      213: 21300032
+    second: peao_nv-Sheet_16
+  - first:
+      213: 21300034
+    second: peao_nv-Sheet_17
+  - first:
+      213: 21300036
+    second: peao_nv-Sheet_18
+  - first:
+      213: 21300038
+    second: peao_nv-Sheet_19
+  - first:
+      213: 21300040
+    second: peao_nv-Sheet_20
+  - first:
+      213: 21300042
+    second: peao_nv-Sheet_21
+  - first:
+      213: 21300044
+    second: peao_nv-Sheet_22
+  - first:
+      213: 21300046
+    second: peao_nv-Sheet_23
+  - first:
+      213: 21300048
+    second: peao_nv-Sheet_24
+  - first:
+      213: 21300050
+    second: aDownLeft_0
+  - first:
+      213: 21300052
+    second: aDownLeft_1
+  - first:
+      213: 21300054
+    second: aDownLeft_2
+  - first:
+      213: 21300056
+    second: aDownRight_0
+  - first:
+      213: 21300058
+    second: aDownRight_1
+  - first:
+      213: 21300060
+    second: aDownRight_2
+  - first:
+      213: 21300062
+    second: aUpRight_0
+  - first:
+      213: 21300064
+    second: aUpRight_1
+  - first:
+      213: 21300066
+    second: spr_pawn_17
+  - first:
+      213: 21300068
+    second: aUpLeft_0
+  - first:
+      213: 21300070
+    second: aUpLeft_1
+  - first:
+      213: 21300072
+    second: aUpLeft_2
+  - first:
+      213: 21300074
+    second: shieldDown_0
+  - first:
+      213: 21300076
+    second: shieldDown_1
+  - first:
+      213: 21300078
+    second: shieldUp_0
+  - first:
+      213: 21300080
+    second: shieldUp_1
+  - first:
+      213: 21300082
+    second: shieldLeft_0
+  - first:
+      213: 21300084
+    second: shieldLeft_1
+  externalObjects: {}
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -55,6 +140,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -63,6 +150,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -70,10 +159,13 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
+    serializedVersion: 2
     filterMode: 0
     aniso: -1
-    mipBias: -1
-    wrapMode: 1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -82,33 +174,44 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 38
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -124,7 +227,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: idle_1
       rect:
@@ -137,7 +248,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: idle_2
       rect:
@@ -150,7 +269,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wDown_0
       rect:
@@ -163,7 +290,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wDown_1
       rect:
@@ -176,7 +311,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wUp_0
       rect:
@@ -189,7 +332,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wUp_1
       rect:
@@ -202,7 +353,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wLeft_0
       rect:
@@ -215,7 +374,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: wLeft_1
       rect:
@@ -228,7 +395,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aDownLeft_0
       rect:
@@ -241,7 +416,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aDownLeft_1
       rect:
@@ -254,7 +437,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aDownLeft_2
       rect:
@@ -267,7 +458,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aDownRight_0
       rect:
@@ -280,7 +479,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aDownRight_1
       rect:
@@ -293,7 +500,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aDownRight_2
       rect:
@@ -306,7 +521,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aUpRight_0
       rect:
@@ -319,7 +542,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aUpRight_1
       rect:
@@ -332,7 +563,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: spr_pawn_17
       rect:
@@ -345,7 +584,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aUpLeft_0
       rect:
@@ -358,7 +605,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aUpLeft_1
       rect:
@@ -371,7 +626,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: aUpLeft_2
       rect:
@@ -384,7 +647,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: shieldDown_0
       rect:
@@ -397,7 +668,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: shieldDown_1
       rect:
@@ -410,7 +689,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: shieldUp_0
       rect:
@@ -423,7 +710,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: shieldUp_1
       rect:
@@ -436,7 +731,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: shieldLeft_0
       rect:
@@ -449,7 +752,15 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: shieldLeft_1
       rect:
@@ -462,9 +773,28 @@ TextureImporter:
       pivot: {x: 0.468, y: 0.45}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

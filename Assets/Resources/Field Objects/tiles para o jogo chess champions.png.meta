@@ -1,127 +1,357 @@
 fileFormatVersion: 2
 guid: fead33dfb3806e44f91228a143e5931c
-timeCreated: 1509898642
-licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: grass_0
-    21300002: grass_1
-    21300004: sand
-    21300006: sand_top
-    21300008: sand_left
-    21300010: sand_topLeft
-    21300012: sand_botLeft
-    21300014: tiles para o jogo chess champions (1)_5
-    21300016: tiles para o jogo chess champions (1)_6
-    21300018: grass_2
-    21300020: grass_3
-    21300022: grass_4
-    21300024: tiles para o jogo chess champions (1)_12
-    21300026: stone
-    21300028: stone_topLeft
-    21300030: stone_left
-    21300032: stone_topRight
-    21300034: stone_right
-    21300036: stone_botRight
-    21300038: stone_top
-    21300040: stone_bot
-    21300042: tiles para o jogo chess champions (1)_21
-    21300044: tiles para o jogo chess champions (1)_22
-    21300046: tiles para o jogo chess champions (1)_23
-    21300048: tiles para o jogo chess champions (1)_24
-    21300050: dirt
-    21300052: tiles para o jogo chess champions (1)_26
-    21300054: tiles para o jogo chess champions (1)_27
-    21300056: tiles para o jogo chess champions (1)_28
-    21300058: tiles para o jogo chess champions (1)_29
-    21300060: grass_5
-    21300062: grass_6
-    21300064: tiles para o jogo chess champions (1)_32
-    21300066: tiles para o jogo chess champions (1)_33
-    21300068: tiles para o jogo chess champions (1)_34
-    21300070: tiles para o jogo chess champions (1)_35
-    21300072: arrow_normal
-    21300074: arrow_poison
-    21300076: arrow_black
-    21300078: tiles para o jogo chess champions (1)_39
-    21300080: tiles para o jogo chess champions (1)_40
-    21300082: tiles para o jogo chess champions (1)_41
-    21300084: tiles para o jogo chess champions (1)_42
-    21300086: tiles para o jogo chess champions (1)_43
-    21300088: tiles para o jogo chess champions (1)_44
-    21300090: tiles para o jogo chess champions (1)_45
-    21300092: tiles para o jogo chess champions (1)_46
-    21300094: tiles para o jogo chess champions (1)_47
-    21300096: tiles para o jogo chess champions (1)_48
-    21300098: tiles para o jogo chess champions (1)_49
-    21300100: tiles para o jogo chess champions (1)_50
-    21300102: tiles para o jogo chess champions (1)_51
-    21300104: tiles para o jogo chess champions (1)_52
-    21300106: tiles para o jogo chess champions (1)_53
-    21300108: tiles para o jogo chess champions (1)_54
-    21300110: tiles para o jogo chess champions (1)_55
-    21300112: tiles para o jogo chess champions (1)_56
-    21300114: tiles para o jogo chess champions (1)_57
-    21300116: tiles para o jogo chess champions (1)_58
-    21300118: dirt_topLeft
-    21300120: dirt_top
-    21300122: dirt_topRight
-    21300124: dirt_right
-    21300126: dirt_botRight
-    21300128: dirt_bot
-    21300130: dirt_botLeft
-    21300132: tiles para o jogo chess champions_6
-    21300134: tiles para o jogo chess champions_7
-    21300136: tiles para o jogo chess champions_8
-    21300138: tiles para o jogo chess champions_9
-    21300140: tiles para o jogo chess champions_10
-    21300142: tiles para o jogo chess champions_11
-    21300144: tiles para o jogo chess champions_12
-    21300146: tiles para o jogo chess champions_13
-    21300148: tree_stump
-    21300150: grassDirt_top
-    21300152: grassDirt_topLeft
-    21300154: grassDirt_right
-    21300156: stoneDirt_topLeft
-    21300158: stoneDirt_right
-    21300160: stoneDirt_top
-    21300162: stoneDirt_left
-    21300164: stoneDirt_bot
-    21300166: stoneDirt_topRight
-    21300168: stoneDirt_botRight
-    21300170: stoneDirt_botLeft
-    21300172: stoneDirt_U
-    21300174: stoneDirt_N
-    21300176: tiles para o jogo chess champions_0
-    21300178: tiles para o jogo chess champions_1
-    21300180: tiles para o jogo chess champions_2
-    21300182: tiles para o jogo chess champions_3
-    21300184: tiles para o jogo chess champions_4
-    21300186: stoneDirt_rightU
-    21300188: tiles para o jogo chess champions_5
-    21300190: tora_0
-    21300192: tora_1
-    21300194: tora_pe
-    21300196: tora_pilha
-    21300198: sand_1
-    21300200: sand_2
-    21300202: sand_3
-    21300204: Sign
-    21300206: tiles para o jogo chess champions_14
-    21300208: tiles para o jogo chess champions_15
-    21300210: tiles para o jogo chess champions_16
-    21300212: tiles para o jogo chess champions_17
-    21300214: tiles para o jogo chess champions_18
-    21300216: tiles para o jogo chess champions_19
-    21300218: tiles para o jogo chess champions_20
-    21300220: fountain green
-    21300222: tower_statue
-    21300224: tree_stump_2
-    21300226: tree_stump_3
-    21300228: water
-    21300230: fountain blue
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: grass_0
+  - first:
+      213: 21300002
+    second: grass_1
+  - first:
+      213: 21300004
+    second: sand
+  - first:
+      213: 21300006
+    second: sand_top
+  - first:
+      213: 21300008
+    second: sand_left
+  - first:
+      213: 21300010
+    second: sand_topLeft
+  - first:
+      213: 21300012
+    second: sand_botLeft
+  - first:
+      213: 21300014
+    second: tiles para o jogo chess champions (1)_5
+  - first:
+      213: 21300016
+    second: tiles para o jogo chess champions (1)_6
+  - first:
+      213: 21300018
+    second: grass_2
+  - first:
+      213: 21300020
+    second: grass_3
+  - first:
+      213: 21300022
+    second: grass_4
+  - first:
+      213: 21300024
+    second: tiles para o jogo chess champions (1)_12
+  - first:
+      213: 21300026
+    second: stone
+  - first:
+      213: 21300028
+    second: stone_topLeft
+  - first:
+      213: 21300030
+    second: stone_left
+  - first:
+      213: 21300032
+    second: stone_topRight
+  - first:
+      213: 21300034
+    second: stone_right
+  - first:
+      213: 21300036
+    second: stone_botRight
+  - first:
+      213: 21300038
+    second: stone_top
+  - first:
+      213: 21300040
+    second: stone_bot
+  - first:
+      213: 21300042
+    second: tiles para o jogo chess champions (1)_21
+  - first:
+      213: 21300044
+    second: tiles para o jogo chess champions (1)_22
+  - first:
+      213: 21300046
+    second: tiles para o jogo chess champions (1)_23
+  - first:
+      213: 21300048
+    second: tiles para o jogo chess champions (1)_24
+  - first:
+      213: 21300050
+    second: dirt
+  - first:
+      213: 21300052
+    second: tiles para o jogo chess champions (1)_26
+  - first:
+      213: 21300054
+    second: tiles para o jogo chess champions (1)_27
+  - first:
+      213: 21300056
+    second: tiles para o jogo chess champions (1)_28
+  - first:
+      213: 21300058
+    second: tiles para o jogo chess champions (1)_29
+  - first:
+      213: 21300060
+    second: grass_5
+  - first:
+      213: 21300062
+    second: grass_6
+  - first:
+      213: 21300064
+    second: tiles para o jogo chess champions (1)_32
+  - first:
+      213: 21300066
+    second: tiles para o jogo chess champions (1)_33
+  - first:
+      213: 21300068
+    second: tiles para o jogo chess champions (1)_34
+  - first:
+      213: 21300070
+    second: tiles para o jogo chess champions (1)_35
+  - first:
+      213: 21300072
+    second: arrow_normal
+  - first:
+      213: 21300074
+    second: arrow_poison
+  - first:
+      213: 21300076
+    second: arrow_black
+  - first:
+      213: 21300078
+    second: tiles para o jogo chess champions (1)_39
+  - first:
+      213: 21300080
+    second: tiles para o jogo chess champions (1)_40
+  - first:
+      213: 21300082
+    second: tiles para o jogo chess champions (1)_41
+  - first:
+      213: 21300084
+    second: tiles para o jogo chess champions (1)_42
+  - first:
+      213: 21300086
+    second: tiles para o jogo chess champions (1)_43
+  - first:
+      213: 21300088
+    second: tiles para o jogo chess champions (1)_44
+  - first:
+      213: 21300090
+    second: tiles para o jogo chess champions (1)_45
+  - first:
+      213: 21300092
+    second: tiles para o jogo chess champions (1)_46
+  - first:
+      213: 21300094
+    second: tiles para o jogo chess champions (1)_47
+  - first:
+      213: 21300096
+    second: tiles para o jogo chess champions (1)_48
+  - first:
+      213: 21300098
+    second: tiles para o jogo chess champions (1)_49
+  - first:
+      213: 21300100
+    second: tiles para o jogo chess champions (1)_50
+  - first:
+      213: 21300102
+    second: tiles para o jogo chess champions (1)_51
+  - first:
+      213: 21300104
+    second: tiles para o jogo chess champions (1)_52
+  - first:
+      213: 21300106
+    second: tiles para o jogo chess champions (1)_53
+  - first:
+      213: 21300108
+    second: tiles para o jogo chess champions (1)_54
+  - first:
+      213: 21300110
+    second: tiles para o jogo chess champions (1)_55
+  - first:
+      213: 21300112
+    second: tiles para o jogo chess champions (1)_56
+  - first:
+      213: 21300114
+    second: tiles para o jogo chess champions (1)_57
+  - first:
+      213: 21300116
+    second: tiles para o jogo chess champions (1)_58
+  - first:
+      213: 21300118
+    second: dirt_topLeft
+  - first:
+      213: 21300120
+    second: dirt_top
+  - first:
+      213: 21300122
+    second: dirt_topRight
+  - first:
+      213: 21300124
+    second: dirt_right
+  - first:
+      213: 21300126
+    second: dirt_botRight
+  - first:
+      213: 21300128
+    second: dirt_bot
+  - first:
+      213: 21300130
+    second: dirt_botLeft
+  - first:
+      213: 21300132
+    second: tiles para o jogo chess champions_6
+  - first:
+      213: 21300134
+    second: tiles para o jogo chess champions_7
+  - first:
+      213: 21300136
+    second: tiles para o jogo chess champions_8
+  - first:
+      213: 21300138
+    second: tiles para o jogo chess champions_9
+  - first:
+      213: 21300140
+    second: tiles para o jogo chess champions_10
+  - first:
+      213: 21300142
+    second: tiles para o jogo chess champions_11
+  - first:
+      213: 21300144
+    second: tiles para o jogo chess champions_12
+  - first:
+      213: 21300146
+    second: tiles para o jogo chess champions_13
+  - first:
+      213: 21300148
+    second: tree_stump
+  - first:
+      213: 21300150
+    second: grassDirt_top
+  - first:
+      213: 21300152
+    second: grassDirt_topLeft
+  - first:
+      213: 21300154
+    second: grassDirt_right
+  - first:
+      213: 21300156
+    second: stoneDirt_topLeft
+  - first:
+      213: 21300158
+    second: stoneDirt_right
+  - first:
+      213: 21300160
+    second: stoneDirt_top
+  - first:
+      213: 21300162
+    second: stoneDirt_left
+  - first:
+      213: 21300164
+    second: stoneDirt_bot
+  - first:
+      213: 21300166
+    second: stoneDirt_topRight
+  - first:
+      213: 21300168
+    second: stoneDirt_botRight
+  - first:
+      213: 21300170
+    second: stoneDirt_botLeft
+  - first:
+      213: 21300172
+    second: stoneDirt_U
+  - first:
+      213: 21300174
+    second: stoneDirt_N
+  - first:
+      213: 21300176
+    second: tiles para o jogo chess champions_0
+  - first:
+      213: 21300178
+    second: tiles para o jogo chess champions_1
+  - first:
+      213: 21300180
+    second: tiles para o jogo chess champions_2
+  - first:
+      213: 21300182
+    second: tiles para o jogo chess champions_3
+  - first:
+      213: 21300184
+    second: tiles para o jogo chess champions_4
+  - first:
+      213: 21300186
+    second: stoneDirt_rightU
+  - first:
+      213: 21300188
+    second: tiles para o jogo chess champions_5
+  - first:
+      213: 21300190
+    second: tora_0
+  - first:
+      213: 21300192
+    second: tora_1
+  - first:
+      213: 21300194
+    second: tora_pe
+  - first:
+      213: 21300196
+    second: tora_pilha
+  - first:
+      213: 21300198
+    second: sand_1
+  - first:
+      213: 21300200
+    second: sand_2
+  - first:
+      213: 21300202
+    second: sand_3
+  - first:
+      213: 21300204
+    second: Sign
+  - first:
+      213: 21300206
+    second: tiles para o jogo chess champions_14
+  - first:
+      213: 21300208
+    second: tiles para o jogo chess champions_15
+  - first:
+      213: 21300210
+    second: tiles para o jogo chess champions_16
+  - first:
+      213: 21300212
+    second: tiles para o jogo chess champions_17
+  - first:
+      213: 21300214
+    second: tiles para o jogo chess champions_18
+  - first:
+      213: 21300216
+    second: tiles para o jogo chess champions_19
+  - first:
+      213: 21300218
+    second: tiles para o jogo chess champions_20
+  - first:
+      213: 21300220
+    second: fountain green
+  - first:
+      213: 21300222
+    second: tower_statue
+  - first:
+      213: 21300224
+    second: tree_stump_2
+  - first:
+      213: 21300226
+    second: tree_stump_3
+  - first:
+      213: 21300228
+    second: water
+  - first:
+      213: 21300230
+    second: fountain blue
   externalObjects: {}
-  serializedVersion: 4
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -139,6 +369,8 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -149,7 +381,7 @@ TextureImporter:
     serializedVersion: 2
     filterMode: 0
     aniso: 16
-    mipBias: -1
+    mipBias: -100
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -161,18 +393,22 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
@@ -181,7 +417,10 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
@@ -190,6 +429,8 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -207,6 +448,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 42305410000000000800000000000000
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: sand_top
       rect:
@@ -221,6 +469,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 62305410000000000800000000000000
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: sand_left
       rect:
@@ -235,6 +490,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 82305410000000000800000000000000
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: sand_topLeft
       rect:
@@ -249,6 +511,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a2305410000000000800000000000000
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: sand_botLeft
       rect:
@@ -263,6 +532,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c2305410000000000800000000000000
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_5
       rect:
@@ -277,6 +553,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e2305410000000000800000000000000
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_6
       rect:
@@ -291,6 +574,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 03305410000000000800000000000000
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grass_0
       rect:
@@ -305,6 +595,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 02305410000000000800000000000000
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grass_1
       rect:
@@ -319,6 +616,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 22305410000000000800000000000000
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grass_2
       rect:
@@ -333,6 +637,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 23305410000000000800000000000000
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grass_3
       rect:
@@ -347,6 +658,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 43305410000000000800000000000000
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grass_4
       rect:
@@ -361,6 +679,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 63305410000000000800000000000000
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_12
       rect:
@@ -375,6 +700,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 83305410000000000800000000000000
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stone
       rect:
@@ -389,6 +721,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a3305410000000000800000000000000
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stone_topLeft
       rect:
@@ -403,6 +742,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c3305410000000000800000000000000
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stone_left
       rect:
@@ -417,6 +763,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e3305410000000000800000000000000
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stone_topRight
       rect:
@@ -431,6 +784,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 04305410000000000800000000000000
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stone_right
       rect:
@@ -445,6 +805,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 24305410000000000800000000000000
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stone_botRight
       rect:
@@ -459,6 +826,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 44305410000000000800000000000000
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stone_top
       rect:
@@ -473,6 +847,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 64305410000000000800000000000000
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stone_bot
       rect:
@@ -487,6 +868,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 84305410000000000800000000000000
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_21
       rect:
@@ -501,6 +889,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a4305410000000000800000000000000
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_22
       rect:
@@ -515,6 +910,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c4305410000000000800000000000000
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_23
       rect:
@@ -529,6 +931,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e4305410000000000800000000000000
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_24
       rect:
@@ -543,6 +952,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 05305410000000000800000000000000
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: dirt
       rect:
@@ -557,6 +973,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 25305410000000000800000000000000
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_26
       rect:
@@ -571,6 +994,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 45305410000000000800000000000000
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_27
       rect:
@@ -585,6 +1015,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 65305410000000000800000000000000
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_28
       rect:
@@ -599,6 +1036,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 85305410000000000800000000000000
+      internalID: 21300056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_29
       rect:
@@ -613,6 +1057,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a5305410000000000800000000000000
+      internalID: 21300058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grass_5
       rect:
@@ -627,6 +1078,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c5305410000000000800000000000000
+      internalID: 21300060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grass_6
       rect:
@@ -641,6 +1099,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e5305410000000000800000000000000
+      internalID: 21300062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_32
       rect:
@@ -655,6 +1120,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 06305410000000000800000000000000
+      internalID: 21300064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_33
       rect:
@@ -669,6 +1141,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 26305410000000000800000000000000
+      internalID: 21300066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_34
       rect:
@@ -683,6 +1162,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 46305410000000000800000000000000
+      internalID: 21300068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_35
       rect:
@@ -697,6 +1183,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 66305410000000000800000000000000
+      internalID: 21300070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: arrow_normal
       rect:
@@ -711,6 +1204,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 86305410000000000800000000000000
+      internalID: 21300072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: arrow_poison
       rect:
@@ -725,6 +1225,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a6305410000000000800000000000000
+      internalID: 21300074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: arrow_black
       rect:
@@ -739,6 +1246,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c6305410000000000800000000000000
+      internalID: 21300076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_39
       rect:
@@ -753,6 +1267,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e6305410000000000800000000000000
+      internalID: 21300078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_40
       rect:
@@ -767,6 +1288,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 07305410000000000800000000000000
+      internalID: 21300080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_41
       rect:
@@ -781,6 +1309,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 27305410000000000800000000000000
+      internalID: 21300082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_42
       rect:
@@ -795,6 +1330,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 47305410000000000800000000000000
+      internalID: 21300084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_44
       rect:
@@ -809,6 +1351,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 87305410000000000800000000000000
+      internalID: 21300088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_45
       rect:
@@ -823,6 +1372,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a7305410000000000800000000000000
+      internalID: 21300090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_46
       rect:
@@ -837,6 +1393,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c7305410000000000800000000000000
+      internalID: 21300092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_47
       rect:
@@ -851,6 +1414,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e7305410000000000800000000000000
+      internalID: 21300094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_50
       rect:
@@ -865,6 +1435,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 48305410000000000800000000000000
+      internalID: 21300100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_53
       rect:
@@ -879,6 +1456,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a8305410000000000800000000000000
+      internalID: 21300106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_54
       rect:
@@ -893,6 +1477,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c8305410000000000800000000000000
+      internalID: 21300108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_55
       rect:
@@ -907,6 +1498,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e8305410000000000800000000000000
+      internalID: 21300110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_56
       rect:
@@ -921,6 +1519,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 09305410000000000800000000000000
+      internalID: 21300112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_57
       rect:
@@ -935,6 +1540,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 29305410000000000800000000000000
+      internalID: 21300114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions (1)_58
       rect:
@@ -949,6 +1561,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 49305410000000000800000000000000
+      internalID: 21300116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: dirt_topLeft
       rect:
@@ -963,6 +1582,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 69305410000000000800000000000000
+      internalID: 21300118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: dirt_top
       rect:
@@ -977,6 +1603,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 89305410000000000800000000000000
+      internalID: 21300120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: dirt_topRight
       rect:
@@ -991,6 +1624,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: a9305410000000000800000000000000
+      internalID: 21300122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: dirt_right
       rect:
@@ -1005,6 +1645,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: c9305410000000000800000000000000
+      internalID: 21300124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: dirt_botRight
       rect:
@@ -1019,6 +1666,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: e9305410000000000800000000000000
+      internalID: 21300126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: dirt_bot
       rect:
@@ -1033,6 +1687,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0a305410000000000800000000000000
+      internalID: 21300128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: dirt_botLeft
       rect:
@@ -1047,6 +1708,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2a305410000000000800000000000000
+      internalID: 21300130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_6
       rect:
@@ -1061,6 +1729,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4a305410000000000800000000000000
+      internalID: 21300132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_7
       rect:
@@ -1075,6 +1750,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6a305410000000000800000000000000
+      internalID: 21300134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_8
       rect:
@@ -1089,6 +1771,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8a305410000000000800000000000000
+      internalID: 21300136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_9
       rect:
@@ -1103,6 +1792,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: aa305410000000000800000000000000
+      internalID: 21300138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_10
       rect:
@@ -1117,6 +1813,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ca305410000000000800000000000000
+      internalID: 21300140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_11
       rect:
@@ -1131,6 +1834,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ea305410000000000800000000000000
+      internalID: 21300142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_12
       rect:
@@ -1145,6 +1855,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0b305410000000000800000000000000
+      internalID: 21300144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_13
       rect:
@@ -1159,6 +1876,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2b305410000000000800000000000000
+      internalID: 21300146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tree_stump
       rect:
@@ -1173,6 +1897,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4b305410000000000800000000000000
+      internalID: 21300148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grassDirt_top
       rect:
@@ -1187,6 +1918,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6b305410000000000800000000000000
+      internalID: 21300150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grassDirt_topLeft
       rect:
@@ -1201,6 +1939,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8b305410000000000800000000000000
+      internalID: 21300152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: grassDirt_right
       rect:
@@ -1215,6 +1960,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ab305410000000000800000000000000
+      internalID: 21300154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_topLeft
       rect:
@@ -1229,6 +1981,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cb305410000000000800000000000000
+      internalID: 21300156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_right
       rect:
@@ -1243,6 +2002,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: eb305410000000000800000000000000
+      internalID: 21300158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_top
       rect:
@@ -1257,6 +2023,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0c305410000000000800000000000000
+      internalID: 21300160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_left
       rect:
@@ -1271,6 +2044,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2c305410000000000800000000000000
+      internalID: 21300162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_bot
       rect:
@@ -1285,6 +2065,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4c305410000000000800000000000000
+      internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_topRight
       rect:
@@ -1299,6 +2086,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6c305410000000000800000000000000
+      internalID: 21300166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_botRight
       rect:
@@ -1313,6 +2107,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8c305410000000000800000000000000
+      internalID: 21300168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_botLeft
       rect:
@@ -1327,6 +2128,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ac305410000000000800000000000000
+      internalID: 21300170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_U
       rect:
@@ -1341,6 +2149,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cc305410000000000800000000000000
+      internalID: 21300172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_N
       rect:
@@ -1355,6 +2170,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ec305410000000000800000000000000
+      internalID: 21300174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_0
       rect:
@@ -1369,6 +2191,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0d305410000000000800000000000000
+      internalID: 21300176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_1
       rect:
@@ -1383,6 +2212,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2d305410000000000800000000000000
+      internalID: 21300178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_2
       rect:
@@ -1397,6 +2233,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4d305410000000000800000000000000
+      internalID: 21300180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_3
       rect:
@@ -1411,6 +2254,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6d305410000000000800000000000000
+      internalID: 21300182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_4
       rect:
@@ -1425,6 +2275,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8d305410000000000800000000000000
+      internalID: 21300184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: stoneDirt_rightU
       rect:
@@ -1439,6 +2296,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ad305410000000000800000000000000
+      internalID: 21300186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_5
       rect:
@@ -1453,6 +2317,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cd305410000000000800000000000000
+      internalID: 21300188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tora_0
       rect:
@@ -1467,6 +2338,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ed305410000000000800000000000000
+      internalID: 21300190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tora_1
       rect:
@@ -1481,6 +2359,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0e305410000000000800000000000000
+      internalID: 21300192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tora_pe
       rect:
@@ -1495,6 +2380,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2e305410000000000800000000000000
+      internalID: 21300194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tora_pilha
       rect:
@@ -1509,6 +2401,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4e305410000000000800000000000000
+      internalID: 21300196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: sand_1
       rect:
@@ -1523,6 +2422,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6e305410000000000800000000000000
+      internalID: 21300198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: sand_2
       rect:
@@ -1537,6 +2443,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8e305410000000000800000000000000
+      internalID: 21300200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: sand_3
       rect:
@@ -1551,6 +2464,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ae305410000000000800000000000000
+      internalID: 21300202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Sign
       rect:
@@ -1565,6 +2485,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ce305410000000000800000000000000
+      internalID: 21300204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_14
       rect:
@@ -1579,6 +2506,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ee305410000000000800000000000000
+      internalID: 21300206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_15
       rect:
@@ -1593,6 +2527,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 0f305410000000000800000000000000
+      internalID: 21300208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_16
       rect:
@@ -1607,6 +2548,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 2f305410000000000800000000000000
+      internalID: 21300210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_17
       rect:
@@ -1621,6 +2569,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 4f305410000000000800000000000000
+      internalID: 21300212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_18
       rect:
@@ -1635,6 +2590,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 6f305410000000000800000000000000
+      internalID: 21300214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_19
       rect:
@@ -1649,6 +2611,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 8f305410000000000800000000000000
+      internalID: 21300216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tiles para o jogo chess champions_20
       rect:
@@ -1663,6 +2632,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: af305410000000000800000000000000
+      internalID: 21300218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: fountain green
       rect:
@@ -1677,6 +2653,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: cf305410000000000800000000000000
+      internalID: 21300220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tower_statue
       rect:
@@ -1691,6 +2674,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: ef305410000000000800000000000000
+      internalID: 21300222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tree_stump_2
       rect:
@@ -1705,6 +2695,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 00405410000000000800000000000000
+      internalID: 21300224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: tree_stump_3
       rect:
@@ -1719,6 +2716,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 20405410000000000800000000000000
+      internalID: 21300226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: water
       rect:
@@ -1733,6 +2737,13 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 40405410000000000800000000000000
+      internalID: 21300228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: fountain blue
       rect:
@@ -1747,9 +2758,26 @@ TextureImporter:
       outline: []
       physicsShape: []
       tessellationDetail: 0
+      bones: []
+      spriteID: 60405410000000000800000000000000
+      internalID: 21300230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
   spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
