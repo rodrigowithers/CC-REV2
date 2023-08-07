@@ -2,106 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce907b19-1039-4f32-8dd2-3e8b1e7d3c5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogue/Dialogue_BG.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogue/Dialogue_BG.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CC-REV2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CC-REV2/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CC-REV2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CC-REV2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CC-REV2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CC-REV2/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dialogue/Dialogue_Border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogue/Dialogue_Border.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dialogue/Dialogue_Next.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dialogue/Dialogue_Next.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.Mdb.pdb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.Pdb.pdb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.Rocks.pdb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OPS/Editor/Plugins/Mono.Cecil/OPS.Mono.Cecil.pdb.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/OPS/Obfuscator.Free/Plugins/OPS.Obfuscator.pdb.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Bosses/TowerBoss/bossSpriteSheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Bosses/TowerBoss/bossSpriteSheet.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Drops/drops.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Drops/drops.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Bishop_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Bishop_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Horse_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Horse_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_King_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_King_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Pawn_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Pawn_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Queen_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Queen_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Tower_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Portraits/e_Tower_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Tower/spr_Tower.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/Tower/spr_Tower.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/debree.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Enemies/debree.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Bishop_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Bishop_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Horse_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Horse_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/King_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/King_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Pawn_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Pawn_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Queen_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Queen_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Tower_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/Character Switch/Portraits/Tower_Normal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/HUD/BlueHealth.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/HUD/BlueHealth.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/HUD/Health.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/HUD/Health.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/HUD/UI Nova.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Active Objects/Player/HUD/UI Nova.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/bispoAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/bispoAttack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/cavaloAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/cavaloAttack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/peaoAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/peaoAttack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/queenAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/queenAttack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/reiAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/reiAttack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/torreAttack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/MenuAttacks/torreAttack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/spr_attackArea.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/spr_attackArea.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/spr_attackAreaBishop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/spr_attackAreaBishop.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/spr_attackAreaHorse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/spr_attackAreaHorse.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/spr_attackAreaTower.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/AttackArea/spr_attackAreaTower.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Bishop/Sicle/Bishop_Normal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Bishop/Sicle/Bishop_Normal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Bishop/Sicle/deathSicle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Bishop/Sicle/deathSicle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Bishop/Sicle/deathSicleChain.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Bishop/Sicle/deathSicleChain.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Horse/Energy/Energy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Horse/Energy/Energy.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/King/Sword/kingSword.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/King/Sword/kingSword.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Horse/Horse_Normal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Horse/Horse_Normal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/King/King_Normal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/King/King_Normal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/King/spr_king.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/King/spr_king.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Pawn/Lance/pawnLance.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Pawn/Lance/pawnLance.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Pawn/Pawn_Normal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Pawn/Pawn_Normal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Pawn/spr_pawn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Pawn/spr_pawn.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Queen/Arrow/arrow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Queen/Arrow/arrow.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Queen/Arrow/arrowParticles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Queen/Arrow/arrowParticles.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Queen/Queen_Normal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Queen/Queen_Normal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Queen/rainha_nv-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Queen/rainha_nv-Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Shadow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Shadow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Tower/Cannon/cannonball.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Tower/Cannon/cannonball.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Tower/Tower_Normal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Tower/Tower_Normal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Tower/torre_nv-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Tower/torre_nv-Sheet.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Classes/Tower/torre_nv-Sheet_SEM_FUMACA.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Classes/Tower/torre_nv-Sheet_SEM_FUMACA.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Box/caixa v2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Box/caixa v2.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Box/caixa.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Box/caixa.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Bushes/arbusto 2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Bushes/arbusto 2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Bushes/arbusto 3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Bushes/arbusto 3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Bushes/arbusto-toco.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Bushes/arbusto-toco.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Bushes/arbusto.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Bushes/arbusto.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Explosion/explosion-Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Explosion/explosion-Sheet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/FloorSpike/Triangle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/FloorSpike/Triangle.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Flowers/flores.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Flowers/flores.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Harpoon/Hexagon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Harpoon/Hexagon.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Houses/Houses.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Houses/Houses.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Houses/barrel.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Houses/barrel.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Houses/house.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Houses/house.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Pillar/Triangle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Pillar/Triangle.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Pillar/debree.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Pillar/debree.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Pillar/pilares.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Pillar/pilares.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Standart/standarts.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Standart/standarts.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Tree/tree pixelart.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Tree/tree pixelart.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/Wall/Wall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/Wall/Wall.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/calçadas de pedra.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/calçadas de pedra.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/pedras.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/pedras.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Field Objects/tiles para o jogo chess champions.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Field Objects/tiles para o jogo chess champions.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Menu/2klogo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Menu/2klogo.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Menu/Checkers.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Menu/Checkers.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Menu/chesscur.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Menu/chesscur.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Menu/logoDevoraChess.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Menu/logoDevoraChess.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Menu/marble_texture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Menu/marble_texture.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Menu/scars.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Menu/scars.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/Shadow.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/Shadow.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/bishop.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/bishop.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/chessico.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/chessico.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/exclamation.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/exclamation.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/horse.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/horse.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/interrogation.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/interrogation.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/king.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/king.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/pawn.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/pawn.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/queen.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/queen.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/tower.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/tower.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/etc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Flash/test.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Flash/test.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Ground/groundTest.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Ground/groundTest.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Ground/testAlphaMap.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Ground/testAlphaMap.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Tiles.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Tiles.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Square.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Square.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/boneco_de_treino.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/boneco_de_treino.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/cerca_vertical.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/cerca_vertical.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/EditorUserSettings.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptMapper" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptMapper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/0/02cc1ba3377fa81db092553865f3e1c0.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/0/0ef9b56f73396b90777f1e1d0af1e2de.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/1/180ce9f7ac9a79481f789f20a805af33.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/1/19b9de9d999dfb0c8cb6354ae059fc49.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/2/222be312eaa526b73c35c4369ea95405.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/2/25e3fc0250f64be7b0a849c6096bf6d5.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/2/25f1f6bc96ef9576d2c914153e6b1f02.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/2/26bcb1e1b017d92365734edb8979fa25.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/2/27f4fea3b144b3a102bf618b1353bee7.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/3/3d3e3546bbc62e96334376e82ea4396e.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/4/49938184027e3262ff982afde1670621.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/5/50f34725a10eee20e01e3ca529f9ca15.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/5/57dbb54708b4b196c46e5a5e88246f28.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/6/683ab549d6a1d29b4d1cb80d1ea6b7d3.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/6/69239984605ca6f73b1427b3a2f6b559.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/6/69d6bb8a8aec563a644f901a7c2deebc.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/6/6bf258cef27c65cb3ed8bab1fafa70ad.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/7/70f891124fef4844d73f5bfdfaf570d2.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/7/763030427ba3cc903fe7a11884cce59e.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/9/99841ea754280e76c1bd363e7382afca.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/9/99cb38158d28a58eedeebb64939b2671.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/9/9b0795a9d5ad40108888c54f64404084.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/9/9b258a59fa7e069cfe644eef980548d9.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/a/ad6ff30ee9f0e246875a79030bbf0c82.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/b/b76823486a0903ab96dfb156caa3ae25.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/b/bb55d2199d5d19b6db041e5748603741.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/b/bbc1d9e1b90003b60d643fc2149a9b46.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/c/c4860b845326a841f8b1e975b00efa21.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/c/ceeeecf580f08e554baa407380ae0aea.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/d/d53e8a9545e730d3b77125f0ddef70f5.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/d/df127ce235504fcccc6386b5cf60f41b.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/e/e31937ecbcddf3127ba44daaaae6b937.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/e/ea5d4074ee983e3aee2f241eb3bf811b.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/e/eb973f60f38a951f0abb397021f4b872.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Packages-Update.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityPackageManager/manifest.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,15 +96,74 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/c5/295fc748/Void.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1jhcDy3R4eRweC7UUAxyPA47TvA" />
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\rodri\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\rodri\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\rodri\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\rodri\Git\CC-REV2 -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\rodri\Git\CC-REV2" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.3f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\rodri\Git\CC-REV2 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\rodri\Git\CC-REV2" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="6524">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="6524" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <created>1604259659638</created>
@@ -127,10 +171,15 @@
       <option name="presentableId" value="Default" />
       <updated>1604259659638</updated>
       <workItem from="1604259709333" duration="1000" />
+      <workItem from="1691417297412" duration="1327000" />
     </task>
     <servers />
   </component>
-  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

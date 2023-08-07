@@ -222,7 +222,7 @@ TextureImporter:
       213: 21300144
     second: bossSpriteSheet_72
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -239,9 +239,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -251,8 +254,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -273,10 +276,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -288,6 +296,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -300,6 +309,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -312,6 +322,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 3
@@ -324,6 +335,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
@@ -1788,9 +1813,78 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      aDown_0: 21300028
+      aDown_1: 21300030
+      aDown_2: 21300032
+      aDown_3: 21300034
+      aDown_4: 21300036
+      aDown_5: 21300038
+      aSide_0: 21300060
+      aSide_1: 21300062
+      aSide_2: 21300064
+      aSide_3: 21300066
+      aSide_4: 21300068
+      aSide_5: 21300070
+      aUp_0: 21300044
+      aUp_1: 21300046
+      aUp_2: 21300048
+      aUp_3: 21300050
+      aUp_4: 21300052
+      aUp_5: 21300054
+      dashDown_0: 21300040
+      dashDown_1: 21300042
+      dashSide_0: 21300072
+      dashSide_1: 21300074
+      dashUp_0: 21300056
+      dashUp_1: 21300058
+      die_0: 21300116
+      die_1: 21300118
+      die_10: 21300142
+      die_2: 21300126
+      die_3: 21300128
+      die_4: 21300130
+      die_5: 21300132
+      die_6: 21300134
+      die_7: 21300136
+      die_8: 21300138
+      die_9: 21300140
+      dizzy_0: 21300076
+      dizzy_1: 21300078
+      dizzy_2: 21300080
+      dizzy_3: 21300082
+      dizzy_4: 21300084
+      dizzy_5: 21300086
+      dizzy_6: 21300088
+      idle_0: 21300000
+      idle_1: 21300002
+      idle_2: 21300004
+      prepare_0: 21300014
+      prepare_1: 21300016
+      prepare_2: 21300018
+      recover_0: 21300090
+      recover_1: 21300092
+      recover_10: 21300110
+      recover_11: 21300112
+      recover_12: 21300114
+      recover_2: 21300094
+      recover_3: 21300096
+      recover_4: 21300098
+      recover_5: 21300100
+      recover_6: 21300102
+      recover_7: 21300104
+      recover_8: 21300106
+      recover_9: 21300108
+      s1_0: 21300024
+      s1_1: 21300026
+      wDown_0: 21300006
+      wDown_1: 21300008
+      wSide_0: 21300020
+      wSide_1: 21300022
+      wUp_0: 21300010
+      wUp_1: 21300012
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
