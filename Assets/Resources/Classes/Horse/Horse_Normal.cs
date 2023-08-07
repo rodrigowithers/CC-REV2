@@ -6,32 +6,22 @@ public class Horse_Normal : Class
 {
     public override float MovementSpeed
     {
-        get
-        {
-            return 200;
-        }
+        get { return 200; }
     }
+
     public override float AttackSpeed
     {
-        get
-        {
-            return 1.0f;
-        }
+        get { return 1.0f; }
     }
+
     public override float AttackDuration
     {
-        get
-        {
-            return 0.3f;
-        }
+        get { return 0.3f; }
     }
 
     public override string Hability
     {
-        get
-        {
-            return "SpeedUp";
-        }
+        get { return "SpeedUp"; }
     }
 
     public float AttackCost = 45;
@@ -58,6 +48,7 @@ public class Horse_Normal : Class
             if (direction.magnitude < 0.7f)
             {
                 area.GetComponent<AttackArea>().Selected = false;
+                continue;
             }
 
             if (angle <= 30)
@@ -84,7 +75,6 @@ public class Horse_Normal : Class
 
     void Start()
     {
-
         Type = CHESSPIECE.HORSE;
         // Carreaga a Area de Ataque
         this.AttackArea = Resources.Load<GameObject>("Classes/Horse/NormalAttackArea");

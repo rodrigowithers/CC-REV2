@@ -55,6 +55,7 @@ public class Queen_Normal : Class
             if (direction.magnitude < 0.7f)
             {
                 area.GetComponent<AttackArea>().Selected = false;
+                continue;
             }
 
             if (angle <= 20)
